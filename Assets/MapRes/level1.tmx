@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="14" height="14" tilewidth="32" tileheight="32" nextobjectid="1">
  <tileset firstgid="1" name="map1_default" tilewidth="32" tileheight="32" tilecount="196" columns="14">
-  <image source="../Google Drive/20152/Human Interface/Canyon defense/asset/map/map1_default.jpg" width="448" height="448"/>
+  <image source="map1_default.jpg" width="448" height="448"/>
  </tileset>
  <layer name="Road" width="14" height="14">
   <data encoding="csv">
