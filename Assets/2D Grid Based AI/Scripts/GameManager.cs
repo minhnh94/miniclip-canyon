@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour {
 				nobj.transform.position = new Vector2(gridBox.transform.position.x + (gridSize*j), gridBox.transform.position.y + (0.87f*i));
 				nobj.name = j+","+i;
 
-				nobj.gameObject.transform.parent = gridBox.transform.parent;
+
 				nobj.SetActive(true);
 
 			}
