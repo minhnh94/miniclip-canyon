@@ -15,7 +15,7 @@ public class GridBoxAction : MonoBehaviour {
 	
 	}
 
-	void OnMouseUp() {
+	void OnMouseUpAsButton() {
 		// Action goes here
 		if (isPressable)
 		{
