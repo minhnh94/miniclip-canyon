@@ -28,7 +28,7 @@ public class MapManager : MonoBehaviour
 
 	void createGridMapData()
 	{
-		StreamReader reader = new StreamReader("Assets/Script/Map1.txt");
+		var reader = new StreamReader("Assets/Script/Map1.txt");
 
 		int i = 0;
 		string line;
@@ -42,18 +42,6 @@ public class MapManager : MonoBehaviour
 
 			i++;
 		}
-
-		foreach (var item in gridData)
-		{
-			if (item.isRoad)
-			{
-				print("1");
-			}
-			else
-			{
-				print("0");
-			}
-		}
 	}
 
 	void createGrid()
@@ -64,11 +52,17 @@ public class MapManager : MonoBehaviour
 			{
 				GameObject nobj = GameObject.Instantiate(gridBoxSample);
 
+				if (gridData[i, j].isBuildable)
+				{
+					nobj.GetComponent<GridBoxAction>().isPressable = true;
+				}
+
+				nobj.transform.parent = currentMap.transform;
+
 				float gridSize = nobj.GetComponent<Renderer>().bounds.size.x;
 
 				nobj.transform.position = new Vector2(gridBoxSample.transform.position.x + gridSize * j, gridBoxSample.transform.position.y - (gridSize * i));
 				nobj.SetActive(true);
-
 			}
 		}
 	}
