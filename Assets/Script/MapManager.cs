@@ -57,11 +57,13 @@ public class MapManager : MonoBehaviour
 					nobj.GetComponent<GridBoxAction>().isPressable = true;
 				}
 
-				nobj.transform.parent = currentMap.transform;
+				nobj.transform.SetParent(currentMap.transform);
 
 				float gridSize = nobj.GetComponent<Renderer>().bounds.size.x;
 
-				nobj.transform.position = new Vector2(gridBoxSample.transform.position.x + gridSize * j, gridBoxSample.transform.position.y - (gridSize * i));
+//				nobj.transform.position = new Vector2(gridBoxSample.transform.position.x + gridSize * j, gridBoxSample.transform.position.y - (gridSize * i));
+				nobj.transform.localPosition = new Vector2(-190+gridSize * j, 191-gridSize * i);
+
 				nobj.SetActive(true);
 			}
 		}
