@@ -8,19 +8,8 @@ public class GridBoxAction : MonoBehaviour {
 
 	Vector3 mouseDownMapTransform;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	void OnMouseDown() {
 		mouseDownMapTransform = currentMap.transform.position;
-		print("mouse down");
 	}
 
 	void OnMouseUpAsButton() {
