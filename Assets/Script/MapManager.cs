@@ -8,6 +8,7 @@ public class MapManager : MonoBehaviour
 
 	public GameObject gridBoxSample;
 	public GameObject currentMap;
+	public Camera mainCamera;
 
 	Grid[,] gridData = new Grid[14, 14];
 
@@ -60,8 +61,9 @@ public class MapManager : MonoBehaviour
 				nobj.transform.parent = currentMap.transform;
 
 				float gridSize = nobj.GetComponent<Renderer>().bounds.size.x;
+				float mapSize = currentMap.GetComponent<Renderer>().bounds.size.x;
 
-				nobj.transform.position = new Vector2(gridBoxSample.transform.position.x + gridSize * j, gridBoxSample.transform.position.y - (gridSize * i));
+				nobj.transform.position = new Vector2(-mapSize / 2 + gridSize / 2 + gridSize * j, mapSize / 2 - gridSize / 2 - (gridSize * i));
 				nobj.SetActive(true);
 			}
 		}
