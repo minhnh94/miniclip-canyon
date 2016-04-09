@@ -20,6 +20,7 @@ public class GridBoxAction : MonoBehaviour {
 
 	void OnMouseDown() {
 		mouseDownMapTransform = currentMap.transform.position;
+		print("mouse down");
 	}
 
 	void OnMouseUpAsButton() {
