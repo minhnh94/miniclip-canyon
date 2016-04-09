@@ -51,20 +51,21 @@ public class MapManager : MonoBehaviour
 		{
 			for (int j = 0; j < 14; j++)
 			{
-				GameObject nobj = GameObject.Instantiate(gridBoxSample);
+				GameObject grid = GameObject.Instantiate(gridBoxSample);
 
+				grid.GetComponent<GridBoxAction>().currentMap = currentMap;
 				if (gridData[i, j].isBuildable)
 				{
-					nobj.GetComponent<GridBoxAction>().isPressable = true;
+					grid.GetComponent<GridBoxAction>().isPressable = true;
 				}
 
-				nobj.transform.parent = currentMap.transform;
+				grid.transform.parent = currentMap.transform;
 
-				float gridSize = nobj.GetComponent<Renderer>().bounds.size.x;
+				float gridSize = grid.GetComponent<Renderer>().bounds.size.x;
 				float mapSize = currentMap.GetComponent<Renderer>().bounds.size.x;
 
-				nobj.transform.position = new Vector2(-mapSize / 2 + gridSize / 2 + gridSize * j, mapSize / 2 - gridSize / 2 - (gridSize * i));
-				nobj.SetActive(true);
+				grid.transform.position = new Vector2(-mapSize / 2 + gridSize / 2 + gridSize * j, mapSize / 2 - gridSize / 2 - (gridSize * i));
+				grid.SetActive(true);
 			}
 		}
 	}
