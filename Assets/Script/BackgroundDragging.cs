@@ -22,9 +22,9 @@ public class BackgroundDragging : MonoBehaviour {
 			// Bg is outta screen
 			curPosition.y = 0;
 		}
-		else if (curPosition.y > 7.785632f)
+		else if (curPosition.y > 5.940788f)
 		{
-			curPosition.y = 7.785632f;
+			curPosition.y = 5.940788f;
 		}
 		transform.position = curPosition;
 	}
