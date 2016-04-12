@@ -135,20 +135,20 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 0
-      y: 60
-      width: 30
-      height: 80
+      y: 65
+      width: 25
+      height: 75
     inner:
       serializedVersion: 2
       x: 0
-      y: 60
-      width: 30
-      height: 10
+      y: 65
+      width: 25
+      height: 5
     rotated: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
+    paddingLeft: 0.08
+    paddingRight: 0.12
+    paddingTop: 0.04
+    paddingBottom: 0.026666667
   mCoordinates: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}
