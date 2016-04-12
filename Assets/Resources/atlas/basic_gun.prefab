@@ -40,7 +40,115 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: b24b6d071fec549afaf2798a19000709, type: 2}
-  sprites: []
+  sprites:
+  - name: basic1
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 206
+      width: 50
+      height: 50
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 206
+      width: 50
+      height: 50
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: basic2
+    outer:
+      serializedVersion: 2
+      x: 58
+      y: 206
+      width: 50
+      height: 50
+    inner:
+      serializedVersion: 2
+      x: 58
+      y: 206
+      width: 50
+      height: 50
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: basic4
+    outer:
+      serializedVersion: 2
+      x: 116
+      y: 206
+      width: 50
+      height: 50
+    inner:
+      serializedVersion: 2
+      x: 116
+      y: 206
+      width: 50
+      height: 50
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: basic5
+    outer:
+      serializedVersion: 2
+      x: 174
+      y: 206
+      width: 50
+      height: 50
+    inner:
+      serializedVersion: 2
+      x: 174
+      y: 206
+      width: 50
+      height: 50
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: basic3
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 148
+      width: 50
+      height: 50
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 148
+      width: 50
+      height: 50
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: btn_Arrow
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 60
+      width: 30
+      height: 80
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 60
+      width: 30
+      height: 10
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   mCoordinates: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}
