@@ -158,10 +158,10 @@ MonoBehaviour:
       height: 80
     inner:
       serializedVersion: 2
-      x: 0
-      y: 176
-      width: 80
-      height: 80
+      x: 30
+      y: 206
+      width: 20
+      height: 20
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
