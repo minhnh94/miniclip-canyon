@@ -5,6 +5,7 @@ public class GridBoxAction : MonoBehaviour {
 
 	public bool isPressable;
 	public GameObject currentMap;
+	public GameObject towerPrefab;
 
 	Vector3 mouseDownMapTransform;
 
@@ -18,7 +19,11 @@ public class GridBoxAction : MonoBehaviour {
 		{
 			if (mouseDownMapTransform == currentMap.transform.position)
 			{
-				print("Pressed!");	
+				if (TowerDefenseManager.whatTowerIsPressed != 0)
+				{
+					print(TowerDefenseManager.whatTowerIsPressed);
+					GameObject tower = (GameObject)Instantiate(towerPrefab, transform.position, Quaternion.identity);
+				}
 			}
 		}
 	}
