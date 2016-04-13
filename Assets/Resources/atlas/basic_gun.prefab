@@ -44,13 +44,13 @@ MonoBehaviour:
   - name: basic1
     outer:
       serializedVersion: 2
-      x: 0
+      x: 88
       y: 206
       width: 50
       height: 50
     inner:
       serializedVersion: 2
-      x: 0
+      x: 88
       y: 206
       width: 50
       height: 50
@@ -62,13 +62,13 @@ MonoBehaviour:
   - name: basic2
     outer:
       serializedVersion: 2
-      x: 58
+      x: 146
       y: 206
       width: 50
       height: 50
     inner:
       serializedVersion: 2
-      x: 58
+      x: 146
       y: 206
       width: 50
       height: 50
@@ -80,14 +80,14 @@ MonoBehaviour:
   - name: basic4
     outer:
       serializedVersion: 2
-      x: 116
-      y: 206
+      x: 0
+      y: 118
       width: 50
       height: 50
     inner:
       serializedVersion: 2
-      x: 116
-      y: 206
+      x: 0
+      y: 118
       width: 50
       height: 50
     rotated: 0
@@ -98,14 +98,14 @@ MonoBehaviour:
   - name: basic5
     outer:
       serializedVersion: 2
-      x: 174
-      y: 206
+      x: 0
+      y: 60
       width: 50
       height: 50
     inner:
       serializedVersion: 2
-      x: 174
-      y: 206
+      x: 0
+      y: 60
       width: 50
       height: 50
     rotated: 0
@@ -116,14 +116,14 @@ MonoBehaviour:
   - name: basic3
     outer:
       serializedVersion: 2
-      x: 0
-      y: 148
+      x: 58
+      y: 118
       width: 50
       height: 50
     inner:
       serializedVersion: 2
-      x: 0
-      y: 148
+      x: 58
+      y: 118
       width: 50
       height: 50
     rotated: 0
@@ -134,14 +134,14 @@ MonoBehaviour:
   - name: btn_Arrow
     outer:
       serializedVersion: 2
-      x: 0
-      y: 65
+      x: 204
+      y: 181
       width: 25
       height: 75
     inner:
       serializedVersion: 2
-      x: 0
-      y: 65
+      x: 204
+      y: 181
       width: 25
       height: 5
     rotated: 0
@@ -149,6 +149,24 @@ MonoBehaviour:
     paddingRight: 0.12
     paddingTop: 0.04
     paddingBottom: 0.026666667
+  - name: slicedsprite_glowbox
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 176
+      width: 80
+      height: 80
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 176
+      width: 80
+      height: 80
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   mCoordinates: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}
