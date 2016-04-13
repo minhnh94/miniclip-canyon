@@ -9,8 +9,6 @@ public class BackgroundDragging : MonoBehaviour {
 	void OnMouseDown() {
 		offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
 		firstMousePosX = Input.mousePosition.x;
-		print("mouse down drag");
-
 	}
 
 	void OnMouseDrag()
