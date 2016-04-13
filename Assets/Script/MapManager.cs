@@ -55,10 +55,8 @@ public class MapManager : MonoBehaviour
 				grid.name = i + "," + j;
 
 				grid.GetComponent<GridBoxAction>().currentMap = currentMap;
-				if (gridData[i, j].isBuildable)
-				{
-					grid.GetComponent<GridBoxAction>().isPressable = true;
-				}	
+				grid.GetComponent<GridBoxAction>().isPressable |= gridData[i, j].isBuildable;
+				grid.GetComponent<BoxCollider2D>().enabled = !gridData[i, j].isRoad;
 
 				grid.transform.parent = currentMap.transform;
 

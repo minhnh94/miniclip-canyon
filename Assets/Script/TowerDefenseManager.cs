@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TowerDefenseManager : MonoBehaviour {
 
-	public static int whatTowerIsPressed = 0;
+	public static int whatTowerIsPressed = 1;
 
 	// Use this for initialization
 	void Start () {
