@@ -10,14 +10,14 @@ public class GridBoxAction : MonoBehaviour {
 	Vector3 mouseDownMapTransform;
 
 	void OnMouseDown() {
-		mouseDownMapTransform = currentMap.transform.position;
+		mouseDownMapTransform = Camera.main.transform.position;
 	}
 
 	void OnMouseUpAsButton() {
 		// Action goes here
 		if (isPressable)
 		{
-			if (mouseDownMapTransform == currentMap.transform.position)
+			if (mouseDownMapTransform == Camera.main.transform.position)
 			{
 				if (TowerDefenseManager.whatTowerIsPressed != 0)
 				{
