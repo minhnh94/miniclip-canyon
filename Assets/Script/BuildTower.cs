@@ -3,6 +3,7 @@ using System.Collections;
 
 public class BuildTower : MonoBehaviour {
 	void OnMouseUp() {
+		print(gameObject.tag);
 		if (gameObject.tag == "Tower1")
 		{
 			TowerDefenseManager.whatTowerIsPressed = 1;

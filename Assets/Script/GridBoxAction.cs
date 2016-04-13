@@ -23,6 +23,8 @@ public class GridBoxAction : MonoBehaviour {
 				{
 					print(TowerDefenseManager.whatTowerIsPressed);
 					GameObject tower = (GameObject)Instantiate(towerPrefab, transform.position, Quaternion.identity);
+
+					isPressable = false;
 				}
 			}
 		}

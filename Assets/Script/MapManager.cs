@@ -57,7 +57,7 @@ public class MapManager : MonoBehaviour
 				if (gridData[i, j].isBuildable)
 				{
 					grid.GetComponent<GridBoxAction>().isPressable = true;
-				}
+				}	
 
 				grid.transform.parent = currentMap.transform;
 

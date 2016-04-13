@@ -9,6 +9,7 @@ TagManager:
   - Tower3
   - Tower4
   - Tower5
+  - Enemy
   layers:
   - Default
   - TransparentFX
