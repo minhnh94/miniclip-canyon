@@ -52,6 +52,7 @@ public class MapManager : MonoBehaviour
 			for (int j = 0; j < 14; j++)
 			{
 				GameObject grid = GameObject.Instantiate(gridBoxSample);
+				grid.name = i + "," + j;
 
 				grid.GetComponent<GridBoxAction>().currentMap = currentMap;
 				if (gridData[i, j].isBuildable)
