@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BuildTower : MonoBehaviour {
-	void OnMouseUp() {
+	void OnPress() {
 		print(gameObject.tag);
 		if (gameObject.tag == "Tower1")
 		{
