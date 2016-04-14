@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GridBoxAction : MonoBehaviour {
 
 	public bool isPressable;
 	public GameObject currentMap;
-	public GameObject towerPrefab;
 	public GameManagerBehavior gameManager;
+	public GameObject[] towerPrefabs;
 
 	Vector3 mouseDownMapTransform;
 
@@ -16,14 +17,14 @@ public class GridBoxAction : MonoBehaviour {
 
 	void OnMouseUpAsButton() {
 		// Action goes here
-		if (CanBuildTower())
+		if (GameManagerBehavior.whatTowerIsPressed != -1)
 		{
+			print("build tower " + GameManagerBehavior.whatTowerIsPressed);
 			if (mouseDownMapTransform == currentMap.transform.position)
 			{
-				if (GameManagerBehavior.whatTowerIsPressed != 0)
+				if (CanBuildTower())
 				{
-					print(GameManagerBehavior.whatTowerIsPressed);
-					GameObject tower = (GameObject)Instantiate(towerPrefab, transform.position, Quaternion.identity);
+					GameObject tower = (GameObject)Instantiate(towerPrefabs[GameManagerBehavior.whatTowerIsPressed], transform.position, Quaternion.identity);
 					gameManager.Gold -= tower.GetComponent<TowerData>().cost;
 					isPressable = false;
 				}
@@ -32,7 +33,9 @@ public class GridBoxAction : MonoBehaviour {
 	}
 
 	bool CanBuildTower() {
-		int cost = towerPrefab.GetComponent<TowerData> ().cost;
-		return isPressable && (towerPrefab != null) && (gameManager.Gold >= cost);
+		print("checking can build");
+		GameObject towerPrefab = towerPrefabs[GameManagerBehavior.whatTowerIsPressed];
+		int cost = towerPrefab.GetComponent<TowerData>().cost;
+		return isPressable && (gameManager.Gold >= cost);
 	}
 }

@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class GameManagerBehavior : MonoBehaviour {
 
-	public static int whatTowerIsPressed = 1;
+	public static int whatTowerIsPressed = -1;
 	public Text goldLabel;
 
 	private int gold;
@@ -18,7 +17,7 @@ public class GameManagerBehavior : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Gold = 1000;
+		Gold = 1000000;
 		Debug.Log (Gold);
 	}
 	
