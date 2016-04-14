@@ -115,6 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - cost: 100
+    bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
+    fireRate: 1
     visualization: {fileID: 119370}
 --- !u!114 &11487430
 MonoBehaviour:

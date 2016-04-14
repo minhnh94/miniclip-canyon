@@ -10,6 +10,8 @@ TagManager:
   - Tower4
   - Tower5
   - Enemy
+  - Goal
+  - World Boundary
   layers:
   - Default
   - TransparentFX
