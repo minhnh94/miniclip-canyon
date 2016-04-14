@@ -18,26 +18,21 @@ public class GridBoxAction : MonoBehaviour {
 		// Action goes here
 		if (CanBuildTower())
 		{
-			Debug.Log (mouseDownMapTransform);
-			Debug.Log (currentMap.transform.position);
 			if (mouseDownMapTransform == currentMap.transform.position)
 			{
-				Debug.Log (GameManagerBehavior.whatTowerIsPressed);
 				if (GameManagerBehavior.whatTowerIsPressed != 0)
 				{
 					print(GameManagerBehavior.whatTowerIsPressed);
 					GameObject tower = (GameObject)Instantiate(towerPrefab, transform.position, Quaternion.identity);
-					gameManager.Gold -= tower.GetComponent<TowerData> ().CurrentLevel.cost;
+					gameManager.Gold -= tower.GetComponent<TowerData>().cost;
 					isPressable = false;
 				}
 			}
 		}
 	}
 
-	private bool CanBuildTower() {
-		Debug.Log (towerPrefab.GetComponent<TowerData> ().levels [0].cost);
-		Debug.Log (GameManagerBehavior.whatTowerIsPressed);
-		int cost = towerPrefab.GetComponent<TowerData> ().levels[0].cost;
+	bool CanBuildTower() {
+		int cost = towerPrefab.GetComponent<TowerData> ().cost;
 		return isPressable && (towerPrefab != null) && (gameManager.Gold >= cost);
 	}
 }
