@@ -11,7 +11,7 @@ GameObject:
   - 58: {fileID: 5851126}
   - 114: {fileID: 11418624}
   - 114: {fileID: 11454338}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TowerBasic5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 445908}
   - 212: {fileID: 21248472}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Basic5 nulircator moving
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197655e52faa0064995fc8c4557871c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 800
+  cost: 200
 --- !u!212 &21248472
 SpriteRenderer:
   m_ObjectHideFlags: 1
