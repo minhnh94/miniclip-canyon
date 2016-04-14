@@ -11,7 +11,7 @@ public class GridBoxAction : MonoBehaviour {
 	Vector3 mouseDownMapTransform;
 
 	void OnMouseDown() {
-		mouseDownMapTransform = currentMap.transform.position;
+		mouseDownMapTransform = Camera.main.transform.position;
 	}
 
 	void OnMouseUpAsButton() {
