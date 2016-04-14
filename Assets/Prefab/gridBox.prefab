@@ -58,6 +58,7 @@ MonoBehaviour:
   isPressable: 0
   currentMap: {fileID: 0}
   towerPrefab: {fileID: 119370, guid: 4867e0db535964da68de69f7f8edb43f, type: 2}
+  gameManager: {fileID: 0}
 --- !u!212 &21264772
 SpriteRenderer:
   m_ObjectHideFlags: 1

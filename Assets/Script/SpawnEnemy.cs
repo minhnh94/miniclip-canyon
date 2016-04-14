@@ -31,7 +31,7 @@ public class SpawnEnemy : MonoBehaviour {
 		if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) ||
 		    timeInterval > spawnInterval) &&
 		    enemiesSpawned < maxEnemies) {
-			Instantiate (enemyPrefab);
+			//Instantiate (enemyPrefab);
 			lastSpawnTime = Time.time;
 			enemiesSpawned++;
 		}

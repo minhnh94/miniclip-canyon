@@ -6,23 +6,23 @@ public class BuildTower : MonoBehaviour {
 		print(gameObject.tag);
 		if (gameObject.tag == "Tower1")
 		{
-			TowerDefenseManager.whatTowerIsPressed = 1;
+			GameManagerBehavior.whatTowerIsPressed = 1;
 		}
 		else if (gameObject.tag == "Tower2")
 		{
-			TowerDefenseManager.whatTowerIsPressed = 2;
+			GameManagerBehavior.whatTowerIsPressed = 2;
 		}
 		else if (gameObject.tag == "Tower3")
 		{
-			TowerDefenseManager.whatTowerIsPressed = 3;
+			GameManagerBehavior.whatTowerIsPressed = 3;
 		}
 		else if (gameObject.tag == "Tower4")
 		{
-			TowerDefenseManager.whatTowerIsPressed = 4;
+			GameManagerBehavior.whatTowerIsPressed = 4;
 		}
 		else if (gameObject.tag == "Tower5")
 		{
-			TowerDefenseManager.whatTowerIsPressed = 5;
+			GameManagerBehavior.whatTowerIsPressed = 5;
 		}
 	}
 }
