@@ -4,11 +4,10 @@ using System.Collections.Generic;
 public class TowerAction : MonoBehaviour {
 	
 	public List<GameObject> enemiesInRange;
-	public GameObject bullet;
 	public GameObject towerGun;
 
 	float lastShotTime;
-	private TowerData towerData;
+	TowerData towerData;
 
 	// Use this for initialization
 	void Start () {
@@ -31,7 +30,7 @@ public class TowerAction : MonoBehaviour {
 		}
 
 		if (target != null) {
-			if (Time.time - lastShotTime > towerData.CurrentLevel.fireRate)	{
+			if (Time.time - lastShotTime > towerData.fireRate)	{
 				Shoot(target.GetComponent<Collider2D>());
 				lastShotTime = Time.time;
 			}
@@ -64,7 +63,7 @@ public class TowerAction : MonoBehaviour {
 	}
 
 	void Shoot(Collider2D target) {
-		GameObject bulletPrefab = towerData.CurrentLevel.bullet;
+		GameObject bulletPrefab = towerData.bullet;
 
 		Vector3 startPosition = gameObject.transform.position;
 		Vector3 targetPosition = target.transform.position;
