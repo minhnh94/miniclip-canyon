@@ -28,5 +28,6 @@ public class PauseMenu : MonoBehaviour {
 
 	public void Quit(){
 		Application.LoadLevel ("Menu");
+		isPaused = false;
 	}
 }
