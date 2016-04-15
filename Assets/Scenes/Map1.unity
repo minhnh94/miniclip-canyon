@@ -204,18 +204,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 199.55055
+    e00: 176.62921
     e01: 0
     e02: 0
-    e03: 1773.0336
+    e03: 1570.7865
     e10: 0
-    e11: 222
+    e11: 196.5
     e12: 0
-    e13: 450.6599
+    e13: 398.89508
     e20: 0
     e21: 0
-    e22: 222
-    e23: 222
+    e22: 196.5
+    e23: 196.5
     e30: 0
     e31: 0
     e32: 0
@@ -714,15 +714,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 193514939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15786661, y: 0.15786661, z: 0.15786661}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 317.91397, y: 353.6788, z: 353.6788}
   m_Children: []
   m_Father: {fileID: 599893266}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -320.53, y: -188.16}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 106960, y: 63506.438}
+  m_SizeDelta: {x: 31180, y: -338.8789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &193514941
 MonoBehaviour:
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -763,6 +763,54 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 193514939}
+--- !u!1 &256182165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 256182166}
+  - 114: {fileID: 256182167}
+  m_Layer: 8
+  m_Name: Anchor (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &256182166
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256182165}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1561.955, y: 812.50507, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 709210627}
+  m_Father: {fileID: 404530595}
+  m_RootOrder: 2
+--- !u!114 &256182167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256182165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8077b76001d36d489868d20d28bddb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCamera: {fileID: 1380088148}
+  widgetContainer: {fileID: 0}
+  panelContainer: {fileID: 0}
+  side: 4
+  halfPixelOffset: 1
+  runOnlyOnce: 0
+  relativeOffset: {x: 0, y: 0}
+  pixelOffset: {x: 0, y: 0}
 --- !u!1 &387552815
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +930,7 @@ Transform:
   m_Children:
   - {fileID: 1803348615}
   - {fileID: 1488177686}
+  - {fileID: 256182166}
   m_Father: {fileID: 1498752981}
   m_RootOrder: 0
 --- !u!114 &404530596
@@ -1230,7 +1279,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1245,7 +1293,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 193514940}
-  m_Father: {fileID: 1380088149}
+  m_Father: {fileID: 709210627}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1307,18 +1355,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 199.55055
+    e00: 176.62921
     e01: 0
     e02: 0
-    e03: 2103.0337
+    e03: 1900.7865
     e10: 0
-    e11: 222
+    e11: 196.5
     e12: 0
-    e13: -730.3401
+    e13: -782.1049
     e20: 0
     e21: 0
-    e22: 222
-    e23: 222
+    e22: 196.5
+    e23: 196.5
     e30: 0
     e31: 0
     e32: 0
@@ -1500,6 +1548,74 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 678933814}
+--- !u!1 &709210626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 709210627}
+  - 114: {fileID: 709210628}
+  m_Layer: 8
+  m_Name: Panel (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &709210627
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709210626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 599893266}
+  m_Father: {fileID: 256182166}
+  m_RootOrder: 0
+--- !u!114 &709210628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709210626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae942c9068183dc40a9d01f648273726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortByDepth: 1
+  showInPanelTool: 1
+  generateNormals: 0
+  depthPass: 0
+  widgetsAreStatic: 0
+  cullWhileDragging: 0
+  worldToLocal:
+    e00: 176.62921
+    e01: 0
+    e02: 0
+    e03: -1570.7864
+    e10: 0
+    e11: 196.5
+    e12: 0
+    e13: -1566.105
+    e20: 0
+    e21: 0
+    e22: 196.5
+    e23: 196.5
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  mAlpha: 1
+  mDebugInfo: 1
+  mClipping: 0
+  mClipRange: {x: 0, y: 0, z: 0, w: 0}
+  mClipSoftness: {x: 40, y: 40}
 --- !u!1 &862780797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,7 +1889,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1915,18 +2030,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 199.55055
+    e00: 176.62921
     e01: 0
     e02: 0
-    e03: 1773.0336
+    e03: 1570.7865
     e10: 0
-    e11: 222
+    e11: 196.5
     e12: 0
-    e13: -1769.3401
+    e13: -1566.105
     e20: 0
     e21: 0
-    e22: 222
-    e23: 222
+    e22: 196.5
+    e23: 196.5
     e30: 0
     e31: 0
     e32: 0
@@ -2774,7 +2889,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 2.97, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 599893266}
   - {fileID: 1498752981}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2850,7 +2964,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1488177685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1783.0111, y: 918.3301, z: 0}
+  m_LocalPosition: {x: -1579.6179, y: 812.50507, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1068093544}
@@ -2900,11 +3014,11 @@ Transform:
   m_GameObject: {fileID: 1498752980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0.8499999, z: 9}
-  m_LocalScale: {x: 0.0045045046, y: 0.0045045046, z: 0.0045045046}
+  m_LocalScale: {x: 0.0050890585, y: 0.0050890585, z: 0.0050890585}
   m_Children:
   - {fileID: 404530595}
   m_Father: {fileID: 1380088149}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!114 &1498752982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2923,18 +3037,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 222
+    e00: 196.5
     e01: 0
     e02: 0
-    e03: -11.1
+    e03: -9.825
     e10: 0
-    e11: 222
+    e11: 196.5
     e12: 0
-    e13: -848.04004
+    e13: -750.62994
     e20: 0
     e21: 0
-    e22: 222
-    e23: 222
+    e22: 196.5
+    e23: 196.5
     e30: 0
     e31: 0
     e32: 0
@@ -3502,7 +3616,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1803348614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1783.0111, y: -1301.6699, z: 0}
+  m_LocalPosition: {x: -1579.6179, y: -1152.495, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 600125360}
