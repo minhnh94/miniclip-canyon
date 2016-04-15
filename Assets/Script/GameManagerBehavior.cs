@@ -18,7 +18,7 @@ public class GameManagerBehavior : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Gold = 1000;
+		Gold = 500;
 		Debug.Log (Gold);
 	}
 	

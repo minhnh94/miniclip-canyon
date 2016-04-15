@@ -5,6 +5,8 @@ using System.Collections.Generic;
 [System.Serializable]
 public class TowerLevel {
 	public int cost;
+	public GameObject bullet;
+	public float fireRate;
 	public GameObject visualization;
 }
 

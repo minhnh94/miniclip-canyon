@@ -8,27 +8,31 @@ public class TowerAction : MonoBehaviour {
 	public GameObject towerGun;
 
 	float lastShotTime;
+	private TowerData towerData;
 
 	// Use this for initialization
 	void Start () {
 		enemiesInRange = new List<GameObject>();
 		lastShotTime = Time.time;
+		towerData = gameObject.GetComponentInChildren<TowerData> ();
 	}
 
 	// Update is called once per frame
 	void Update () {
 		GameObject target = null;
 
-		if (enemiesInRange.Count != 0)
-		{
-			target = enemiesInRange[0];	
+		float minimalEnemyDistance = float.MaxValue;
+		foreach (GameObject enemy in enemiesInRange) {
+			float distanceToGoal = enemy.GetComponent<MoveToGoal> ().distanceToGoal ();
+			if (distanceToGoal < minimalEnemyDistance) {
+				target = enemy;
+				minimalEnemyDistance = distanceToGoal;
+			}
 		}
 
-		if (target != null)
-		{
-			if (Time.time - lastShotTime > 1)
-			{
-				shoot(target.GetComponent<Collider2D>());
+		if (target != null) {
+			if (Time.time - lastShotTime > towerData.CurrentLevel.fireRate)	{
+				Shoot(target.GetComponent<Collider2D>());
 				lastShotTime = Time.time;
 			}
 
@@ -38,15 +42,15 @@ public class TowerAction : MonoBehaviour {
 	}
 
 	void OnEnemyDestroy(GameObject enemy) {
-		enemiesInRange.Remove(enemy);
+		enemiesInRange.Remove (enemy);
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag.Equals("Enemy"))
 		{
 			enemiesInRange.Add(other.gameObject);
-//			EnemyDestructionDelegate del = other.gameObject.GetComponent<EnemyDestructionDelegate>();
-//			del.enemyDelegate += OnEnemyDestroy;
+			EnemyDestructionDelegate del = other.gameObject.GetComponent<EnemyDestructionDelegate>();
+			del.enemyDelegate += OnEnemyDestroy;
 		}
 	}
 
@@ -54,23 +58,23 @@ public class TowerAction : MonoBehaviour {
 		if (other.gameObject.tag.Equals("Enemy"))
 		{
 			enemiesInRange.Remove(other.gameObject);
-//			EnemyDestructionDelegate del = other.gameObject.GetComponent<EnemyDestructionDelegate>();
-//			del.enemyDelegate -= OnEnemyDestroy;
+			EnemyDestructionDelegate del = other.gameObject.GetComponent<EnemyDestructionDelegate>();
+			del.enemyDelegate -= OnEnemyDestroy;
 		}
 	}
 
-	void shoot(Collider2D target) {
-		GameObject bulletPrefab = bullet;
-		Vector3 startPos = gameObject.transform.position;
-		Vector3 targetPos = target.transform.position;
-		startPos.z = bulletPrefab.transform.position.z;
-		targetPos.z = bulletPrefab.transform.position.z;
+	void Shoot(Collider2D target) {
+		GameObject bulletPrefab = towerData.CurrentLevel.bullet;
+
+		Vector3 startPosition = gameObject.transform.position;
+		Vector3 targetPosition = target.transform.position;
+		startPosition.z = bulletPrefab.transform.position.z;
+		targetPosition.z = bulletPrefab.transform.position.z;
 
 		GameObject newBullet = (GameObject)Instantiate(bulletPrefab);
-		newBullet.transform.position = startPos;
+		newBullet.transform.position = startPosition;
 		BulletBehavior bulletComp = newBullet.GetComponent<BulletBehavior>();
 		bulletComp.target = target.gameObject;
-		bulletComp.startPos = startPos;
-		bulletComp.endPos = targetPos;
+		bulletComp.startPosition = startPosition;
 	}
 }

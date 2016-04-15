@@ -115,6 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - cost: 100
+    bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
+    fireRate: 1
     visualization: {fileID: 119370}
 --- !u!114 &11487430
 MonoBehaviour:
@@ -154,7 +156,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -779211693
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e7b0c34ca585b476285c934e9f4c2c8f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -184,7 +186,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1034258453
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 72a6f6949fc114d0e9dc2f9bd62e5028, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
