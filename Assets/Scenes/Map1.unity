@@ -551,8 +551,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generateOnUpdate: 1
   navObstacles:
-  - {fileID: 387552816}
   - {fileID: 74274814}
+  - {fileID: 387552816}
   inflateRadius: 0.7
   regenerateFlag: 1
 --- !u!4 &187417144
@@ -1921,7 +1921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f56a634a0eb4195adab9fa76b72459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridBoxSample: {fileID: 110826, guid: 3bceec4d552d448e8b492a295ff2dcaa, type: 2}
+  gridBoxSample: {fileID: 139562, guid: fe478073d7c6f4a3ea75431cec4e94c2, type: 2}
   currentMap: {fileID: 1841114031}
   mainCamera: {fileID: 1380088148}
 --- !u!4 &1063506449
@@ -2289,6 +2289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5680c80b17c9a495bba6f80653761b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1367933376}
+  mapManager: {fileID: 1063506448}
 --- !u!1 &1243230172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2407,6 +2409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5680c80b17c9a495bba6f80653761b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1367933376}
+  mapManager: {fileID: 1063506448}
 --- !u!1 &1253213573
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,6 +2731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5680c80b17c9a495bba6f80653761b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1367933376}
+  mapManager: {fileID: 1063506448}
 --- !u!1 &1367933375
 GameObject:
   m_ObjectHideFlags: 0
@@ -3367,6 +3373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5680c80b17c9a495bba6f80653761b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1367933376}
+  mapManager: {fileID: 1063506448}
 --- !u!1 &1650293194
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,6 +3493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5680c80b17c9a495bba6f80653761b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1367933376}
+  mapManager: {fileID: 1063506448}
 --- !u!1 &1694883183
 GameObject:
   m_ObjectHideFlags: 0
@@ -3848,61 +3858,3 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.006416753}
   serializedVersion: 2
   m_Size: {x: 0.99999934, y: 0.36263147}
---- !u!1 &2097826686 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 173846, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-  m_PrefabInternal: {fileID: 2107623522}
---- !u!1001 &2107623522
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 434130, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 3.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 434130, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 10.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 434130, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 434130, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 434130, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 434130, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 434130, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 434130, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 141308, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 189250, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11431690, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-      propertyPath: healthBarWrapper
-      value: 
-      objectReference: {fileID: 2097826686}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-  m_IsPrefabParent: 0

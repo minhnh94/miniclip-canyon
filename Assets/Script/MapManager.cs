@@ -2,15 +2,16 @@
 using System.Collections;
 using System.IO;
 using System;
+using System.Collections.Generic;
 
 public class MapManager : MonoBehaviour
 {
-
 	public GameObject gridBoxSample;
 	public GameObject currentMap;
 	public Camera mainCamera;
 
 	Grid[,] gridData = new Grid[14, 14];
+	List<GameObject> gridPrefabs = new List<GameObject>();
 
 	// Use this for initialization
 	void Start()
@@ -23,6 +24,25 @@ public class MapManager : MonoBehaviour
 	void Update()
 	{
 	
+	}
+
+	public void ToggleGridPreview(bool isTurnedOn) {
+		if (isTurnedOn)
+		{
+			foreach (var grid in gridPrefabs)
+			{
+				var gridAction = grid.GetComponent<GridBoxAction>();
+				gridAction.towerPreviewRender.SetActive(gridAction.isPressable);
+			}
+		}
+		else
+		{
+			foreach (var grid in gridPrefabs)
+			{
+				var gridAction = grid.GetComponent<GridBoxAction>();
+				gridAction.towerPreviewRender.SetActive(false);
+			}
+		}
 	}
 
 	#region Private inits
@@ -52,6 +72,8 @@ public class MapManager : MonoBehaviour
 			for (int j = 0; j < 14; j++)
 			{
 				GameObject grid = GameObject.Instantiate(gridBoxSample);
+				gridPrefabs.Add(grid);
+				grid.GetComponent<GridBoxAction>().towerPreviewRender.SetActive(false);
 				grid.name = i + "," + j;
 
 				grid.GetComponent<GridBoxAction>().currentMap = currentMap;
@@ -61,7 +83,8 @@ public class MapManager : MonoBehaviour
 
 				grid.transform.parent = currentMap.transform;
 
-				float gridSize = grid.GetComponent<Renderer>().bounds.size.x;
+//				float gridSize = grid.GetComponent<Renderer>().bounds.size.x;
+				float gridSize = grid.GetComponent<GridBoxAction>().normalRender.GetComponent<Renderer>().bounds.size.x;
 				float mapSize = currentMap.GetComponent<Renderer>().bounds.size.x;
 
 				grid.transform.position = new Vector2(-mapSize / 2 + gridSize / 2 + gridSize * j, mapSize / 2 - gridSize / 2 - (gridSize * i));

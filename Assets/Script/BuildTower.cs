@@ -3,6 +3,7 @@
 public class BuildTower : MonoBehaviour {
 
 	public GameManagerBehavior gameManager;
+	public MapManager mapManager;
 
 	Color initialColor;
 	UIButton refButton;
@@ -47,6 +48,7 @@ public class BuildTower : MonoBehaviour {
 		}
 
 		GameManagerBehavior.whatTowerIsPressed = GameManagerBehavior.whatTowerIsPressed == selection ? -1 : selection;
+		mapManager.ToggleGridPreview(GameManagerBehavior.whatTowerIsPressed != -1);
 	}
 
 	public void SetToNormalState() {

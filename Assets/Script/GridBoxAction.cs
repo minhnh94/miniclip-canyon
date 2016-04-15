@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class GridBoxAction : MonoBehaviour {
 
 	public bool isPressable;
+	public GameObject normalRender;
+	public GameObject towerPreviewRender;
 	public GameObject currentMap;
 	public GameManagerBehavior gameManager;
 	public GameObject[] towerPrefabs;
