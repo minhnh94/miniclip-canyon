@@ -49,7 +49,6 @@ public class BulletBehavior : MonoBehaviour {
 			if (healthBarTransform != null) {
 				HealthBar healthBar = healthBarTransform.gameObject.GetComponent<HealthBar> ();
 				healthBar.currentHealth -= Mathf.Max (damage, 0);
-				Debug.Log (healthBar.currentHealth);
 
 				if (healthBar.currentHealth <= 0) {
 					oldTargetPosition = target.transform.position;

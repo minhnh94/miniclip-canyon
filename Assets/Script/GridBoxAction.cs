@@ -32,7 +32,6 @@ public class GridBoxAction : MonoBehaviour {
 	}
 
 	bool CanBuildTower() {
-		print("checking can build");
 		GameObject towerPrefab = towerPrefabs[GameManagerBehavior.whatTowerIsPressed];
 		int cost = towerPrefab.GetComponent<TowerData>().cost;
 		return isPressable && (gameManager.Gold >= cost);

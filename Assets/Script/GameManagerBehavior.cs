@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class GameManagerBehavior : MonoBehaviour {
 
 	public static int whatTowerIsPressed = -1;
+	public GameObject[] towerButtons;
 	public Text goldLabel;
 
 	private int gold;
