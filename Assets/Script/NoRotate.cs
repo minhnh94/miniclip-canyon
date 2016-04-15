@@ -7,7 +7,7 @@ public class NoRotate : MonoBehaviour {
 	void Start () {
 	
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	
@@ -17,5 +17,9 @@ public class NoRotate : MonoBehaviour {
 		if (transform.rotation != Quaternion.Euler (0, 0, 0)) {
 			transform.rotation = Quaternion.Euler (0, 0, 0);
 		}
+	}
+
+	void GoodByeHealthBar(){
+		DestroyObject (gameObject);
 	}
 }

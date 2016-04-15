@@ -18,8 +18,7 @@ public class EnemyDestructionDelegate : MonoBehaviour {
 	}
 
 	public void PlayAnimation(){
-
-		//healthBarWrapper.SetActive (false);
+		Destroy (healthBarWrapper);
 		Animator animator = GetComponent<Animator>();
 		animator.SetBool ("die", true);
 		OnDestroy ();

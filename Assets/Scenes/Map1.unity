@@ -204,18 +204,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 176.62921
+    e00: 144.7191
     e01: 0
     e02: 0
-    e03: 1570.7865
+    e03: 1467.4156
     e10: 0
-    e11: 196.5
+    e11: 161
     e12: 0
-    e13: 398.89508
+    e13: 326.82996
     e20: 0
     e21: 0
-    e22: 196.5
-    e23: 196.5
+    e22: 161
+    e23: 161
     e30: 0
     e31: 0
     e32: 0
@@ -551,8 +551,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generateOnUpdate: 1
   navObstacles:
-  - {fileID: 74274814}
   - {fileID: 387552816}
+  - {fileID: 74274814}
   inflateRadius: 0.7
   regenerateFlag: 1
 --- !u!4 &187417144
@@ -786,7 +786,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256182165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1561.955, y: 812.50507, z: 0}
+  m_LocalPosition: {x: 1460.1797, y: 665.18005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 709210627}
@@ -1355,18 +1355,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 176.62921
+    e00: 144.7191
     e01: 0
     e02: 0
-    e03: 1900.7865
+    e03: 1797.4156
     e10: 0
-    e11: 196.5
+    e11: 161
     e12: 0
-    e13: -782.1049
+    e13: -854.17004
     e20: 0
     e21: 0
-    e22: 196.5
-    e23: 196.5
+    e22: 161
+    e23: 161
     e30: 0
     e31: 0
     e32: 0
@@ -1595,18 +1595,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 176.62921
+    e00: 144.7191
     e01: 0
     e02: 0
-    e03: -1570.7864
+    e03: -1467.4156
     e10: 0
-    e11: 196.5
+    e11: 161
     e12: 0
-    e13: -1566.105
+    e13: -1283.17
     e20: 0
     e21: 0
-    e22: 196.5
-    e23: 196.5
+    e22: 161
+    e23: 161
     e30: 0
     e31: 0
     e32: 0
@@ -2030,18 +2030,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 176.62921
+    e00: 144.7191
     e01: 0
     e02: 0
-    e03: 1570.7865
+    e03: 1467.4156
     e10: 0
-    e11: 196.5
+    e11: 161
     e12: 0
-    e13: -1566.105
+    e13: -1283.17
     e20: 0
     e21: 0
-    e22: 196.5
-    e23: 196.5
+    e22: 161
+    e23: 161
     e30: 0
     e31: 0
     e32: 0
@@ -2964,7 +2964,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1488177685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1579.6179, y: 812.50507, z: 0}
+  m_LocalPosition: {x: -1474.6516, y: 665.18005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1068093544}
@@ -3014,7 +3014,7 @@ Transform:
   m_GameObject: {fileID: 1498752980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0.8499999, z: 9}
-  m_LocalScale: {x: 0.0050890585, y: 0.0050890585, z: 0.0050890585}
+  m_LocalScale: {x: 0.0062111802, y: 0.0062111802, z: 0.0062111802}
   m_Children:
   - {fileID: 404530595}
   m_Father: {fileID: 1380088149}
@@ -3037,18 +3037,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 196.5
+    e00: 161
     e01: 0
     e02: 0
-    e03: -9.825
+    e03: -8.05
     e10: 0
-    e11: 196.5
+    e11: 161
     e12: 0
-    e13: -750.62994
+    e13: -615.02
     e20: 0
     e21: 0
-    e22: 196.5
-    e23: 196.5
+    e22: 161
+    e23: 161
     e30: 0
     e31: 0
     e32: 0
@@ -3616,7 +3616,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1803348614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1579.6179, y: -1152.495, z: 0}
+  m_LocalPosition: {x: -1474.6516, y: -944.81995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 600125360}
@@ -3840,6 +3840,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.006416753}
   serializedVersion: 2
   m_Size: {x: 0.99999934, y: 0.36263147}
+--- !u!1 &2097826686 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 173846, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
+  m_PrefabInternal: {fileID: 2107623522}
 --- !u!1001 &2107623522
 Prefab:
   m_ObjectHideFlags: 0
@@ -3879,6 +3883,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 141308, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 189250, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431690, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
+      propertyPath: healthBarWrapper
+      value: 
+      objectReference: {fileID: 2097826686}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
   m_IsPrefabParent: 0
