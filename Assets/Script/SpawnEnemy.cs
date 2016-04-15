@@ -27,7 +27,7 @@ public class SpawnEnemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float timeInterval = Time.time - lastSpawnTime;
-		float spawnInterval = 2f;
+		float spawnInterval = 1.0f;
 		if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) ||
 		    timeInterval > spawnInterval) &&
 		    enemiesSpawned < maxEnemies) {

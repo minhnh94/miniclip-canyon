@@ -551,8 +551,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generateOnUpdate: 1
   navObstacles:
-  - {fileID: 387552816}
   - {fileID: 74274814}
+  - {fileID: 387552816}
   inflateRadius: 0.7
   regenerateFlag: 1
 --- !u!4 &187417144

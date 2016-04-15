@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BulletBehavior : MonoBehaviour {
-	public float speed = 5;
+	public float speed = 10;
 	public int damage;
 	public GameObject target;
 	public Vector3 startPosition;
@@ -32,12 +32,12 @@ public class BulletBehavior : MonoBehaviour {
 	void Update () {
 		float timeInterval = Time.time - startTime;
 
-		// The bullet will keep moving, staying below the enemy until the enemy is destroyed
-		// Dunno how to fix tbh
 		if (target != null && !enemyDestruction) {
 			gameObject.transform.position = Vector3.Lerp (startPosition, target.transform.position, timeInterval * speed / distance);
+			Vector3 direction = gameObject.transform.position - target.transform.position;
+			gameObject.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI + 90, new Vector3(0, 0, 1));
 		} else {
-			gameObject.transform.position = Vector3.MoveTowards (gameObject.transform.position, oldTargetPosition, - (timeInterval * speed / (distance * 25)) );
+			gameObject.transform.Translate (Vector3.up * speed * Time.deltaTime);
 		}
 	}
 
@@ -52,10 +52,11 @@ public class BulletBehavior : MonoBehaviour {
 			if (healthBar.currentHealth <= 0) {
 				oldTargetPosition = target.transform.position;
 				Destroy (target);
-				Destroy (gameObject);
 				enemyCollision = true;
 				gameManager.Gold += 20;
 			}
+
+			Destroy (gameObject);
 		}
 
 		if (other.tag == "World Boundary") {

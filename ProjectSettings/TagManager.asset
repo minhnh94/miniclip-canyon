@@ -49,6 +49,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Map
+    uniqueID: 536644019
+    locked: 0
   - name: TowerBase
     uniqueID: 3515755603
     locked: 0
