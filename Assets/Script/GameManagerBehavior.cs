@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class GameManagerBehavior : MonoBehaviour {
 
-	public static int whatTowerIsPressed = 1;
+	public static int whatTowerIsPressed = -1;
 	public Text goldLabel;
 
 	private int gold;
