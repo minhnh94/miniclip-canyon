@@ -84,6 +84,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 150
+  fireRate: 2
+  bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
 --- !u!212 &21214960
 SpriteRenderer:
   m_ObjectHideFlags: 1

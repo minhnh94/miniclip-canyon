@@ -85,7 +85,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesInRange: []
-  bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
   towerGun: {fileID: 195768}
 --- !u!114 &11454338
 MonoBehaviour:
@@ -99,6 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 200
+  fireRate: 1
+  bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
 --- !u!212 &21248472
 SpriteRenderer:
   m_ObjectHideFlags: 1
