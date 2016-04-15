@@ -51,7 +51,7 @@ public class BulletBehavior : MonoBehaviour {
 
 			if (healthBar.currentHealth <= 0) {
 				oldTargetPosition = target.transform.position;
-				Destroy (target);
+				del.PlayAnimation();
 				enemyCollision = true;
 				gameManager.Gold += 20;
 			}

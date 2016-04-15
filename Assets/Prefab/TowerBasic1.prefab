@@ -114,7 +114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesInRange: []
-  bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
   towerGun: {fileID: 166190}
 --- !u!114 &11488970
 MonoBehaviour:
@@ -128,6 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 100
+  fireRate: 1
+  bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
 --- !u!212 &21218436
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -194,7 +195,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
+    - target: {fileID: 0}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 197412}

@@ -30,6 +30,7 @@ GameObject:
   - 50: {fileID: 5074960}
   - 114: {fileID: 11451564}
   - 114: {fileID: 11431690}
+  - 95: {fileID: 9596936}
   m_Layer: 0
   m_Name: enemy land 4
   m_TagString: Enemy
@@ -157,6 +158,23 @@ PolygonCollider2D:
       - {x: 0.13499999, y: -0.155}
       - {x: 0.13499999, y: 0.145}
       - {x: 0.125, y: 0.155}
+--- !u!95 &9596936
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162806}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e2683b8f0971e4e13b357c7c88012da6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11420600
 MonoBehaviour:
   m_ObjectHideFlags: 1
