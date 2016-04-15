@@ -45,15 +45,18 @@ public class BulletBehavior : MonoBehaviour {
 		// If bullet hit the enemy
 		if ((target != null) && (other == target.transform.GetComponent<PolygonCollider2D> ())) {
 			Transform healthBarTransform = target.transform.Find ("HealthBarWrapper/HealthBar");
-			HealthBar healthBar = healthBarTransform.gameObject.GetComponent<HealthBar> ();
-			healthBar.currentHealth -= Mathf.Max (damage, 0);
-			Debug.Log (healthBar.currentHealth);
 
-			if (healthBar.currentHealth <= 0) {
-				oldTargetPosition = target.transform.position;
-				del.PlayAnimation();
-				enemyCollision = true;
-				gameManager.Gold += 20;
+			if (healthBarTransform != null) {
+				HealthBar healthBar = healthBarTransform.gameObject.GetComponent<HealthBar> ();
+				healthBar.currentHealth -= Mathf.Max (damage, 0);
+				Debug.Log (healthBar.currentHealth);
+
+				if (healthBar.currentHealth <= 0) {
+					oldTargetPosition = target.transform.position;
+					del.PlayAnimation ();
+					enemyCollision = true;
+					gameManager.Gold += 20;
+				}
 			}
 
 			Destroy (gameObject);
