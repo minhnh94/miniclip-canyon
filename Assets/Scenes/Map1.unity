@@ -1857,7 +1857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   mPivot: 4
   mDepth: 1
   mAtlas: {fileID: 11401026, guid: 10b67f9ac0a3544a8bd3559500a6a4b1, type: 2}
@@ -2144,8 +2144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 1940245558}
-  hover: {r: 0.7529412, g: 0.7647059, b: 0.06666667, a: 1}
-  pressed: {r: 0.7529412, g: 0.7647059, b: 0.06666667, a: 1}
+  hover: {r: 1, g: 1, b: 1, a: 1}
+  pressed: {r: 1, g: 1, b: 1, a: 1}
   duration: 0.2
   disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!65 &1230146317
@@ -2468,8 +2468,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 1553485471}
-  hover: {r: 0.7529412, g: 0.7647059, b: 0.06666667, a: 1}
-  pressed: {r: 0.7529412, g: 0.7647059, b: 0.06666667, a: 1}
+  hover: {r: 1, g: 1, b: 1, a: 1}
+  pressed: {r: 1, g: 1, b: 1, a: 1}
   duration: 0.2
   disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!65 &1354540886
@@ -2711,7 +2711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   mPivot: 4
   mDepth: 1
   mAtlas: {fileID: 11401026, guid: 10b67f9ac0a3544a8bd3559500a6a4b1, type: 2}
@@ -2893,7 +2893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   mPivot: 4
   mDepth: 1
   mAtlas: {fileID: 11401026, guid: 10b67f9ac0a3544a8bd3559500a6a4b1, type: 2}
@@ -3112,8 +3112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 1470158852}
-  hover: {r: 0.7529412, g: 0.7647059, b: 0.06666667, a: 1}
-  pressed: {r: 0.7529412, g: 0.7647059, b: 0.06666667, a: 1}
+  hover: {r: 1, g: 1, b: 1, a: 1}
+  pressed: {r: 1, g: 1, b: 1, a: 1}
   duration: 0.2
   disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!65 &1645441933
@@ -3234,8 +3234,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 1066059663}
-  hover: {r: 0.7529412, g: 0.7647059, b: 0.06666667, a: 1}
-  pressed: {r: 0.7529412, g: 0.7647059, b: 0.06666667, a: 1}
+  hover: {r: 1, g: 1, b: 1, a: 1}
+  pressed: {r: 1, g: 1, b: 1, a: 1}
   duration: 0.2
   disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!65 &1650293200
@@ -3593,8 +3593,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 2051622757}
-  hover: {r: 0.7529412, g: 0.7647059, b: 0.06666667, a: 1}
-  pressed: {r: 0.7529412, g: 0.7647059, b: 0.06666667, a: 1}
+  hover: {r: 1, g: 1, b: 1, a: 1}
+  pressed: {r: 1, g: 1, b: 1, a: 1}
   duration: 0.2
   disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!65 &1852046206
@@ -3697,7 +3697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   mPivot: 4
   mDepth: 1
   mAtlas: {fileID: 11401026, guid: 10b67f9ac0a3544a8bd3559500a6a4b1, type: 2}
@@ -3746,7 +3746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 0.59}
   mPivot: 4
   mDepth: 1
   mAtlas: {fileID: 11401026, guid: 10b67f9ac0a3544a8bd3559500a6a4b1, type: 2}
