@@ -13,6 +13,11 @@ TagManager:
   - Goal
   - World Boundary
   - Bullet
+  - Advance1
+  - Advance2
+  - Advance3
+  - Advance4
+  - Advance5
   layers:
   - Default
   - TransparentFX
