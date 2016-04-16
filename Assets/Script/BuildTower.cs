@@ -5,8 +5,8 @@ public class BuildTower : MonoBehaviour {
 	public GameManagerBehavior gameManager;
 	public MapManager mapManager;
 
-	public Color initialColor;
-	public UIButton refButton;
+	Color initialColor;
+	UIButton refButton;
 
 	void Start() {
 		refButton = gameObject.GetComponent<UIButton>();
@@ -15,7 +15,8 @@ public class BuildTower : MonoBehaviour {
 
 	void OnClick() {
 
-		refButton.defaultColor = refButton.hover;
+		SetToSelectedState();
+
 		int selection = -1;
 
 		if (gameObject.tag == Constant.TowerBasic1Tag)
@@ -41,10 +42,7 @@ public class BuildTower : MonoBehaviour {
 			
 		if (GameManagerBehavior.whatTowerIsPressed != -1)
 		{
-			print("reset");
-			var currentBtn = gameManager.towerButtons[GameManagerBehavior.whatTowerIsPressed];
-			currentBtn.GetComponent<BuildTower>().refButton.defaultColor = initialColor;
-			TweenColor.Begin(currentBtn.GetComponent<UIButton>().tweenTarget, 0, initialColor);
+			SetToNormalState();
 		}
 
 		GameManagerBehavior.whatTowerIsPressed = GameManagerBehavior.whatTowerIsPressed == selection ? -1 : selection;
@@ -52,6 +50,14 @@ public class BuildTower : MonoBehaviour {
 	}
 
 	public void SetToNormalState() {
-		refButton.defaultColor = initialColor;
+		var currentBtn = gameManager.towerButtons[GameManagerBehavior.whatTowerIsPressed];
+		currentBtn.GetComponent<BuildTower>().refButton.defaultColor = initialColor;
+		TweenColor.Begin(currentBtn.GetComponent<UIButton>().tweenTarget, 0, initialColor);
+		TweenScale.Begin(currentBtn, 0, new Vector3(1, 1, 1));
+	}
+
+	public void SetToSelectedState() {
+		refButton.defaultColor = refButton.hover;
+		TweenScale.Begin(gameObject, 0, new Vector3(1.2f, 1.2f, 1));
 	}
 }
