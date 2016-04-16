@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 150
   fireRate: 0.75
+  isSlowTower: 1
   bullet: {fileID: 157792, guid: 0144026b77daa89458e78c41da6c9ce9, type: 2}
 --- !u!212 &21214960
 SpriteRenderer:
