@@ -39,6 +39,26 @@ public class BuildTower : MonoBehaviour {
 		{
 			selection = 4;
 		}
+		else if (gameObject.tag == Constant.TowerAdvanced1Tag)
+		{
+			selection = 5;
+		}
+		else if (gameObject.tag == Constant.TowerAdvanced2Tag)
+		{
+			selection = 6;
+		}
+		else if (gameObject.tag == Constant.TowerAdvanced3Tag)
+		{
+			selection = 7;
+		}
+		else if (gameObject.tag == Constant.TowerAdvanced4Tag)
+		{
+			selection = 8;
+		}
+		else if (gameObject.tag == Constant.TowerAdvanced5Tag)
+		{
+			selection = 9;
+		}
 			
 		if (GameManagerBehavior.whatTowerIsPressed != -1)
 		{

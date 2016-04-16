@@ -533,8 +533,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generateOnUpdate: 1
   navObstacles:
-  - {fileID: 74274814}
   - {fileID: 387552816}
+  - {fileID: 74274814}
   inflateRadius: 0.7
   regenerateFlag: 1
 --- !u!4 &187417144
@@ -831,18 +831,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 199.55055
+    e00: 143.82022
     e01: 0
     e02: 0
-    e03: -988.03357
+    e03: -494.33093
     e10: 0
-    e11: 222
+    e11: 160
     e12: 0
-    e13: 328.6599
+    e13: 202.79999
     e20: 0
     e21: 0
-    e22: 222
-    e23: 222
+    e22: 160
+    e23: 160
     e30: 0
     e31: 0
     e32: 0
@@ -875,7 +875,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256182165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1763.056, y: 918.3301, z: 0}
+  m_LocalPosition: {x: 1272.1399, y: 661.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 709210627}
@@ -1500,18 +1500,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 199.55055
+    e00: 143.82022
     e01: 0
     e02: 0
-    e03: 501.03357
+    e03: 7.3310547
     e10: 0
-    e11: 222
+    e11: 160
     e12: 0
-    e13: -591.3401
+    e13: -717.2
     e20: 0
     e21: 0
-    e22: 222
-    e23: 222
+    e22: 160
+    e23: 160
     e30: 0
     e31: 0
     e32: 0
@@ -1575,7 +1575,7 @@ GameObject:
   - 114: {fileID: 627093489}
   m_Layer: 8
   m_Name: Advance2
-  m_TagString: Untagged
+  m_TagString: Advance2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1860,18 +1860,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 199.55055
+    e00: 143.82022
     e01: 0
     e02: 0
-    e03: -1773.0336
+    e03: -1279.3309
     e10: 0
-    e11: 222
+    e11: 160
     e12: 0
-    e13: -1769.3401
+    e13: -1275.2
     e20: 0
     e21: 0
-    e22: 222
-    e23: 222
+    e22: 160
+    e23: 160
     e30: 0
     e31: 0
     e32: 0
@@ -2402,18 +2402,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 199.55055
+    e00: 143.82022
     e01: 0
     e02: 0
-    e03: 1773.0336
+    e03: 1279.331
     e10: 0
-    e11: 222
+    e11: 160
     e12: 0
-    e13: -1769.3401
+    e13: -1275.2
     e20: 0
     e21: 0
-    e22: 222
-    e23: 222
+    e22: 160
+    e23: 160
     e30: 0
     e31: 0
     e32: 0
@@ -2446,7 +2446,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1120153013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1763.056, y: -1301.6699, z: 0}
+  m_LocalPosition: {x: 1272.1399, y: -938.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 214272552}
@@ -3155,6 +3155,12 @@ MonoBehaviour:
   - {fileID: 1645441927}
   - {fileID: 1230146311}
   - {fileID: 1354540880}
+  - {fileID: 1800876310}
+  - {fileID: 627093487}
+  - {fileID: 1542435007}
+  - {fileID: 1431840797}
+  - {fileID: 2103410202}
+  isShowingAdvanceButton: 0
   goldLabel: {fileID: 193514941}
 --- !u!4 &1367933377
 Transform:
@@ -3295,52 +3301,6 @@ Transform:
   - {fileID: 1498752981}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!1001 &1438571799
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 5.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 11481928, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
-      propertyPath: cost
-      value: 150
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1431840797
 GameObject:
   m_ObjectHideFlags: 0
@@ -3357,7 +3317,7 @@ GameObject:
   - 114: {fileID: 1431840799}
   m_Layer: 8
   m_Name: Advance4
-  m_TagString: Untagged
+  m_TagString: Advance4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3461,6 +3421,52 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 300, y: 300, z: 0}
   m_Center: {x: -0.0000076293945, y: -0.000059127808, z: -0.5}
+--- !u!1001 &1438571799
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 486252, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481928, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
+      propertyPath: cost
+      value: 150
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1470158852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,7 +3539,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1488177685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1783.0111, y: 918.3301, z: 0}
+  m_LocalPosition: {x: -1286.5221, y: 661.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1068093544}
@@ -3583,7 +3589,7 @@ Transform:
   m_GameObject: {fileID: 1498752980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0.8499999, z: 9}
-  m_LocalScale: {x: 0.0045045046, y: 0.0045045046, z: 0.0045045046}
+  m_LocalScale: {x: 0.00625, y: 0.00625, z: 0.00625}
   m_Children:
   - {fileID: 404530595}
   m_Father: {fileID: 1380088149}
@@ -3606,18 +3612,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 222
+    e00: 160
     e01: 0
     e02: 0
-    e03: -11.1
+    e03: -8
     e10: 0
-    e11: 222
+    e11: 160
     e12: 0
-    e13: -848.04004
+    e13: -611.2
     e20: 0
     e21: 0
-    e22: 222
-    e23: 222
+    e22: 160
+    e23: 160
     e30: 0
     e31: 0
     e32: 0
@@ -3659,7 +3665,7 @@ GameObject:
   - 114: {fileID: 1542435009}
   m_Layer: 8
   m_Name: Advance3
-  m_TagString: Untagged
+  m_TagString: Advance3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4400,7 +4406,7 @@ GameObject:
   - 114: {fileID: 1800876312}
   m_Layer: 8
   m_Name: Advance1
-  m_TagString: Untagged
+  m_TagString: Advance1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4527,7 +4533,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1803348614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1783.0111, y: -1301.6699, z: 0}
+  m_LocalPosition: {x: -1286.5221, y: -938.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 600125360}
@@ -4935,7 +4941,7 @@ GameObject:
   - 114: {fileID: 2103410204}
   m_Layer: 8
   m_Name: Advance5
-  m_TagString: Untagged
+  m_TagString: Advance5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

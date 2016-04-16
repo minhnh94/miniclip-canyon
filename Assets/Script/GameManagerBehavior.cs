@@ -5,6 +5,7 @@ public class GameManagerBehavior : MonoBehaviour {
 
 	public static int whatTowerIsPressed = -1;
 	public GameObject[] towerButtons;
+	public bool isShowingAdvanceButton;
 	public Text goldLabel;
 
 	private int gold;
