@@ -27,4 +27,31 @@ public class GameManagerBehavior : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	public void ToggleTowerButton() {
+		if (isShowingAdvanceButton)
+		{
+			for (int i = 0; i < 5; i++)
+			{
+				var btn = towerButtons[i];
+				btn.SetActive(false);
+			}
+			for (int i = 5; i < 10; i++)
+			{
+				var btn = towerButtons[i];
+				btn.SetActive(true);
+			}
+		} else {
+			for (int i = 0; i < 5; i++)
+			{
+				var btn = towerButtons[i];
+				btn.SetActive(true);
+			}
+			for (int i = 5; i < 10; i++)
+			{
+				var btn = towerButtons[i];
+				btn.SetActive(false);
+			}
+		}
+	}
 }
