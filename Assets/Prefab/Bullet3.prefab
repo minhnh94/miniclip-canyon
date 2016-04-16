@@ -77,6 +77,8 @@ MonoBehaviour:
   damage: 0
   isSlowBullet: 0
   bulletSlowDuration: 0
+  isAoeBullet: 0
+  radius: 0
   target: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &21214994

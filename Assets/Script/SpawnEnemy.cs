@@ -17,8 +17,8 @@ public class SpawnEnemy : MonoBehaviour {
 
 	private float lastSpawnTime;
 	private int enemiesSpawned = 0;
-	private int maxEnemies = 200;
-	private float spawnInterval = 1f;
+	public int maxEnemies = 200;
+	public float spawnInterval = 1f;
 
 	// Use this for initialization
 	void Start () {

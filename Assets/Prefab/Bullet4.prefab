@@ -77,6 +77,8 @@ MonoBehaviour:
   damage: 0
   isSlowBullet: 1
   bulletSlowDuration: 3
+  isAoeBullet: 0
+  radius: 0
   target: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &21251900
@@ -105,7 +107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1507993691
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 75a8819671d4f744eb5ec767ccf62349, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62d7120283220b14ea369efed458de92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

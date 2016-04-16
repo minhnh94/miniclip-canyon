@@ -11,6 +11,7 @@ GameObject:
   - 58: {fileID: 5801428}
   - 114: {fileID: 11462886}
   - 114: {fileID: 11459932}
+  - 114: {fileID: 11404226}
   m_Layer: 2
   m_Name: TowerBasic2
   m_TagString: Untagged
@@ -73,6 +74,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 9
+--- !u!114 &11404226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4c59c4e3048984ab1f66fd47d9335e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaImage: {fileID: 144370, guid: 06b3fee76514c1b49bcd78882cced656, type: 2}
 --- !u!114 &11459932
 MonoBehaviour:
   m_ObjectHideFlags: 1

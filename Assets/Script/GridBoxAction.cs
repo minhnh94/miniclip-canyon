@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class GridBoxAction : MonoBehaviour {
 
+	public bool isSelected = false;
 	public bool isPressable;
 	public GameObject normalRender;
 	public GameObject towerPreviewRender;
@@ -26,11 +27,13 @@ public class GridBoxAction : MonoBehaviour {
 				if (CanBuildTower())
 				{
 					GameObject tower = (GameObject)Instantiate(towerPrefabs[GameManagerBehavior.whatTowerIsPressed], transform.position, Quaternion.identity);
+					tower.transform.SetParent(gameObject.transform);
 					gameManager.Gold -= tower.GetComponent<TowerData>().cost;
 					isPressable = false;
 				}
 			}
 		}
+		isSelected = !isSelected;
 	}
 
 	bool CanBuildTower() {

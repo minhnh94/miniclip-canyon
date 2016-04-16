@@ -11,6 +11,7 @@ GameObject:
   - 58: {fileID: 5801318}
   - 114: {fileID: 11416668}
   - 114: {fileID: 11445710}
+  - 114: {fileID: 11494888}
   m_Layer: 2
   m_Name: TowerBasic4
   m_TagString: Untagged
@@ -99,7 +100,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 150
   fireRate: 1.5
+  isSlowTower: 0
   bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
+--- !u!114 &11494888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4c59c4e3048984ab1f66fd47d9335e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaImage: {fileID: 144370, guid: 06b3fee76514c1b49bcd78882cced656, type: 2}
 --- !u!212 &21203854
 SpriteRenderer:
   m_ObjectHideFlags: 1

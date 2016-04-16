@@ -7,6 +7,7 @@ public class TowerData : MonoBehaviour {
 	public float fireRate;
 	public bool isSlowTower;
 	public GameObject bullet;
+	public float aoeImageScale;
 
 	// Use this for initialization
 	void Start () {

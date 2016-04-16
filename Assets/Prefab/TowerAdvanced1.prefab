@@ -11,6 +11,7 @@ GameObject:
   - 58: {fileID: 5834746}
   - 114: {fileID: 11487430}
   - 114: {fileID: 11466640}
+  - 114: {fileID: 11421296}
   m_Layer: 2
   m_Name: TowerAdvanced1
   m_TagString: Untagged
@@ -102,6 +103,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4
+--- !u!114 &11421296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4c59c4e3048984ab1f66fd47d9335e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaImage: {fileID: 144370, guid: 06b3fee76514c1b49bcd78882cced656, type: 2}
 --- !u!114 &11466640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 100
   fireRate: 1
+  isSlowTower: 0
   bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
 --- !u!114 &11487430
 MonoBehaviour:
@@ -128,7 +142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesInRange: []
-  bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
   towerGun: {fileID: 125034}
 --- !u!212 &21230114
 SpriteRenderer:
@@ -185,7 +198,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1034258453
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 72a6f6949fc114d0e9dc2f9bd62e5028, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
