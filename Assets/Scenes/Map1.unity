@@ -758,18 +758,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 143.82022
+    e00: 164.04494
     e01: 0
     e02: 0
-    e03: -494.33093
+    e03: -671.1797
     e10: 0
-    e11: 160
+    e11: 182.5
     e12: 0
-    e13: 202.79999
+    e13: 248.47498
     e20: 0
     e21: 0
-    e22: 160
-    e23: 160
+    e22: 182.5
+    e23: 182.5
     e30: 0
     e31: 0
     e32: 0
@@ -802,7 +802,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256182165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1272.1399, y: 661.03, z: 0}
+  m_LocalPosition: {x: 1447.9774, y: 754.405, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 709210627}
@@ -1335,18 +1335,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 143.82022
+    e00: 164.04494
     e01: 0
     e02: 0
-    e03: 7.3310547
+    e03: 184.17981
     e10: 0
-    e11: 160
+    e11: 182.5
     e12: 0
-    e13: -717.2
+    e13: -671.525
     e20: 0
     e21: 0
-    e22: 160
-    e23: 160
+    e22: 182.5
+    e23: 182.5
     e30: 0
     e31: 0
     e32: 0
@@ -1458,13 +1458,13 @@ RectTransform:
   m_GameObject: {fileID: 606683524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.030165747, y: 0.030165762, z: 0.030165762}
   m_Children: []
   m_Father: {fileID: 1194734140}
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 238, y: 128.7}
+  m_AnchoredPosition: {x: -297.45, y: -169}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &627093487
@@ -1768,18 +1768,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 143.82022
+    e00: 164.04494
     e01: 0
     e02: 0
-    e03: -1279.3309
+    e03: -1456.1797
     e10: 0
-    e11: 160
+    e11: 182.5
     e12: 0
-    e13: -1275.2
+    e13: -1454.525
     e20: 0
     e21: 0
-    e22: 160
-    e23: 160
+    e22: 182.5
+    e23: 182.5
     e30: 0
     e31: 0
     e32: 0
@@ -2181,7 +2181,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2323,18 +2322,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 143.82022
+    e00: 164.04494
     e01: 0
     e02: 0
-    e03: 1279.331
+    e03: 1456.1798
     e10: 0
-    e11: 160
+    e11: 182.5
     e12: 0
-    e13: -1275.2
+    e13: -1454.525
     e20: 0
     e21: 0
-    e22: 160
-    e23: 160
+    e22: 182.5
+    e23: 182.5
     e30: 0
     e31: 0
     e32: 0
@@ -2367,7 +2366,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1120153013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1272.1399, y: -938.97, z: 0}
+  m_LocalPosition: {x: 1447.9774, y: -1070.595, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 214272552}
@@ -2578,16 +2577,16 @@ RectTransform:
   m_GameObject: {fileID: 1194734139}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 606683527}
   m_Father: {fileID: 1853539641}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 300.5, y: 169}
+  m_SizeDelta: {x: 601, y: 338}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194734141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2633,16 +2632,15 @@ Canvas:
   m_GameObject: {fileID: 1194734139}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 2
+  m_Camera: {fileID: 404530598}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1 &1230146311
 GameObject:
@@ -3552,7 +3550,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1488177685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1286.5221, y: 661.03, z: 0}
+  m_LocalPosition: {x: -1464.3821, y: 754.405, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1068093544}
@@ -3602,7 +3600,7 @@ Transform:
   m_GameObject: {fileID: 1498752980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0.8499999, z: 9}
-  m_LocalScale: {x: 0.00625, y: 0.00625, z: 0.00625}
+  m_LocalScale: {x: 0.005479452, y: 0.005479452, z: 0.005479452}
   m_Children:
   - {fileID: 404530595}
   m_Father: {fileID: 1380088149}
@@ -3625,18 +3623,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 160
+    e00: 182.5
     e01: 0
     e02: 0
-    e03: -8
+    e03: -9.125
     e10: 0
-    e11: 160
+    e11: 182.5
     e12: 0
-    e13: -611.2
+    e13: -697.15
     e20: 0
     e21: 0
-    e22: 160
-    e23: 160
+    e22: 182.5
+    e23: 182.5
     e30: 0
     e31: 0
     e32: 0
@@ -4588,7 +4586,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1803348614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1286.5221, y: -938.97, z: 0}
+  m_LocalPosition: {x: -1464.3821, y: -1070.595, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 600125360}
