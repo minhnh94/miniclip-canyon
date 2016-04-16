@@ -26,17 +26,22 @@ public class GridBoxAction : MonoBehaviour {
 			{
 				if (CanBuildTower())
 				{
+					Debug.Log ("Before build");
 					GameObject tower = (GameObject)Instantiate(towerPrefabs[GameManagerBehavior.whatTowerIsPressed], transform.position, Quaternion.identity);
+					Debug.Log ("After build");
+					Debug.Log (isPressable);
 					tower.transform.SetParent(gameObject.transform);
+					Debug.Log (gameManager.Gold);
 					gameManager.Gold -= tower.GetComponent<TowerData>().cost;
+					Debug.Log (gameManager.Gold);
 					isPressable = false;
 				}
 			}
+			isSelected = !isSelected;
 		}
-		isSelected = !isSelected;
 	}
 
-	bool CanBuildTower() {
+	public bool CanBuildTower() {
 		GameObject towerPrefab = towerPrefabs[GameManagerBehavior.whatTowerIsPressed];
 		int cost = towerPrefab.GetComponent<TowerData>().cost;
 		return isPressable && (gameManager.Gold >= cost);

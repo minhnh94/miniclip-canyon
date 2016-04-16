@@ -131,6 +131,7 @@ MonoBehaviour:
   fireRate: 1
   isSlowTower: 0
   bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
+  aoeImageScale: 1
 --- !u!114 &11498570
 MonoBehaviour:
   m_ObjectHideFlags: 1

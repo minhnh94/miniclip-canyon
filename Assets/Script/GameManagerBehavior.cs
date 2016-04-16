@@ -13,7 +13,7 @@ public class GameManagerBehavior : MonoBehaviour {
 		get { return gold; }
 		set {
 			gold = value;
-			goldLabel.GetComponent<Text> ().text = "Gold: " + gold;
+			goldLabel.GetComponent<Text> ().text = ""+gold;
 		}
 	}
 
@@ -26,5 +26,32 @@ public class GameManagerBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	public void ToggleTowerButton() {
+		if (isShowingAdvanceButton)
+		{
+			for (int i = 0; i < 5; i++)
+			{
+				var btn = towerButtons[i];
+				btn.SetActive(false);
+			}
+			for (int i = 5; i < 10; i++)
+			{
+				var btn = towerButtons[i];
+				btn.SetActive(true);
+			}
+		} else {
+			for (int i = 0; i < 5; i++)
+			{
+				var btn = towerButtons[i];
+				btn.SetActive(true);
+			}
+			for (int i = 5; i < 10; i++)
+			{
+				var btn = towerButtons[i];
+				btn.SetActive(false);
+			}
+		}
 	}
 }

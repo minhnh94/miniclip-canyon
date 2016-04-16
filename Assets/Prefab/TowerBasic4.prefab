@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesInRange: []
-  towerGun: {fileID: 197268}
+  towerGun: {fileID: 185870}
 --- !u!114 &11445710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,6 +102,7 @@ MonoBehaviour:
   fireRate: 1.5
   isSlowTower: 0
   bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
+  aoeImageScale: 4
 --- !u!114 &11494888
 MonoBehaviour:
   m_ObjectHideFlags: 1
