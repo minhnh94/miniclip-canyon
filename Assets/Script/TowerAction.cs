@@ -30,8 +30,14 @@ public class TowerAction : MonoBehaviour {
 		}
 
 		if (target != null) {
-			if (Time.time - lastShotTime > towerData.fireRate)	{
-				Shoot(target.GetComponent<Collider2D>());
+			if (Time.time - lastShotTime > towerData.fireRate) {
+				if (gameObject.GetComponent<TowerData> ().isSlowTower) {
+					foreach (GameObject enemy in enemiesInRange) {
+						Shoot (enemy.GetComponent<Collider2D> ());
+					}
+				} else {
+					Shoot (target.GetComponent<Collider2D> ());
+				}
 				lastShotTime = Time.time;
 			}
 

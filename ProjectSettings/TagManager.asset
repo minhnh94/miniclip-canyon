@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Goal
   - World Boundary
+  - Bullet
   layers:
   - Default
   - TransparentFX

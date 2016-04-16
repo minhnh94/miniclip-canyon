@@ -4,6 +4,9 @@ using System.Collections;
 public class BulletBehavior : MonoBehaviour {
 	public float speed = 10;
 	public int damage;
+	public bool isSlowBullet;
+	public float bulletSlowDuration;
+
 	public GameObject target;
 	public Vector3 startPosition;
 	private Vector3 oldTargetPosition;

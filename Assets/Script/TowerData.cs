@@ -5,6 +5,7 @@ public class TowerData : MonoBehaviour {
 
 	public int cost;
 	public float fireRate;
+	public bool isSlowTower;
 	public GameObject bullet;
 
 	// Use this for initialization
