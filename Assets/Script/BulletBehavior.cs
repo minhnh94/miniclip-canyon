@@ -58,6 +58,7 @@ public class BulletBehavior : MonoBehaviour {
 				if (healthBarTransform != null) {
 					HealthBar healthBar = healthBarTransform.gameObject.GetComponent<HealthBar> ();
 					healthBar.currentHealth -= Mathf.Max (damage, 0);
+					Destroy (gameObject);
 
 					if (healthBar.currentHealth <= 0) {
 						del.PlayAnimation ();
@@ -66,8 +67,6 @@ public class BulletBehavior : MonoBehaviour {
 					}
 				}
 			}
-
-			Destroy (gameObject);
 		}
 
 		if (other.tag == "World Boundary") {
@@ -86,6 +85,7 @@ public class BulletBehavior : MonoBehaviour {
 				if (healthBarTransform != null) {
 					HealthBar healthBar = healthBarTransform.gameObject.GetComponent<HealthBar> ();
 					healthBar.currentHealth -= Mathf.Max (damage, 0);
+					Destroy (gameObject);
 
 					if (healthBar.currentHealth <= 0) {
 						subDel.PlayAnimation ();

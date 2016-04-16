@@ -11,6 +11,7 @@ public class GridBoxAction : MonoBehaviour {
 	public GameObject currentMap;
 	public GameManagerBehavior gameManager;
 	public GameObject[] towerPrefabs;
+	private GameObject tower;
 
 	Vector3 mouseDownMapTransform;
 
@@ -22,22 +23,18 @@ public class GridBoxAction : MonoBehaviour {
 		// Action goes here
 		if (mouseDownMapTransform == Camera.main.transform.position)
 		{
+			isSelected = !isSelected;
 			if (GameManagerBehavior.whatTowerIsPressed != -1)
 			{
 				if (CanBuildTower())
 				{
-					Debug.Log ("Before build");
-					GameObject tower = (GameObject)Instantiate(towerPrefabs[GameManagerBehavior.whatTowerIsPressed], transform.position, Quaternion.identity);
-					Debug.Log ("After build");
-					Debug.Log (isPressable);
+					tower = (GameObject)Instantiate(towerPrefabs[GameManagerBehavior.whatTowerIsPressed], transform.position, Quaternion.identity);
 					tower.transform.SetParent(gameObject.transform);
-					Debug.Log (gameManager.Gold);
 					gameManager.Gold -= tower.GetComponent<TowerData>().cost;
-					Debug.Log (gameManager.Gold);
 					isPressable = false;
+					isSelected = false;
 				}
 			}
-			isSelected = !isSelected;
 		}
 	}
 

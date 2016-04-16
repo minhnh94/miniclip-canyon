@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036a7f51f7ff9414f9d7ba88239e4d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSelected: 0
   isPressable: 0
   normalRender: {fileID: 129536}
   towerPreviewRender: {fileID: 196162}
@@ -120,7 +121,7 @@ MonoBehaviour:
   towerPrefabs:
   - {fileID: 197412, guid: 7f34b4e236c6c4bb4913396520a39530, type: 2}
   - {fileID: 134602, guid: d2be8bce625484237addd336760f9b28, type: 2}
-  - {fileID: 159824, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
+  - {fileID: 153006, guid: d48610cf01a8a4cc194b2c58124dea75, type: 2}
   - {fileID: 185870, guid: 90776373fa674483a8cd3e3854bc5e0e, type: 2}
   - {fileID: 167460, guid: a9913ddc93c7f4143a21a9742ef25372, type: 2}
   - {fileID: 167460, guid: a9913ddc93c7f4143a21a9742ef25372, type: 2}
