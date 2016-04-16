@@ -5,8 +5,8 @@ public class BuildTower : MonoBehaviour {
 	public GameManagerBehavior gameManager;
 	public MapManager mapManager;
 
-	Color initialColor;
-	UIButton refButton;
+	public Color initialColor;
+	public UIButton refButton;
 
 	void Start() {
 		refButton = gameObject.GetComponent<UIButton>();
