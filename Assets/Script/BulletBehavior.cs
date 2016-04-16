@@ -6,11 +6,14 @@ public class BulletBehavior : MonoBehaviour {
 	public int damage;
 	public bool isSlowBullet;
 	public float bulletSlowDuration;
+	public bool isAoeBullet;
+	public float radius;
 
 	public GameObject target;
 	public Vector3 startPosition;
 	private Vector3 oldTargetPosition;
 	private EnemyDestructionDelegate del;
+	private EnemyDestructionDelegate subDel;
 	private bool enemyDestruction;
 	private bool enemyCollision;
 
@@ -47,17 +50,20 @@ public class BulletBehavior : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other) {
 		// If bullet hit the enemy
 		if ((target != null) && (other == target.transform.GetComponent<PolygonCollider2D> ())) {
-			Transform healthBarTransform = target.transform.Find ("HealthBarWrapper/HealthBar");
+			if (isAoeBullet) {
+				areaOfEffect (other, radius);
+			} else {
+				Transform healthBarTransform = target.transform.Find ("HealthBarWrapper/HealthBar");
 
-			if (healthBarTransform != null) {
-				HealthBar healthBar = healthBarTransform.gameObject.GetComponent<HealthBar> ();
-				healthBar.currentHealth -= Mathf.Max (damage, 0);
+				if (healthBarTransform != null) {
+					HealthBar healthBar = healthBarTransform.gameObject.GetComponent<HealthBar> ();
+					healthBar.currentHealth -= Mathf.Max (damage, 0);
 
-				if (healthBar.currentHealth <= 0) {
-					oldTargetPosition = target.transform.position;
-					del.PlayAnimation ();
-					enemyCollision = true;
-					gameManager.Gold += 20;
+					if (healthBar.currentHealth <= 0) {
+						del.PlayAnimation ();
+						enemyCollision = true;
+						gameManager.Gold += 20;
+					}
 				}
 			}
 
@@ -66,6 +72,28 @@ public class BulletBehavior : MonoBehaviour {
 
 		if (other.tag == "World Boundary") {
 			Destroy (gameObject);
+		}
+	}
+
+	void areaOfEffect (Collider2D mainTarget, float radius) {
+		Collider2D[] subTargets = Physics2D.OverlapCircleAll(mainTarget.gameObject.transform.position, radius);
+		foreach (Collider2D subTarget in subTargets) {
+			if (subTarget.transform.Find ("HealthBarWrapper/HealthBar") != null) {
+				subDel = subTarget.gameObject.GetComponent<EnemyDestructionDelegate> ();
+
+				Transform healthBarTransform = subTarget.transform.Find ("HealthBarWrapper/HealthBar");
+
+				if (healthBarTransform != null) {
+					HealthBar healthBar = healthBarTransform.gameObject.GetComponent<HealthBar> ();
+					healthBar.currentHealth -= Mathf.Max (damage, 0);
+
+					if (healthBar.currentHealth <= 0) {
+						subDel.PlayAnimation ();
+						enemyCollision = true;
+						gameManager.Gold += 20;
+					}
+				}
+			}
 		}
 	}
 

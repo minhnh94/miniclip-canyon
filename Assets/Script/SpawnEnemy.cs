@@ -17,7 +17,8 @@ public class SpawnEnemy : MonoBehaviour {
 
 	private float lastSpawnTime;
 	private int enemiesSpawned = 0;
-	private int maxEnemies = 20;
+	private int maxEnemies = 200;
+	private float spawnInterval = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -27,7 +28,6 @@ public class SpawnEnemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float timeInterval = Time.time - lastSpawnTime;
-		float spawnInterval = 1.0f;
 		if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) ||
 		    timeInterval > spawnInterval) &&
 		    enemiesSpawned < maxEnemies) {
