@@ -44,14 +44,14 @@ MonoBehaviour:
   - name: btn_Arrow
     outer:
       serializedVersion: 2
-      x: 467
-      y: 341
+      x: 459
+      y: 437
       width: 25
       height: 75
     inner:
       serializedVersion: 2
-      x: 467
-      y: 341
+      x: 459
+      y: 437
       width: 25
       height: 5
     rotated: 0
@@ -63,13 +63,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 413
-      y: 432
+      y: 330
       width: 80
       height: 80
     inner:
       serializedVersion: 2
       x: 443
-      y: 462
+      y: 360
       width: 20
       height: 20
     rotated: 0
@@ -81,13 +81,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 393
-      y: 341
+      y: 239
       width: 66
       height: 75
     inner:
       serializedVersion: 2
       x: 393
-      y: 341
+      y: 239
       width: 66
       height: 75
     rotated: 0
@@ -98,14 +98,14 @@ MonoBehaviour:
   - name: advance3
     outer:
       serializedVersion: 2
-      x: 308
-      y: 256
+      x: 0
+      y: 129
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 308
-      y: 256
+      x: 0
+      y: 129
       width: 66
       height: 75
     rotated: 0
@@ -116,14 +116,14 @@ MonoBehaviour:
   - name: basic5
     outer:
       serializedVersion: 2
-      x: 382
-      y: 256
+      x: 0
+      y: 46
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 382
-      y: 256
+      x: 0
+      y: 46
       width: 66
       height: 75
     rotated: 0
@@ -134,13 +134,13 @@ MonoBehaviour:
   - name: basic3
     outer:
       serializedVersion: 2
-      x: 0
+      x: 74
       y: 129
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 0
+      x: 74
       y: 129
       width: 66
       height: 75
@@ -152,13 +152,13 @@ MonoBehaviour:
   - name: basic1
     outer:
       serializedVersion: 2
-      x: 0
+      x: 74
       y: 46
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 0
+      x: 74
       y: 46
       width: 66
       height: 75
@@ -170,13 +170,13 @@ MonoBehaviour:
   - name: basic4
     outer:
       serializedVersion: 2
-      x: 74
+      x: 148
       y: 129
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 74
+      x: 148
       y: 129
       width: 66
       height: 75
@@ -188,13 +188,13 @@ MonoBehaviour:
   - name: advance5
     outer:
       serializedVersion: 2
-      x: 74
+      x: 148
       y: 46
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 74
+      x: 148
       y: 46
       width: 66
       height: 75
@@ -206,13 +206,13 @@ MonoBehaviour:
   - name: advance4
     outer:
       serializedVersion: 2
-      x: 148
+      x: 222
       y: 129
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 148
+      x: 222
       y: 129
       width: 66
       height: 75
@@ -224,13 +224,13 @@ MonoBehaviour:
   - name: advance1
     outer:
       serializedVersion: 2
-      x: 148
+      x: 222
       y: 46
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 148
+      x: 222
       y: 46
       width: 66
       height: 75
@@ -242,13 +242,13 @@ MonoBehaviour:
   - name: advance2
     outer:
       serializedVersion: 2
-      x: 222
+      x: 296
       y: 129
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 222
+      x: 296
       y: 129
       width: 66
       height: 75
@@ -261,13 +261,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 308
-      y: 424
+      y: 322
       width: 97
       height: 88
     inner:
       serializedVersion: 2
       x: 308
-      y: 424
+      y: 322
       width: 97
       height: 88
     rotated: 0
@@ -279,13 +279,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 308
-      y: 339
+      y: 237
       width: 77
       height: 77
     inner:
       serializedVersion: 2
       x: 308
-      y: 339
+      y: 237
       width: 77
       height: 77
     rotated: 0
@@ -306,6 +306,24 @@ MonoBehaviour:
       y: 212
       width: 300
       height: 300
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: menu_button
+    outer:
+      serializedVersion: 2
+      x: 308
+      y: 418
+      width: 143
+      height: 94
+    inner:
+      serializedVersion: 2
+      x: 308
+      y: 418
+      width: 143
+      height: 94
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
