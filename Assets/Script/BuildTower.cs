@@ -78,6 +78,7 @@ public class BuildTower : MonoBehaviour {
 
 	public void SetToSelectedState() {
 		refButton.defaultColor = refButton.hover;
+		TweenColor.Begin(gameObject.GetComponent<UIButton>().tweenTarget, 0, refButton.hover);
 		TweenScale.Begin(gameObject, 0, new Vector3(1.2f, 1.2f, 1));
 	}
 }
