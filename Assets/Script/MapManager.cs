@@ -50,6 +50,7 @@ public class MapManager : MonoBehaviour
 			var gridAction = grid.GetComponent<GridBoxAction> ();
 			gridAction.isSelected = false;
 		}
+	}
 		
 	public void ToggleSpecificGrid(int index, bool isTurnedOff) {
 		var btn = gridPrefabs[index];
