@@ -6,20 +6,37 @@ public class GameManagerBehavior : MonoBehaviour {
 	public static int whatTowerIsPressed = -1;
 	public GameObject[] towerButtons;
 	public bool isShowingAdvanceButton;
-	public Text goldLabel;
 
+	public Text goldLabel;
 	private int gold;
 	public int Gold {
 		get { return gold; }
 		set {
 			gold = value;
-			goldLabel.GetComponent<Text> ().text = ""+gold;
+			goldLabel.GetComponent<Text> ().text = "" + gold;
+		}
+	}
+
+	public Text healthLabel;
+	private int health;
+	public int Health {
+		get {
+			return health;
+		}
+		set {
+			if (value < health) {
+				Camera.main.GetComponent<CameraShake> ().Shake ();
+			}
+			health = value;
+			healthLabel.GetComponent<Text> ().text = "" + health;
+			Debug.Log (healthLabel.GetComponent<Text> ().text);
 		}
 	}
 
 	// Use this for initialization
 	void Start () {
 		Gold = 500;
+		Health = 5;
 		Debug.Log (Gold);
 	}
 	
