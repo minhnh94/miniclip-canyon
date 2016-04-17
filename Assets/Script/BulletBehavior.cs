@@ -100,8 +100,5 @@ public class BulletBehavior : MonoBehaviour {
 	void OnEnemyDestroy(GameObject enemy) {
 		del.enemyDelegate -= OnEnemyDestroy;
 		enemyDestruction = true;
-		if (enemyCollision) {
-			Destroy (gameObject);
-		}
 	}
 }
