@@ -2,21 +2,24 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class RetryButtonAction : MonoBehaviour, IPointerClickHandler {
-	#region IPointerClickHandler implementation
-
-	public void OnPointerClick(PointerEventData eventData)
+public class RetryButtonAction : MonoBehaviour
+{
+	void Start()
 	{
-		if (gameObject.tag == "RetryBtn")
-		{
-			SceneManager.LoadScene("Map1");
-		}
-		else if (gameObject.tag == "QuitBtn")
-		{
-			SceneManager.LoadScene("Menu");
-		}
+		GetComponent<Button>().onClick.AddListener(
+			() =>
+			{
+				if (gameObject.tag == "RetryBtn")
+				{
+					SceneManager.LoadScene("Map1");
+				}
+				else if (gameObject.tag == "QuitBtn")
+				{
+					SceneManager.LoadScene("Menu");
+				}
+			}
+		);
 	}
-
-	#endregion
 }
