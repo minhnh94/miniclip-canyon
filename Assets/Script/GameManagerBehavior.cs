@@ -33,6 +33,14 @@ public class GameManagerBehavior : MonoBehaviour {
 		}
 	}
 
+	private int wave;
+	public int Wave {
+		get { return wave; }
+		set {
+			wave = value;
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		Gold = 500;
