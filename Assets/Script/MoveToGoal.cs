@@ -36,6 +36,9 @@ public class MoveToGoal : MonoBehaviour{
 		// If the enemy hits the goal
 		if (other.tag == "Goal") {
 			Destroy (gameObject);
+
+			GameManagerBehavior gameManager = GameObject.Find ("GameManager").GetComponent<GameManagerBehavior> ();
+			gameManager.Health -= 1;
 		}
 
 		if (other.tag == "Bullet") {
