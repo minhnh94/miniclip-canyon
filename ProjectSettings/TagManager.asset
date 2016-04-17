@@ -70,3 +70,6 @@ TagManager:
   - name: TowerGun
     uniqueID: 1034258453
     locked: 0
+  - name: UI
+    uniqueID: 401042345
+    locked: 0
