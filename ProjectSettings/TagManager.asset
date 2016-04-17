@@ -18,6 +18,8 @@ TagManager:
   - Advance3
   - Advance4
   - Advance5
+  - QuitBtn
+  - RetryBtn
   layers:
   - Default
   - TransparentFX

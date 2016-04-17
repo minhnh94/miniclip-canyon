@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManagerBehavior : MonoBehaviour {
 
@@ -29,7 +30,10 @@ public class GameManagerBehavior : MonoBehaviour {
 			}
 			health = value;
 			healthLabel.GetComponent<Text> ().text = "" + health;
-			Debug.Log (healthLabel.GetComponent<Text> ().text);
+			if (health == 0)
+			{
+				SceneManager.LoadScene("GameOverScene");
+			}
 		}
 	}
 
