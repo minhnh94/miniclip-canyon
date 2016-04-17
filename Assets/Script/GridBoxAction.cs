@@ -10,10 +10,15 @@ public class GridBoxAction : MonoBehaviour {
 	public GameObject towerPreviewRender;
 	public GameObject currentMap;
 	public GameManagerBehavior gameManager;
+	public MapManager mapManager;
 	public GameObject[] towerPrefabs;
 	private GameObject tower;
 
 	Vector3 mouseDownMapTransform;
+
+	void Start() {
+		mapManager = GameObject.Find ("MapManager").GetComponent<MapManager> ();
+	}
 
 	void OnMouseDown() {
 		mouseDownMapTransform = Camera.main.transform.position;
@@ -24,6 +29,7 @@ public class GridBoxAction : MonoBehaviour {
 		if (mouseDownMapTransform == Camera.main.transform.position)
 		{
 			isSelected = !isSelected;
+
 			if (GameManagerBehavior.whatTowerIsPressed != -1)
 			{
 				if (CanBuildTower())
@@ -34,6 +40,11 @@ public class GridBoxAction : MonoBehaviour {
 					isPressable = false;
 					isSelected = false;
 				}
+			}
+
+			if (isSelected) {
+				mapManager.deactivateOtherGridBox ();
+				isSelected = true;
 			}
 		}
 	}
