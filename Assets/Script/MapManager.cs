@@ -45,6 +45,13 @@ public class MapManager : MonoBehaviour
 		}
 	}
 
+	public void deactivateOtherGridBox() {
+		foreach (var grid in gridPrefabs) {
+			var gridAction = grid.GetComponent<GridBoxAction> ();
+			gridAction.isSelected = false;
+		}
+	}
+		
 	public void ToggleSpecificGrid(int index, bool isTurnedOff) {
 		var btn = gridPrefabs[index];
 		btn.GetComponent<GridBoxAction>().towerPreviewRender.SetActive(!isTurnedOff);

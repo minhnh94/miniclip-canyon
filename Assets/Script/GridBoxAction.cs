@@ -18,6 +18,10 @@ public class GridBoxAction : MonoBehaviour {
 
 	Vector3 mouseDownMapTransform;
 
+	void Start() {
+		mapManager = GameObject.Find ("MapManager").GetComponent<MapManager> ();
+	}
+
 	void OnMouseDown() {
 		mouseDownMapTransform = Camera.main.transform.position;
 	}
@@ -27,6 +31,7 @@ public class GridBoxAction : MonoBehaviour {
 		if (mouseDownMapTransform == Camera.main.transform.position)
 		{
 			isSelected = !isSelected;
+
 			if (GameManagerBehavior.whatTowerIsPressed != -1)
 			{
 				if (CanBuildTower())
@@ -40,6 +45,11 @@ public class GridBoxAction : MonoBehaviour {
 					// Delete the preview grid
 					mapManager.ToggleSpecificGrid(indexInMapManagerArray, true);
 				}
+			}
+
+			if (isSelected) {
+				mapManager.deactivateOtherGridBox ();
+				isSelected = true;
 			}
 		}
 	}
