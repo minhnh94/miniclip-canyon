@@ -9,3 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
   - enabled: 1
     path: Assets/Scenes/Map1.unity
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
+  - enabled: 1
+    path: Assets/Scenes/SelectMap.unity

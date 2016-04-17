@@ -5,6 +5,6 @@ public class StartGame : MonoBehaviour {
 
 	void OnMouseDown() {
 		print ("clicked");
-		Application.LoadLevel("Map1");
+		Application.LoadLevel("SelectMap");
 	}
 }
