@@ -6,10 +6,13 @@ public class GridBoxAction : MonoBehaviour {
 
 	public bool isSelected = false;
 	public bool isPressable;
+	public int indexInMapManagerArray;
+
 	public GameObject normalRender;
 	public GameObject towerPreviewRender;
 	public GameObject currentMap;
 	public GameManagerBehavior gameManager;
+	public MapManager mapManager;
 	public GameObject[] towerPrefabs;
 	private GameObject tower;
 
@@ -33,6 +36,9 @@ public class GridBoxAction : MonoBehaviour {
 					gameManager.Gold -= tower.GetComponent<TowerData>().cost;
 					isPressable = false;
 					isSelected = false;
+
+					// Delete the preview grid
+					mapManager.ToggleSpecificGrid(indexInMapManagerArray, true);
 				}
 			}
 		}
