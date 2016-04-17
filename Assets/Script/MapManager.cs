@@ -50,6 +50,10 @@ public class MapManager : MonoBehaviour
 			var gridAction = grid.GetComponent<GridBoxAction> ();
 			gridAction.isSelected = false;
 		}
+		
+	public void ToggleSpecificGrid(int index, bool isTurnedOff) {
+		var btn = gridPrefabs[index];
+		btn.GetComponent<GridBoxAction>().towerPreviewRender.SetActive(!isTurnedOff);
 	}
 
 	#region Private inits
@@ -74,6 +78,7 @@ public class MapManager : MonoBehaviour
 
 	void createGrid()
 	{
+		int index = 0;
 		for (int i = 0; i < 14; i++)
 		{
 			for (int j = 0; j < 14; j++)
@@ -81,12 +86,14 @@ public class MapManager : MonoBehaviour
 				GameObject grid = GameObject.Instantiate(gridBoxSample);
 				gridPrefabs.Add(grid);
 				grid.GetComponent<GridBoxAction>().towerPreviewRender.SetActive(false);
+				grid.GetComponent<GridBoxAction>().indexInMapManagerArray = index;
 				grid.name = i + "," + j;
 
 				grid.GetComponent<GridBoxAction>().currentMap = currentMap;
 				grid.GetComponent<GridBoxAction>().isPressable |= gridData[i, j].isBuildable;
 				grid.GetComponent<BoxCollider2D>().enabled = !gridData[i, j].isRoad;
-				grid.GetComponent<GridBoxAction> ().gameManager = GameObject.Find ("GameManager").GetComponent<GameManagerBehavior> ();
+				grid.GetComponent<GridBoxAction>().gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehavior>();
+				grid.GetComponent<GridBoxAction>().mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
 
 				grid.transform.parent = currentMap.transform;
 
@@ -96,6 +103,7 @@ public class MapManager : MonoBehaviour
 
 				grid.transform.position = new Vector2(-mapSize / 2 + gridSize / 2 + gridSize * j, mapSize / 2 - gridSize / 2 - (gridSize * i));
 				grid.SetActive(true);
+				index++;
 			}
 		}
 	}
