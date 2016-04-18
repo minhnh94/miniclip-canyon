@@ -72,9 +72,9 @@ public class BulletBehavior : MonoBehaviour {
 					Destroy (gameObject);
 
 					if (healthBar.currentHealth <= 0) {
+						gameManager.Gold += target.gameObject.GetComponent<EnemyDestructionDelegate> ().gold;
 						del.PlayAnimation ();
 						enemyCollision = true;
-						gameManager.Gold += 20;
 					}
 				}
 			}
@@ -99,9 +99,9 @@ public class BulletBehavior : MonoBehaviour {
 					Destroy (gameObject);
 
 					if (healthBar.currentHealth <= 0) {
+						gameManager.Gold += subTarget.gameObject.GetComponent<EnemyDestructionDelegate> ().gold;
 						subDel.PlayAnimation ();
 						enemyCollision = true;
-						gameManager.Gold += 20;
 					}
 				}
 			}

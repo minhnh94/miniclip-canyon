@@ -118,7 +118,7 @@ MonoBehaviour:
   canAttackGround: 1
   enemiesInRange: []
   towerGun: {fileID: 166190}
-  shootSound: {fileID: 8300000, guid: b9c034fb484584f07a4623af64d14e1e, type: 3}
+  shootSound: {fileID: 8300000, guid: 66ce1252a2e3a489295dae3de58b5583, type: 3}
 --- !u!114 &11488970
 MonoBehaviour:
   m_ObjectHideFlags: 1

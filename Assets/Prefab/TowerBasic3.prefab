@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 418734}
   - 58: {fileID: 5808940}
-  - 114: {fileID: 11434448}
   - 114: {fileID: 11477960}
   - 114: {fileID: 11499194}
   - 114: {fileID: 11425510}
@@ -86,21 +85,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7134934f8a5679f4ebea2f04e6136cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11434448
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd0f10a543154c61abf8f4338512605, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canAttackAir: 1
+  canAttackAir: 0
   canAttackGround: 1
+  aoeBulletSizeScale: 0.5
   enemiesInRange: []
   towerGun: {fileID: 153006}
+  shootSound: {fileID: 8300000, guid: 33e8e64d1ab484b99b21eeb967fe0ccc, type: 3}
 --- !u!114 &11477960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,7 +105,7 @@ MonoBehaviour:
   cost: 150
   fireRate: 0.75
   isSlowTower: 1
-  bullet: {fileID: 157792, guid: 0144026b77daa89458e78c41da6c9ce9, type: 2}
+  bullet: {fileID: 158946, guid: a9b7626c5f3008c4b949a71ba9ef2ddf, type: 2}
   aoeImageScale: 4
 --- !u!114 &11499194
 MonoBehaviour:

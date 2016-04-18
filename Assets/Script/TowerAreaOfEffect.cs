@@ -17,7 +17,13 @@ public class TowerAreaOfEffect : MonoBehaviour {
 		aoeImageScale = gameObject.GetComponent<TowerData> ().aoeImageScale;
 		if (!gameObject.transform.Find("Area of Effect(Clone)")) {
 			effectArea = Instantiate (areaImage, transform.position, transform.rotation) as GameObject;
-			effectArea.transform.SetParent (gameObject.GetComponent<TowerAction> ().towerGun.transform);
+			if (GetComponent<TowerAction> () != null) {
+				effectArea.transform.SetParent (gameObject.GetComponent<TowerAction> ().towerGun.transform);
+			} else {
+				if (GetComponent<AoeTowerAction> () != null) {
+					effectArea.transform.SetParent (gameObject.GetComponent<AoeTowerAction> ().towerGun.transform);
+				}
+			}
 			effectArea.transform.localScale = new Vector3 (areaRadius * aoeImageScale, areaRadius * aoeImageScale, 0);
 		}
 		deactivateAoE ();

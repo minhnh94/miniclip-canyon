@@ -226,8 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c94a89e84c0834892517e80018d79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gold: 20
   healthBarWrapper: {fileID: 187732}
-  destroySound: {fileID: 8300000, guid: 4f8240bd15d4942769cda289e89a7385, type: 3}
+  destroySound: {fileID: 8300000, guid: 47c9c7d61f7334755b42ab6e8e4e2412, type: 3}
 --- !u!212 &21213562
 SpriteRenderer:
   m_ObjectHideFlags: 1
