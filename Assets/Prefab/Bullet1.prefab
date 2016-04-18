@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11457028}
   - 58: {fileID: 5891370}
   - 50: {fileID: 5002816}
+  - 95: {fileID: 9501736}
   m_Layer: 0
   m_Name: Bullet1
   m_TagString: Bullet
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168938}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.098229, y: 3.1307564, z: 0}
+  m_LocalPosition: {x: 0.5398682, y: 2.2010794, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,6 +63,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.19
+--- !u!95 &9501736
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168938}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4be8b5d34a6794a2cb7d47c9fbc1e48d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11457028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,6 +140,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: damage
       value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
