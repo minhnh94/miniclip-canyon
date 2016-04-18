@@ -8,6 +8,9 @@ public class TowerAction : MonoBehaviour {
 	public List<GameObject> enemiesInRange;
 	public GameObject towerGun;
 
+	GameObject target = null;
+	GameObject oldTarget = null;
+	float t;
 	float lastShotTime;
 	TowerData towerData;
 
@@ -20,8 +23,6 @@ public class TowerAction : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		GameObject target = null;
-
 		float minimalEnemyDistance = float.MaxValue;
 		foreach (GameObject enemy in enemiesInRange) {
 			float distanceToGoal = 0f;
@@ -52,8 +53,13 @@ public class TowerAction : MonoBehaviour {
 
 			Vector3 direction = towerGun.transform.position - target.transform.position;
 //			towerGun.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI + 90,	new Vector3(0, 0, 1));
-			float t = Time.time - lastShotTime;
-			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), t);
+			if (oldTarget == target) {
+				t = Time.time - lastShotTime;
+			} else {
+				t = Time.time - lastShotTime + towerData.fireRate;
+			}
+			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), t * 0.25f);
+			oldTarget = target;
 		}
 	}
 
