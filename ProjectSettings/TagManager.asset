@@ -68,6 +68,9 @@ TagManager:
   - name: Enemy
     uniqueID: 2351526059
     locked: 0
+  - name: AoE Attack
+    uniqueID: 82688637
+    locked: 0
   - name: TowerGun
     uniqueID: 1034258453
     locked: 0

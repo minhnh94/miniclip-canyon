@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EnemyDestructionDelegate : MonoBehaviour {
 
+	public int gold;
 	public delegate void EnemyDelegate (GameObject enemy);
 	public EnemyDelegate enemyDelegate;
 	public GameObject healthBarWrapper;
