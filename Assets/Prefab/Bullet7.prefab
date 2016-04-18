@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d50678e675e4db08f51be6ea1eb3e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 40
   speedDecay: 5
   damage: 45
   isSlowBullet: 0
@@ -144,7 +144,7 @@ Prefab:
         type: 3}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 10
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: damage
