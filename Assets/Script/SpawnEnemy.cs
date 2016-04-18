@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Wave {
@@ -28,7 +29,6 @@ public class SpawnEnemy : MonoBehaviour {
 	void Start () {
 		lastSpawnTime = Time.time;
 		gameManager = GameObject.Find ("GameManager").GetComponent<GameManagerBehavior> ();
-
 	}
 	
 	// Update is called once per frame
@@ -71,18 +71,10 @@ public class SpawnEnemy : MonoBehaviour {
 			}
 			// 5 
 		} else {
-//			gameManager.gameOver = true;
+			gameManager.gameOver = true;
 //			GameObject gameOverText = GameObject.FindGameObjectWithTag ("GameWon");
 //			gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
+			SceneManager.LoadScene("GameOverScene");
 		}
-
-//		float timeInterval = Time.time - lastSpawnTime;
-//		if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) ||
-//		    timeInterval > spawnInterval) &&
-//		    enemiesSpawned < maxEnemies) {
-//			Instantiate (enemyPrefab);
-//			lastSpawnTime = Time.time;
-//			enemiesSpawned++;
-//		}
 	}
 }

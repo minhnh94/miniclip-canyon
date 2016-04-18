@@ -37,11 +37,22 @@ public class GameManagerBehavior : MonoBehaviour {
 		}
 	}
 
+	public GameObject[] nextWaveLabels;
+	public bool gameOver = false;
+
 	private int wave;
 	public int Wave {
 		get { return wave; }
 		set {
 			wave = value;
+			if (!gameOver) {
+				for (int i = 0; i < nextWaveLabels.Length; i++) {
+					nextWaveLabels [i].GetComponent<Text> ().text = "Wave " + (value + 1);
+					Debug.Log (nextWaveLabels [i].GetComponent<Text> ().text);
+					Debug.Log (nextWaveLabels [i].GetComponent<Animator> ());
+					nextWaveLabels [i].GetComponent<Animator> ().SetTrigger ("nextWave");
+				}
+			}
 		}
 	}
 
@@ -49,7 +60,7 @@ public class GameManagerBehavior : MonoBehaviour {
 	void Start () {
 		Gold = 500;
 		Health = 5;
-		Debug.Log (Gold);
+		Wave = 0;
 	}
 	
 	// Update is called once per frame
