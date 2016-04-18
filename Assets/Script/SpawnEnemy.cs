@@ -22,8 +22,6 @@ public class SpawnEnemy : MonoBehaviour {
 
 	private float lastSpawnTime;
 	private int enemiesSpawned = 0;
-	public int maxEnemies = 200;
-	public float spawnInterval = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -39,9 +37,11 @@ public class SpawnEnemy : MonoBehaviour {
 			// 2
 			float timeInterval = Time.time - lastSpawnTime;
 			float spawnInterval = waves[currentWave].spawnInterval;
-			if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) ||
-				timeInterval > spawnInterval) && 
-				enemiesSpawned < waves[currentWave].maxEnemies) {
+			Debug.Log (enemiesSpawned);
+			Debug.Log (timeInterval);
+			Debug.Log (timeBetweenWaves);
+			Debug.Log (timeInterval > spawnInterval);
+			if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) || (enemiesSpawned != 0 && timeInterval > spawnInterval)) && enemiesSpawned < waves[currentWave].maxEnemies) {
 				// 3  
 				lastSpawnTime = Time.time;
 				GameObject newEnemy = (GameObject) Instantiate(waves[currentWave].enemyPrefab);
