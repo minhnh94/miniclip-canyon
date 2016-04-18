@@ -85,6 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd0f10a543154c61abf8f4338512605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAttackAir: 0
+  canAttackGround: 1
   enemiesInRange: []
   towerGun: {fileID: 185870}
 --- !u!114 &11445710
