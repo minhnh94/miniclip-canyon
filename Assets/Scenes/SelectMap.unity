@@ -536,17 +536,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1276793908}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &325219685
@@ -1134,6 +1123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectMenuCanvas: {fileID: 1072896634}
+  startGameSound: {fileID: 8300000, guid: 3fcdad52513954fe8aecb4a3bdee9823, type: 3}
 --- !u!1 &1098071274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1184,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8c96f1352269b40998bb90925ee1051f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ea1576ab18a1a45c2802040ee08b9373, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1381,10 +1371,10 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478622062}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7ee1ed4deee0949018033df702ca2ce3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d64ade6d6ba454ef88aa96ea649ffd28, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

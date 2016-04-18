@@ -6,6 +6,7 @@ public class GameTypeManager : MonoBehaviour {
 	// Use this for initialization
 
 	public GameObject selectMenuCanvas;
+	public AudioClip startGameSound;
 
 	void Start () {
 	
@@ -16,8 +17,13 @@ public class GameTypeManager : MonoBehaviour {
 	
 	}
 
+	void PlayStartGameSound(){
+		AudioSource.PlayClipAtPoint(startGameSound, transform.position);
+	}
+
 
 	public void StartGame() {
+		PlayStartGameSound ();
 		Application.LoadLevel("Map1");
 	}
 }
