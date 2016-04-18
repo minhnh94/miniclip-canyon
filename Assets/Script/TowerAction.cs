@@ -51,7 +51,9 @@ public class TowerAction : MonoBehaviour {
 			}
 
 			Vector3 direction = towerGun.transform.position - target.transform.position;
-			towerGun.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI + 90,	new Vector3(0, 0, 1));
+//			towerGun.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI + 90,	new Vector3(0, 0, 1));
+			float t = Time.time - lastShotTime;
+			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), t);
 		}
 	}
 
