@@ -104,7 +104,7 @@ MonoBehaviour:
   cost: 150
   fireRate: 1.5
   isSlowTower: 0
-  bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
+  bullet: {fileID: 117132, guid: 30d4483a8efc84081b9b1c49a6994106, type: 2}
   aoeImageScale: 4
 --- !u!114 &11494888
 MonoBehaviour:
@@ -172,6 +172,10 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 1034258453
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 117132, guid: 30d4483a8efc84081b9b1c49a6994106, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 185870}
