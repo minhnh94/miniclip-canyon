@@ -17,13 +17,17 @@ public class GameTypeManager : MonoBehaviour {
 	
 	}
 
-	void PlayStartGameSound(){
+	IEnumerator PlayStartGameSoundThenLoad(){
 		AudioSource.PlayClipAtPoint(startGameSound, transform.position);
+		yield return new WaitForSeconds(startGameSound.length);
+
+
+		Application.LoadLevel("Map1");
 	}
 
 
 	public void StartGame() {
-		PlayStartGameSound ();
-		Application.LoadLevel("Map1");
+		StartCoroutine(PlayStartGameSoundThenLoad ());
+
 	}
 }
