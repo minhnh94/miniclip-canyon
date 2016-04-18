@@ -114,10 +114,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSelected: 0
   isPressable: 0
+  indexInMapManagerArray: 0
   normalRender: {fileID: 129536}
   towerPreviewRender: {fileID: 196162}
   currentMap: {fileID: 0}
   gameManager: {fileID: 0}
+  mapManager: {fileID: 0}
   towerPrefabs:
   - {fileID: 197412, guid: 7f34b4e236c6c4bb4913396520a39530, type: 2}
   - {fileID: 134602, guid: d2be8bce625484237addd336760f9b28, type: 2}
@@ -129,6 +131,7 @@ MonoBehaviour:
   - {fileID: 167460, guid: a9913ddc93c7f4143a21a9742ef25372, type: 2}
   - {fileID: 167460, guid: a9913ddc93c7f4143a21a9742ef25372, type: 2}
   - {fileID: 167460, guid: a9913ddc93c7f4143a21a9742ef25372, type: 2}
+  placeTowerSound: {fileID: 8300000, guid: 8c96f1352269b40998bb90925ee1051f, type: 3}
 --- !u!212 &21253952
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -195,7 +198,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: placeTowerSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8c96f1352269b40998bb90925ee1051f, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 139562}

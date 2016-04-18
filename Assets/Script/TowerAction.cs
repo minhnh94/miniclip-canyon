@@ -7,6 +7,7 @@ public class TowerAction : MonoBehaviour {
 	public bool canAttackGround;
 	public List<GameObject> enemiesInRange;
 	public GameObject towerGun;
+	public AudioClip shootSound;
 
 	float lastShotTime;
 	TowerData towerData;
@@ -97,7 +98,13 @@ public class TowerAction : MonoBehaviour {
 		}
 	}
 
+	void PlayShootSound(){
+		AudioSource.PlayClipAtPoint(shootSound, transform.position);
+	}
+
 	void Shoot(Collider2D target) {
+		PlayShootSound ();
+
 		GameObject bulletPrefab = towerData.bullet;
 
 		Vector3 startPosition = gameObject.transform.position;

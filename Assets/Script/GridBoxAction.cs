@@ -14,6 +14,9 @@ public class GridBoxAction : MonoBehaviour {
 	public GameManagerBehavior gameManager;
 	public MapManager mapManager;
 	public GameObject[] towerPrefabs;
+
+	public AudioClip placeTowerSound;
+
 	private GameObject tower;
 
 	Vector3 mouseDownMapTransform;
@@ -36,6 +39,8 @@ public class GridBoxAction : MonoBehaviour {
 			{
 				if (CanBuildTower())
 				{
+					PlayPlaceTowerSound ();
+
 					tower = (GameObject)Instantiate(towerPrefabs[GameManagerBehavior.whatTowerIsPressed], transform.position, Quaternion.identity);
 					tower.transform.SetParent(gameObject.transform);
 					gameManager.Gold -= tower.GetComponent<TowerData>().cost;
@@ -53,6 +58,12 @@ public class GridBoxAction : MonoBehaviour {
 			}
 		}
 	}
+
+	void PlayPlaceTowerSound(){
+
+		AudioSource.PlayClipAtPoint(placeTowerSound, transform.position);
+	}
+
 
 	public bool CanBuildTower() {
 		GameObject towerPrefab = towerPrefabs[GameManagerBehavior.whatTowerIsPressed];
