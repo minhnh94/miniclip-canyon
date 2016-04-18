@@ -6,6 +6,7 @@ public class EnemyDestructionDelegate : MonoBehaviour {
 	public delegate void EnemyDelegate (GameObject enemy);
 	public EnemyDelegate enemyDelegate;
 	public GameObject healthBarWrapper;
+	public AudioClip destroySound;
 
 	// Use this for initialization
 	void Start () {
@@ -19,8 +20,10 @@ public class EnemyDestructionDelegate : MonoBehaviour {
 
 	public void PlayAnimation(){
 		Destroy (healthBarWrapper);
+		PlayAudio ();
 		Animator animator = GetComponent<Animator>();
 		animator.SetBool ("die", true);
+
 		OnDestroy ();
 	}
 
@@ -33,5 +36,9 @@ public class EnemyDestructionDelegate : MonoBehaviour {
 		if (enemyDelegate != null) {
 			enemyDelegate (gameObject);
 		}
+	}
+
+	public void PlayAudio(){
+		AudioSource.PlayClipAtPoint(destroySound, transform.position);
 	}
 }

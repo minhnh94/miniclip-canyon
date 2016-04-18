@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarWrapper: {fileID: 173846}
+  destroySound: {fileID: 8300000, guid: 168bf5544331c4d4a99fbd01ba4dd37f, type: 3}
 --- !u!114 &11440862
 MonoBehaviour:
   m_ObjectHideFlags: 1
