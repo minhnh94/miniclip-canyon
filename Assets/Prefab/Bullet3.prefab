@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  speedDecay: 0.5
   damage: 80
   isSlowBullet: 0
   bulletSlowDuration: 0

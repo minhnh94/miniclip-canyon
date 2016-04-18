@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class BulletBehavior : MonoBehaviour {
-	public float speed = 10;
+	public float speed;
+	private float muzzleSpeed;
+	public float speedDecay;
 	public int damage;
 	public bool isSlowBullet;
 	public float bulletSlowDuration;
@@ -24,8 +26,12 @@ public class BulletBehavior : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		muzzleSpeed = speed * 2f;
 		startTime = Time.time;
 		distance = Vector3.Distance(startPosition, target.transform.position);
+		Vector3 direction = target.transform.position - gameObject.transform.position;
+		transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), 1f);
+
 		GameObject gm = GameObject.Find ("GameManager");
 		gameManager = gm.GetComponent<GameManagerBehavior> ();
 		del = target.gameObject.GetComponent<EnemyDestructionDelegate>();
@@ -37,13 +43,18 @@ public class BulletBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float timeInterval = Time.time - startTime;
+		if (muzzleSpeed > speed) {
+			muzzleSpeed -= speedDecay;
+		}
 
 		if (target != null && !enemyDestruction) {
-			gameObject.transform.position = Vector3.Lerp (startPosition, target.transform.position, timeInterval * speed / distance);
-			Vector3 direction = gameObject.transform.position - target.transform.position;
-			gameObject.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI + 90, new Vector3(0, 0, 1));
+//			gameObject.transform.position = Vector3.Lerp (startPosition, target.transform.position, timeInterval * speed / distance);
+			Vector3 direction = target.transform.position - gameObject.transform.position;
+			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), timeInterval * 0.5f);
+//			gameObject.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI + 90, new Vector3(0, 0, 1));
+			gameObject.transform.Translate (Vector3.up * muzzleSpeed * Time.deltaTime);
 		} else {
-			gameObject.transform.Translate (Vector3.up * speed * Time.deltaTime);
+			gameObject.transform.Translate (Vector3.up * muzzleSpeed * Time.deltaTime);
 		}
 	}
 
