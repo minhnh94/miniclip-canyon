@@ -3,7 +3,7 @@ using System.Collections;
 
 public class StartGame : MonoBehaviour {
 
-	void OnMouseDown() {
+	public void StartSelectMap() {
 		print ("clicked");
 		Application.LoadLevel("SelectMap");
 	}

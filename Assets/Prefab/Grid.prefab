@@ -131,7 +131,7 @@ MonoBehaviour:
   - {fileID: 167460, guid: a9913ddc93c7f4143a21a9742ef25372, type: 2}
   - {fileID: 167460, guid: a9913ddc93c7f4143a21a9742ef25372, type: 2}
   - {fileID: 167460, guid: a9913ddc93c7f4143a21a9742ef25372, type: 2}
-  placeTowerSound: {fileID: 8300000, guid: 8c96f1352269b40998bb90925ee1051f, type: 3}
+  placeTowerSound: {fileID: 8300000, guid: b139c3547c3714dcc9dc0305494c538c, type: 3}
 --- !u!212 &21253952
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -202,7 +202,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: placeTowerSound
       value: 
-      objectReference: {fileID: 8300000, guid: 8c96f1352269b40998bb90925ee1051f, type: 3}
+      objectReference: {fileID: 8300000, guid: b139c3547c3714dcc9dc0305494c538c, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 139562}
