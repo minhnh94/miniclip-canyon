@@ -87,21 +87,21 @@ public class TowerAction : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-//		if (canAttackGround) {
-//			if (other.gameObject.tag.Equals ("Ground Enemy")) {
+		if (canAttackGround) {
+			if (other.gameObject.tag.Equals ("Ground Enemy")) {
 				enemiesInRange.Remove (other.gameObject);
 				EnemyDestructionDelegate del = other.gameObject.GetComponent<EnemyDestructionDelegate> ();
 				del.enemyDelegate -= OnEnemyDestroy;
-//			}
-//		}
-//
-//		if (canAttackAir) {
-//			if (other.gameObject.tag.Equals ("Air Enemy")) {
-//				enemiesInRange.Remove (other.gameObject);
-//				EnemyDestructionDelegate del = other.gameObject.GetComponent<EnemyDestructionDelegate> ();
-//				del.enemyDelegate -= OnEnemyDestroy;
-//			}
-//		}
+			}
+		}
+
+		if (canAttackAir) {
+			if (other.gameObject.tag.Equals ("Air Enemy")) {
+				enemiesInRange.Remove (other.gameObject);
+				EnemyDestructionDelegate del = other.gameObject.GetComponent<EnemyDestructionDelegate> ();
+				del.enemyDelegate -= OnEnemyDestroy;
+			}
+		}
 	}
 
 	void PlayShootSound(){
