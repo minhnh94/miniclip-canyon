@@ -10,7 +10,6 @@ public class AoeTowerAction : MonoBehaviour {
 	public GameObject towerGun;
 	public AudioClip shootSound;
 
-	GameObject target = null;
 	GameObject oldTarget = null;
 	float t;
 	float lastShotTime;
@@ -25,13 +24,15 @@ public class AoeTowerAction : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		GameObject target = null;
+
 		float minimalEnemyDistance = float.MaxValue;
 		foreach (GameObject enemy in enemiesInRange) {
-			float distanceToGoal = 0f;
-			if (enemy.tag == "Ground Enemy") {
+			float distanceToGoal = float.MaxValue;
+			if (enemy.tag == "Ground Enemy" && canAttackGround) {
 				distanceToGoal = enemy.GetComponent<MoveToGoal> ().distanceToGoal ();
 			} else {
-				if (enemy.tag == "Air Enemy") {
+				if (enemy.tag == "Air Enemy" && canAttackAir) {
 					distanceToGoal = enemy.GetComponent<FlyToGoal> ().distanceToGoal ();
 				}
 			}

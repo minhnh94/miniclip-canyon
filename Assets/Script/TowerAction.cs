@@ -9,9 +9,8 @@ public class TowerAction : MonoBehaviour {
 	public GameObject towerGun;
 	public AudioClip shootSound;
 
-	GameObject target = null;
 	GameObject oldTarget = null;
-	float t;
+	float turnRate;
 	float lastShotTime;
 	TowerData towerData;
 
@@ -24,13 +23,15 @@ public class TowerAction : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		GameObject target = null;
+
 		float minimalEnemyDistance = float.MaxValue;
 		foreach (GameObject enemy in enemiesInRange) {
-			float distanceToGoal = 0f;
-			if (enemy.tag == "Ground Enemy") {
+			float distanceToGoal = float.MaxValue;
+			if (enemy.tag == "Ground Enemy" && canAttackGround) {
 				distanceToGoal = enemy.GetComponent<MoveToGoal> ().distanceToGoal ();
 			} else {
-				if (enemy.tag == "Air Enemy") {
+				if (enemy.tag == "Air Enemy" && canAttackAir) {
 					distanceToGoal = enemy.GetComponent<FlyToGoal> ().distanceToGoal ();
 				}
 			}
@@ -39,27 +40,27 @@ public class TowerAction : MonoBehaviour {
 				minimalEnemyDistance = distanceToGoal;
 			}
 		}
-
+		Debug.Log (target);
 		if (target != null) {
 			if (Time.time - lastShotTime > towerData.fireRate) {
-				if (gameObject.GetComponent<TowerData> ().isSlowTower) {
-					foreach (GameObject enemy in enemiesInRange) {
-						Shoot (enemy.GetComponent<Collider2D> ());
-					}
-				} else {
+//				if (gameObject.GetComponent<TowerData> ().isSlowTower) {
+//					foreach (GameObject enemy in enemiesInRange) {
+//						Shoot (enemy.GetComponent<Collider2D> ());
+//					}
+//				} else {
 					Shoot (target.GetComponent<Collider2D> ());
-				}
+//				}!!###
 				lastShotTime = Time.time;
 			}
 
 			Vector3 direction = towerGun.transform.position - target.transform.position;
 //			towerGun.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI + 90,	new Vector3(0, 0, 1));
 			if (oldTarget == target) {
-				t = Time.time - lastShotTime;
+				turnRate = Time.time - lastShotTime;
 			} else {
-				t = Time.time - lastShotTime + towerData.fireRate;
+				turnRate = Time.time - lastShotTime + towerData.fireRate;
 			}
-			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), t * 0.25f);
+			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), turnRate * 0.25f);
 			oldTarget = target;
 		}
 	}
