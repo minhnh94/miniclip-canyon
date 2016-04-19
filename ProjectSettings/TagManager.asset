@@ -19,6 +19,12 @@ TagManager:
   - Advance4
   - Advance5
   - Air Enemy
+  - SelectMap1
+  - SelectMap2
+  - SelectMap3
+  - EasyBtn
+  - NormalBtn
+  - HardBtn
   layers:
   - Default
   - TransparentFX

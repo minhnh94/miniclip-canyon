@@ -28,6 +28,5 @@ public class GameTypeManager : MonoBehaviour {
 
 	public void StartGame() {
 		StartCoroutine(PlayStartGameSoundThenLoad ());
-
 	}
 }
