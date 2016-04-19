@@ -11,5 +11,9 @@
 	public static string TowerAdvanced4Tag = "Advance4";
 	public static string TowerAdvanced5Tag = "Advance5";
 
+	public static string SelectMap1Btn = "SelectMap1";
+	public static string SelectMap2Btn = "SelectMap2";
+	public static string SelectMap3Btn = "SelectMap3";
+
 	public static string EnemyTag = "Enemy";
 }

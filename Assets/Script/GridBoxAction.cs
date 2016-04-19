@@ -48,7 +48,7 @@ public class GridBoxAction : MonoBehaviour {
 					isSelected = false;
 
 					// Delete the preview grid
-					mapManager.ToggleSpecificGrid(indexInMapManagerArray, true);
+					towerPreviewRender.SetActive(false);
 				}
 			}
 
