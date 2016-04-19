@@ -15,5 +15,9 @@
 	public static string SelectMap2Btn = "SelectMap2";
 	public static string SelectMap3Btn = "SelectMap3";
 
+	public static string EasyModeBtn = "EasyBtn";
+	public static string NormalModeBtn = "NormalBtn";
+	public static string HardModeBtn = "HardBtn";
+
 	public static string EnemyTag = "Enemy";
 }
