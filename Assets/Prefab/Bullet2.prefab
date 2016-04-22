@@ -73,8 +73,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d50678e675e4db08f51be6ea1eb3e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  speedDecay: 0.5
+  speed: 20
+  speedDecay: 5
   damage: 50
   isSlowBullet: 0
   bulletSlowDuration: 0

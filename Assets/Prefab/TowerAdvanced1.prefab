@@ -129,8 +129,8 @@ MonoBehaviour:
   cost: 100
   fireRate: 1
   isSlowTower: 0
-  bullet: {fileID: 168938, guid: 49444a097cffd4f2fa461f9213c07839, type: 2}
-  aoeImageScale: 1
+  bullet: {fileID: 117132, guid: 30d4483a8efc84081b9b1c49a6994106, type: 2}
+  aoeImageScale: 2
 --- !u!114 &11487430
 MonoBehaviour:
   m_ObjectHideFlags: 1

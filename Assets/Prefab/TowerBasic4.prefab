@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 150
-  fireRate: 1.5
+  fireRate: 0.5
   isSlowTower: 0
   bullet: {fileID: 117132, guid: 30d4483a8efc84081b9b1c49a6994106, type: 2}
   aoeImageScale: 4

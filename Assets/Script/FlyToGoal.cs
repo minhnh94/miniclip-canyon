@@ -13,7 +13,7 @@ public class FlyToGoal : MonoBehaviour{
 	public GameObject[] waypoints;
 	private int currentWaypoint = 0;
 	private float lastWaypointSwitchTime;
-	public float speed = 100.0f;
+	public float speed = 1f;
 
 	void Start() {
 		lastWaypointSwitchTime = Time.time;
@@ -27,7 +27,7 @@ public class FlyToGoal : MonoBehaviour{
 		float pathLength = Vector3.Distance (startPosition, endPosition);
 		float totalTimeForPath = pathLength / speed;
 		float currentTimeOnPath = Time.time - lastWaypointSwitchTime;
-		gameObject.transform.position = Vector3.Lerp (startPosition, endPosition, currentTimeOnPath / totalTimeForPath);
+		gameObject.transform.position = Vector3.Lerp (startPosition, endPosition, currentTimeOnPath / totalTimeForPath );
 
 		if (gameObject.transform.position.Equals(endPosition)) {
 			if (currentWaypoint < waypoints.Length - 3) {
@@ -55,7 +55,7 @@ public class FlyToGoal : MonoBehaviour{
 		if (other.tag == "Bullet") {
 			if (other.gameObject.GetComponent<BulletBehavior> ().isSlowBullet) {
 				if (!isSlowed) {
-					
+//					speed /= 2;
 				}
 				isSlowed = true;
 				bulletSlowDuration = other.gameObject.GetComponent <BulletBehavior> ().bulletSlowDuration;
@@ -75,6 +75,6 @@ public class FlyToGoal : MonoBehaviour{
 	void ClearSlowEffect()
 	{
 		isSlowed = false;
-
+//		speed *= 2;
 	}
 }
