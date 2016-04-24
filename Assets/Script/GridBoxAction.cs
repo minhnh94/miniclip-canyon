@@ -50,6 +50,16 @@ public class GridBoxAction : MonoBehaviour {
 					// Delete the preview grid
 					towerPreviewRender.SetActive(false);
 				}
+				else
+				{
+					if (!isPressable)
+					{
+						mapManager.ToggleGridPreview(false);
+						var btn = gameManager.towerButtons[GameManagerBehavior.whatTowerIsPressed];
+						btn.GetComponent<BuildTower>().SetToNormalState();
+						GameManagerBehavior.whatTowerIsPressed = -1;
+					}
+				}
 			}
 
 			if (isSelected) {

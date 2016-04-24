@@ -87,7 +87,7 @@ public class MapManager : MonoBehaviour
 
 				grid.GetComponent<GridBoxAction>().currentMap = currentMap;
 				grid.GetComponent<GridBoxAction>().isPressable |= gridData[i, j].isBuildable;
-				grid.GetComponent<BoxCollider2D>().enabled = !gridData[i, j].isRoad;
+//				grid.GetComponent<BoxCollider2D>().enabled = !gridData[i, j].isRoad;
 				grid.GetComponent<GridBoxAction>().gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehavior>();
 				grid.GetComponent<GridBoxAction>().mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
 
