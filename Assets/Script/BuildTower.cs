@@ -4,6 +4,8 @@ public class BuildTower : MonoBehaviour {
 
 	public GameManagerBehavior gameManager;
 	public MapManager mapManager;
+	public GameObject towerPrefabData;
+	public GameObject priceLabel;
 
 	Color initialColor;
 	UIButton refButton;
@@ -11,6 +13,8 @@ public class BuildTower : MonoBehaviour {
 	void Start() {
 		refButton = gameObject.GetComponent<UIButton>();
 		initialColor = refButton.defaultColor;
+
+		initPriceLabel();
 	}
 
 	void OnClick() {
@@ -80,5 +84,11 @@ public class BuildTower : MonoBehaviour {
 		refButton.defaultColor = refButton.hover;
 		TweenColor.Begin(gameObject.GetComponent<UIButton>().tweenTarget, 0, refButton.hover);
 		TweenScale.Begin(gameObject, 0, new Vector3(1.2f, 1.2f, 1));
+	}
+
+	void initPriceLabel()
+	{
+		int cost = towerPrefabData.GetComponent<TowerData>().cost;
+		priceLabel.GetComponent<UILabel>().text = "" + cost;
 	}
 }
