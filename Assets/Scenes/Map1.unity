@@ -93,9 +93,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 36479990}
+  - 61: {fileID: 36479991}
   m_Layer: 0
   m_Name: Waypoint 22
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +113,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 951254865}
   m_RootOrder: 1
+--- !u!61 &36479991
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 36479989}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.26027322}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.4794522}
 --- !u!1 &62518310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,9 +1099,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 314584938}
+  - 61: {fileID: 314584939}
   m_Layer: 0
   m_Name: Waypoint 12
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1103,6 +1119,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1964250576}
   m_RootOrder: 1
+--- !u!61 &314584939
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 314584937}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.26027322}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.4794522}
 --- !u!1 &325900112
 GameObject:
   m_ObjectHideFlags: 0
@@ -3007,9 +3037,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 996157577}
+  - 61: {fileID: 996157578}
   m_Layer: 0
   m_Name: Waypoint 32
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3026,6 +3057,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1713590951}
   m_RootOrder: 1
+--- !u!61 &996157578
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996157576}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.26027322}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.4794522}
 --- !u!1 &1037674749
 GameObject:
   m_ObjectHideFlags: 0
@@ -6384,14 +6429,14 @@ MonoBehaviour:
   enemyPrefab: {fileID: 199594, guid: 655098f2a3503cd4f9ec8ee340f22602, type: 2}
   waves:
   - enemyPrefab: {fileID: 199594, guid: 655098f2a3503cd4f9ec8ee340f22602, type: 2}
-    spawnInterval: 0.1
-    maxEnemies: 10
+    spawnInterval: 1
+    maxEnemies: 5
   - enemyPrefab: {fileID: 135990, guid: ae3e8a36ee94d80479c6a3fd7291a5b0, type: 2}
     spawnInterval: 1
     maxEnemies: 5
-  - enemyPrefab: {fileID: 162806, guid: d92f95910feac1d4297bf7a9bc85c450, type: 2}
-    spawnInterval: 0.5
-    maxEnemies: 12
+  - enemyPrefab: {fileID: 138418, guid: 75a22f24e3476a44e9a8d24720633768, type: 2}
+    spawnInterval: 1
+    maxEnemies: 5
   - enemyPrefab: {fileID: 135990, guid: ae3e8a36ee94d80479c6a3fd7291a5b0, type: 2}
     spawnInterval: 0.75
     maxEnemies: 10
