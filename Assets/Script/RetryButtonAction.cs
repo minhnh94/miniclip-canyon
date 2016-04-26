@@ -11,6 +11,7 @@ public class RetryButtonAction : MonoBehaviour
 		GetComponent<Button>().onClick.AddListener(
 			() =>
 			{
+				GameManagerBehavior.whatTowerIsPressed = -1;
 				if (gameObject.tag == "RetryBtn")
 				{
 					SceneManager.LoadScene("Map1");

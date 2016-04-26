@@ -128,9 +128,9 @@ MonoBehaviour:
   - {fileID: 167460, guid: a9913ddc93c7f4143a21a9742ef25372, type: 2}
   - {fileID: 119370, guid: 4867e0db535964da68de69f7f8edb43f, type: 2}
   - {fileID: 169826, guid: 8d0d3e04233f9be4283626f2182a7264, type: 2}
-  - {fileID: 167460, guid: a9913ddc93c7f4143a21a9742ef25372, type: 2}
-  - {fileID: 167460, guid: a9913ddc93c7f4143a21a9742ef25372, type: 2}
-  - {fileID: 167460, guid: a9913ddc93c7f4143a21a9742ef25372, type: 2}
+  - {fileID: 106244, guid: d34e780d7939992498de467a54e61b9c, type: 2}
+  - {fileID: 199876, guid: 58745fe29696b304abfb04d60297fb01, type: 2}
+  - {fileID: 115210, guid: 9ecb7bdf4d112e749baadf7822c2d6b2, type: 2}
   placeTowerSound: {fileID: 8300000, guid: b139c3547c3714dcc9dc0305494c538c, type: 3}
 --- !u!212 &21253952
 SpriteRenderer:
