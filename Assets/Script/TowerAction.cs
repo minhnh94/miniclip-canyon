@@ -40,21 +40,21 @@ public class TowerAction : MonoBehaviour {
 				minimalEnemyDistance = distanceToGoal;
 			}
 		}
-		Debug.Log (target);
+//		Debug.Log (target);
 		if (target != null) {
-			if (Time.time - lastShotTime > towerData.fireRate) {
+			Vector3 direction = towerGun.transform.position - target.transform.position;
+			if ((Vector2.Angle(towerGun.transform.up, direction) <= 10) && (Time.time - lastShotTime > towerData.fireRate)) {
 				Shoot (target.GetComponent<Collider2D> ());
 				lastShotTime = Time.time;
 			}
 
-			Vector3 direction = towerGun.transform.position - target.transform.position;
 //			towerGun.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI + 90,	new Vector3(0, 0, 1));
 			if (oldTarget == target) {
-				turnRate = Time.time - lastShotTime;
+				turnRate = Mathf.Min(towerData.fireRate, Time.time - lastShotTime);
 			} else {
-				turnRate = Time.time - lastShotTime + towerData.fireRate;
+				turnRate = Mathf.Min(towerData.fireRate, Time.time - lastShotTime - towerData.fireRate);
 			}
-			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), turnRate * 0.25f);
+			towerGun.transform.rotation = Quaternion.Slerp (towerGun.transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), turnRate * 0.1f);
 			oldTarget = target;
 		}
 	}

@@ -13,7 +13,7 @@ public class FlyToGoal : MonoBehaviour{
 	public GameObject[] waypoints;
 	private int currentWaypoint = 0;
 	private float lastWaypointSwitchTime;
-	public float speed = 1f;
+	public float speed;
 
 	void Start() {
 		lastWaypointSwitchTime = Time.time;
