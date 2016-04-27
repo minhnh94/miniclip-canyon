@@ -13,6 +13,8 @@ public class MapManager : MonoBehaviour
 	Grid[,] gridData = new Grid[14, 14];
 	List<GameObject> gridPrefabs = new List<GameObject>();
 
+	public GameObject sellButton;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -23,7 +25,11 @@ public class MapManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-	
+		if (getSelectedGridBox () != null) {
+			sellButton.SetActive (true);
+		} else {
+			sellButton.SetActive (false);
+		}
 	}
 
 	public void ToggleGridPreview(bool isTurnedOn) {
@@ -50,6 +56,24 @@ public class MapManager : MonoBehaviour
 			var gridAction = grid.GetComponent<GridBoxAction> ();
 			gridAction.isSelected = false;
 		}
+	}
+
+	public bool hasSelectedGridBox() {
+		foreach (var grid in gridPrefabs) {
+			var gridAction = grid.GetComponent<GridBoxAction> ();
+			if (gridAction.isSelected == true)
+				return true;
+		}
+		return false;
+	}
+
+	public GameObject getSelectedGridBox() {
+		foreach (var grid in gridPrefabs) {
+			var gridAction = grid.GetComponent<GridBoxAction> ();
+			if (gridAction.isSelected == true)
+				return grid;
+		}
+		return null;
 	}
 
 	#region Private inits

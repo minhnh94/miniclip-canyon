@@ -48,8 +48,8 @@ public class GameManagerBehavior : MonoBehaviour {
 			if (!gameOver) {
 				for (int i = 0; i < nextWaveLabels.Length; i++) {
 					nextWaveLabels [i].GetComponent<Text> ().text = "Wave " + (value + 1);
-					Debug.Log (nextWaveLabels [i].GetComponent<Text> ().text);
-					Debug.Log (nextWaveLabels [i].GetComponent<Animator> ());
+//					Debug.Log (nextWaveLabels [i].GetComponent<Text> ().text);
+//					Debug.Log (nextWaveLabels [i].GetComponent<Animator> ());
 					nextWaveLabels [i].GetComponent<Animator> ().SetTrigger ("nextWave");
 				}
 			}

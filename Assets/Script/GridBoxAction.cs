@@ -63,6 +63,10 @@ public class GridBoxAction : MonoBehaviour {
 			}
 
 			if (isSelected) {
+				if (gameObject.transform.childCount == 2) {
+					isSelected = false;
+					return;
+				}
 				mapManager.deactivateOtherGridBox ();
 				isSelected = true;
 			}
