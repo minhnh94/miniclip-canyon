@@ -31,44 +31,40 @@ public class GridBoxAction : MonoBehaviour {
 
 	void OnMouseUpAsButton() {
 		// Action goes here
-		if (mouseDownMapTransform == Camera.main.transform.position)
-		{
-			isSelected = !isSelected;
+		if (UICamera.hoveredObject == null) {
+			if (mouseDownMapTransform == Camera.main.transform.position) {
+				isSelected = !isSelected;
 
-			if (GameManagerBehavior.whatTowerIsPressed != -1)
-			{
-				if (CanBuildTower())
-				{
-					PlayPlaceTowerSound ();
+				if (GameManagerBehavior.whatTowerIsPressed != -1) {
+					if (CanBuildTower ()) {
+						PlayPlaceTowerSound ();
 
-					tower = (GameObject)Instantiate(towerPrefabs[GameManagerBehavior.whatTowerIsPressed], transform.position, Quaternion.identity);
-					tower.transform.SetParent(gameObject.transform);
-					gameManager.Gold -= tower.GetComponent<TowerData>().cost;
-					isPressable = false;
-					isSelected = false;
+						tower = (GameObject)Instantiate (towerPrefabs [GameManagerBehavior.whatTowerIsPressed], transform.position, Quaternion.identity);
+						tower.transform.SetParent (gameObject.transform);
+						gameManager.Gold -= tower.GetComponent<TowerData> ().cost;
+						isPressable = false;
+						isSelected = false;
 
-					// Delete the preview grid
-					towerPreviewRender.SetActive(false);
-				}
-				else
-				{
-					if (!isPressable)
-					{
-						mapManager.ToggleGridPreview(false);
-						var btn = gameManager.towerButtons[GameManagerBehavior.whatTowerIsPressed];
-						btn.GetComponent<BuildTower>().SetToNormalState();
-						GameManagerBehavior.whatTowerIsPressed = -1;
+						// Delete the preview grid
+						towerPreviewRender.SetActive (false);
+					} else {
+						if (!isPressable) {
+							mapManager.ToggleGridPreview (false);
+							var btn = gameManager.towerButtons [GameManagerBehavior.whatTowerIsPressed];
+							btn.GetComponent<BuildTower> ().SetToNormalState ();
+							GameManagerBehavior.whatTowerIsPressed = -1;
+						}
 					}
 				}
-			}
 
-			if (isSelected) {
-				if (gameObject.transform.childCount == 2) {
-					isSelected = false;
-					return;
+				if (isSelected) {
+					if (gameObject.transform.childCount == 2) {
+						isSelected = false;
+						return;
+					}
+					mapManager.deactivateOtherGridBox ();
+					isSelected = true;
 				}
-				mapManager.deactivateOtherGridBox ();
-				isSelected = true;
 			}
 		}
 	}
