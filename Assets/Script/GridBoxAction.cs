@@ -57,6 +57,11 @@ public class GridBoxAction : MonoBehaviour {
 					}
 				}
 
+				if (transform.childCount == 2) {
+//					mapManager.getSelectedGridBox ().transform.GetChild (2).gameObject.GetComponent<TowerAreaOfEffect> ().deactivateAoE ();
+					mapManager.deactivateOtherGridBox();
+				}
+
 				if (isSelected) {
 					if (gameObject.transform.childCount == 2) {
 						isSelected = false;

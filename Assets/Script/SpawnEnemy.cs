@@ -65,7 +65,7 @@ public class SpawnEnemy : MonoBehaviour {
 				betweenWavesTimer = Time.time;
 			}
 			// 4 
-			if ((enemiesSpawned == waves[currentWave].maxEnemies) && (Time.time - betweenWavesTimer >= 5) && (GameObject.FindGameObjectWithTag("Ground Enemy") == null) && (GameObject.FindGameObjectWithTag("Air Enemy") == null)) {
+			if ((enemiesSpawned >= waves[currentWave].maxEnemies) && (Time.time - betweenWavesTimer >= 5) && (GameObject.FindGameObjectWithTag("Ground Enemy") == null) && (GameObject.FindGameObjectWithTag("Air Enemy") == null)) {
 				gameManager.Wave++;
 				gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
 				enemiesSpawned = 0;
