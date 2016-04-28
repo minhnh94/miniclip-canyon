@@ -71,6 +71,8 @@ public class BuildTower : MonoBehaviour {
 
 		GameManagerBehavior.whatTowerIsPressed = GameManagerBehavior.whatTowerIsPressed == selection ? -1 : selection;
 		mapManager.ToggleGridPreview(GameManagerBehavior.whatTowerIsPressed != -1);
+//		Debug.Log ("selection: " + selection);
+//		Debug.Log ("whatTowerIsPressed: " + GameManagerBehavior.whatTowerIsPressed);
 	}
 
 	public void SetToNormalState() {

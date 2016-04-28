@@ -51,7 +51,7 @@ public class MapManager : MonoBehaviour
 		}
 	}
 
-	public void deactivateOtherGridBox() {
+	public void deselectOtherGridBox() {
 		foreach (var grid in gridPrefabs) {
 			var gridAction = grid.GetComponent<GridBoxAction> ();
 			gridAction.isSelected = false;

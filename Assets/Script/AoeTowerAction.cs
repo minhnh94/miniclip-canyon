@@ -48,15 +48,14 @@ public class AoeTowerAction : MonoBehaviour {
 				lastShotTime = Time.time;
 			}
 
-			Vector3 direction = towerGun.transform.position - target.transform.position;
-			//			towerGun.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI + 90,	new Vector3(0, 0, 1));
-			if (oldTarget == target) {
-				t = Time.time - lastShotTime;
-			} else {
-				t = Time.time - lastShotTime + towerData.fireRate;
-			}
-			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), t * 0.25f);
-			oldTarget = target;
+//			Vector3 direction = towerGun.transform.position - target.transform.position;
+//			if (oldTarget == target) {
+//				t = Time.time - lastShotTime;
+//			} else {
+//				t = Time.time - lastShotTime + towerData.fireRate;
+//			}
+//			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), t * 0.25f);
+//			oldTarget = target;
 		}
 	}
 

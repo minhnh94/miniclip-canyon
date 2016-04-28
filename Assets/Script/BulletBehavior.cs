@@ -25,8 +25,11 @@ public class BulletBehavior : MonoBehaviour {
 	private bool enemyDestruction;
 	private bool enemyCollision;
 
-	float distance;
-	float startTime;
+	private float startDistance;
+	private float currentDistance;
+	private float startTime;
+	private bool closeEnough = false;
+	private float closeStartTime;
 
 	private GameManagerBehavior gameManager;
 
@@ -34,7 +37,7 @@ public class BulletBehavior : MonoBehaviour {
 	void Start () {
 		muzzleSpeed = speed * 2f;
 		startTime = Time.time;
-		distance = Vector3.Distance(startPosition, target.transform.position);
+		startDistance = Vector3.Distance(startPosition, target.transform.position);
 		Vector3 direction = target.transform.position - gameObject.transform.position;
 		transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), 1f);
 
@@ -54,10 +57,23 @@ public class BulletBehavior : MonoBehaviour {
 		}
 
 		if (target != null && !enemyDestruction) {
-//			gameObject.transform.position = Vector3.Lerp (startPosition, target.transform.position, timeInterval * speed / distance);
 			Vector3 direction = target.transform.position - gameObject.transform.position;
+			currentDistance = direction.magnitude;
+			if ((currentDistance <= (speed / 10f)) || closeEnough) {
+				if (!closeEnough) {
+					closeEnough = true;
+					startPosition = transform.position;
+					closeStartTime = Time.time;
+				}
+
+				float closeTimeInterval = Time.time - closeStartTime;
+				muzzleSpeed = (muzzleSpeed >= (speed * 0.75f)) ? (muzzleSpeed - speedDecay) : muzzleSpeed;
+				gameObject.transform.position = Vector3.Lerp (startPosition, target.transform.position, closeTimeInterval * muzzleSpeed / currentDistance);
+
+				transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), timeInterval * 0.5f);
+				return;
+			}
 			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), timeInterval * 0.5f);
-//			gameObject.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI + 90, new Vector3(0, 0, 1));
 			gameObject.transform.Translate (Vector3.up * muzzleSpeed * Time.deltaTime);
 		} else {
 			gameObject.transform.Translate (Vector3.up * muzzleSpeed * Time.deltaTime);

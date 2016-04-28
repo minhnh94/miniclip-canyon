@@ -10,7 +10,9 @@ public class TowerAction : MonoBehaviour {
 	public AudioClip shootSound;
 
 	GameObject oldTarget = null;
-	float turnRate;
+	float turnDuration;
+	public float turnRate;
+	public float canShootAngleThreshold;
 	float lastShotTime;
 	TowerData towerData;
 
@@ -43,18 +45,18 @@ public class TowerAction : MonoBehaviour {
 //		Debug.Log (target);
 		if (target != null) {
 			Vector3 direction = towerGun.transform.position - target.transform.position;
-			if ((Vector2.Angle(towerGun.transform.up, direction) <= 10) && (Time.time - lastShotTime > towerData.fireRate)) {
+			if ((Vector2.Angle(towerGun.transform.up, direction) <= canShootAngleThreshold) && (Time.time - lastShotTime > towerData.fireRate)) {
 				Shoot (target.GetComponent<Collider2D> ());
 				lastShotTime = Time.time;
 			}
 
 //			towerGun.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI + 90,	new Vector3(0, 0, 1));
 			if (oldTarget == target) {
-				turnRate = Mathf.Min(towerData.fireRate, Time.time - lastShotTime);
+				turnDuration = Mathf.Min(towerData.fireRate, Time.time - lastShotTime);
 			} else {
-				turnRate = Mathf.Min(towerData.fireRate, Time.time - lastShotTime - towerData.fireRate);
+				turnDuration = Mathf.Min(towerData.fireRate, Time.time - lastShotTime - towerData.fireRate);
 			}
-			towerGun.transform.rotation = Quaternion.Slerp (towerGun.transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), turnRate * 0.1f);
+			towerGun.transform.rotation = Quaternion.Slerp (towerGun.transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), turnDuration * turnRate);
 			oldTarget = target;
 		}
 	}

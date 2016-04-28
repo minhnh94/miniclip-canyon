@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyDestructionDelegate : MonoBehaviour {
 
 	public int gold;
-	public float hpMod = 1;
+	public float hpMod;
 	public delegate void EnemyDelegate (GameObject enemy);
 	public EnemyDelegate enemyDelegate;
 	public GameObject healthBarWrapper;
