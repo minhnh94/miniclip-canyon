@@ -114,6 +114,7 @@ public class TowerAction : MonoBehaviour {
 		targetPosition.z = bulletPrefab.transform.position.z;
 
 		GameObject newBullet = (GameObject)Instantiate(bulletPrefab);
+		newBullet.GetComponent<BulletBehavior> ().Damage = GetComponent<TowerData> ().damage;
 		newBullet.transform.position = startPosition;
 		BulletBehavior bulletComp = newBullet.GetComponent<BulletBehavior>();
 		bulletComp.target = target.gameObject;

@@ -9,6 +9,7 @@ public class HealthBar : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		currentHealth = maxHealth;
 		originalScale = gameObject.transform.localScale.x;
 	}
 	
@@ -17,6 +18,10 @@ public class HealthBar : MonoBehaviour {
 		Vector3 tmpScale = gameObject.transform.localScale;
 		tmpScale.x = currentHealth / maxHealth * originalScale;
 		gameObject.transform.localScale = tmpScale;
+	}
 
+	public void AdjustMaxHP () {
+		float hpMod = transform.parent.GetComponentInParent<EnemyDestructionDelegate> ().hpMod;
+		maxHealth *= hpMod;
 	}
 }

@@ -130,7 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197655e52faa0064995fc8c4557871c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 100
+  cost: 200
+  damage: 10
   fireRate: 1
   isSlowTower: 1
   bullet: {fileID: 157792, guid: 0144026b77daa89458e78c41da6c9ce9, type: 2}

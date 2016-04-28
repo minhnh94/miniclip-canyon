@@ -12,11 +12,9 @@ public class Wave {
 public class SpawnEnemy : MonoBehaviour {
 
 	public GameObject[] waypoints;
-
-	public GameObject enemyPrefab;
-	public Wave[] waves;
 	public int timeBetweenWaves = 5;
 	public int currentWave = 0;
+	public Wave[] waves;
 
 	private GameManagerBehavior gameManager;
 
@@ -46,6 +44,8 @@ public class SpawnEnemy : MonoBehaviour {
 				// 3  
 				lastSpawnTime = Time.time;
 				GameObject newEnemy = (GameObject) Instantiate(waves[currentWave].enemyPrefab);
+				newEnemy.GetComponent<EnemyDestructionDelegate> ().hpMod *= (1 + currentWave / 20);
+				newEnemy.GetComponent<EnemyDestructionDelegate> ().healthBarWrapper.GetComponentInChildren<HealthBar> ().AdjustMaxHP ();
 				if (newEnemy.tag == "Air Enemy") {
 					float randomRoute = Random.value * 3;
 					if ((randomRoute >= 0) && (randomRoute < 1)) {

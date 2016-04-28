@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gold: 20
+  hpMod: 1.25
   healthBarWrapper: {fileID: 117348}
   destroySound: {fileID: 8300000, guid: 7ebc7cf8f13f34bb884570dc5df7510e, type: 3}
 --- !u!114 &11410292

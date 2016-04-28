@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemyDestructionDelegate : MonoBehaviour {
 
 	public int gold;
+	public float hpMod = 1;
 	public delegate void EnemyDelegate (GameObject enemy);
 	public EnemyDelegate enemyDelegate;
 	public GameObject healthBarWrapper;
@@ -11,7 +12,7 @@ public class EnemyDestructionDelegate : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame

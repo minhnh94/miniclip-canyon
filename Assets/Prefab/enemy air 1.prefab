@@ -229,7 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c94a89e84c0834892517e80018d79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 20
+  gold: 15
+  hpMod: 1
   healthBarWrapper: {fileID: 182620}
   destroySound: {fileID: 8300000, guid: 17504d73f80f64fc4ad7948d69be9d56, type: 3}
 --- !u!212 &21245658

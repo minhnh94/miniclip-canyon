@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 100
+  damage: 25
   fireRate: 1
   isSlowTower: 0
   bullet: {fileID: 117132, guid: 30d4483a8efc84081b9b1c49a6994106, type: 2}

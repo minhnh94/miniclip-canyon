@@ -73,7 +73,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 9
+  m_Radius: 6
 --- !u!114 &11404226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 120
+  damage: 34
   fireRate: 1.5
   isSlowTower: 0
   bullet: {fileID: 167704, guid: 618af2818cb599f43a95439a0143b0fd, type: 2}

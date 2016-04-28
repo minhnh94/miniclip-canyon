@@ -102,7 +102,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 3
 --- !u!114 &11413358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,10 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197655e52faa0064995fc8c4557871c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 100
-  fireRate: 1
+  cost: 500
+  damage: 50
+  fireRate: 0.5
   isSlowTower: 0
-  bullet: {fileID: 157792, guid: 0144026b77daa89458e78c41da6c9ce9, type: 2}
+  bullet: {fileID: 117132, guid: 30d4483a8efc84081b9b1c49a6994106, type: 2}
   aoeImageScale: 2
 --- !u!114 &11492000
 MonoBehaviour:

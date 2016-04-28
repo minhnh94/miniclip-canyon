@@ -5,7 +5,13 @@ public class BulletBehavior : MonoBehaviour {
 	public float speed;
 	private float muzzleSpeed;
 	public float speedDecay;
-	public int damage;
+	private int _damage;
+	public int Damage {
+		get { return _damage; }
+		set {
+			_damage = value;
+		}
+	}
 	public bool isSlowBullet;
 	public float bulletSlowDuration;
 	public bool isAoeBullet;
@@ -68,7 +74,7 @@ public class BulletBehavior : MonoBehaviour {
 
 				if (healthBarTransform != null) {
 					HealthBar healthBar = healthBarTransform.gameObject.GetComponent<HealthBar> ();
-					healthBar.currentHealth -= Mathf.Max (damage, 0);
+					healthBar.currentHealth -= Mathf.Max (_damage, 0);
 					Destroy (gameObject);
 
 					if (healthBar.currentHealth <= 0) {
@@ -95,7 +101,7 @@ public class BulletBehavior : MonoBehaviour {
 
 				if (healthBarTransform != null) {
 					HealthBar healthBar = healthBarTransform.gameObject.GetComponent<HealthBar> ();
-					healthBar.currentHealth -= Mathf.Max (damage, 0);
+					healthBar.currentHealth -= Mathf.Max (_damage, 0);
 					Destroy (gameObject);
 
 					if (healthBar.currentHealth <= 0) {

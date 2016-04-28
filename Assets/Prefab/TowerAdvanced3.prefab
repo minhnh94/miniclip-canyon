@@ -114,10 +114,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197655e52faa0064995fc8c4557871c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 100
+  cost: 400
+  damage: 34
   fireRate: 1
   isSlowTower: 0
-  bullet: {fileID: 157792, guid: 0144026b77daa89458e78c41da6c9ce9, type: 2}
+  bullet: {fileID: 186808, guid: 0395f0abb7b80d544ab57b92c268d25f, type: 2}
   aoeImageScale: 2
 --- !u!114 &11470150
 MonoBehaviour:
