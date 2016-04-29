@@ -49,6 +49,7 @@ public class SpawnEnemy : MonoBehaviour {
 				lastSpawnTime = Time.time;
 				GameObject newEnemy = (GameObject) Instantiate(waves[theCurrentWave].enemyPrefab);
 				newEnemy.GetComponent<EnemyDestructionDelegate> ().hpMod *= (float) (1 + theCurrentWave / 20f);
+				newEnemy.GetComponent<EnemyDestructionDelegate>().hpMod *= GameManagerBehavior.DifficultyBonus;
 				newEnemy.GetComponent<EnemyDestructionDelegate> ().healthBarWrapper.GetComponentInChildren<HealthBar> ().AdjustMaxHP ();
 
 				if (newEnemy.tag == "Air Enemy") {

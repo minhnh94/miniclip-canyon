@@ -17,31 +17,31 @@ public class SelectGameModeButtonAction : MonoBehaviour {
 				var difficultyText = GameObject.Find("DifficultyText").GetComponent<Text>();
 				var btnTag = gameObject.tag;
 				if (btnTag.Equals(Constant.EasyModeBtn)) {
-					difficultyText.text = "Waves: 20\nDelay per wave: 2 min\nScore bonus: 0%";
+					difficultyText.text = "Waves: 20\nEnemy HP bonus: 0%\nBounty bonus: 0%";
 
 					GetComponent<Image>().sprite = Resources.Load<Sprite>("icon/border_button_select");
 					GameObject.Find("Button (2)").GetComponent<Image>().sprite = Resources.Load<Sprite>("icon/border_button");
 					GameObject.Find("Button (1)").GetComponent<Image>().sprite = Resources.Load<Sprite>("icon/border_button");
 
-					GameManagerBehavior.DifficultyBonus = 0;
+					GameManagerBehavior.DifficultyBonus = 1.0f;
 					GameManagerBehavior.GameWaveLength = 20;
 				} else if (btnTag.Equals(Constant.NormalModeBtn)) {
-					difficultyText.text = "Waves: 30\nDelay per wave: 1.5 min\nScore bonus: 20%";
+					difficultyText.text = "Waves: 30\nEnemy HP bonus: +50%\nBounty bonus: +10%";
 
 					GetComponent<Image>().sprite = Resources.Load<Sprite>("icon/border_button_select");
 					GameObject.Find("Button (2)").GetComponent<Image>().sprite = Resources.Load<Sprite>("icon/border_button");
 					GameObject.Find("Button").GetComponent<Image>().sprite = Resources.Load<Sprite>("icon/border_button");
 
-					GameManagerBehavior.DifficultyBonus = 20;
+					GameManagerBehavior.DifficultyBonus = 1.5f;
 					GameManagerBehavior.GameWaveLength = 30;
 				} else if (btnTag.Equals(Constant.HardModeBtn)) {
-					difficultyText.text = "Waves: 50\nDelay per wave: 1 min\nScore bonus: 50%";
+					difficultyText.text = "Waves: 50\nEnemy HP bonus: +100%\nBounty bonus: 20%";
 
 					GetComponent<Image>().sprite = Resources.Load<Sprite>("icon/border_button_select");
 					GameObject.Find("Button").GetComponent<Image>().sprite = Resources.Load<Sprite>("icon/border_button");
 					GameObject.Find("Button (1)").GetComponent<Image>().sprite = Resources.Load<Sprite>("icon/border_button");
 
-					GameManagerBehavior.DifficultyBonus = 50;
+					GameManagerBehavior.DifficultyBonus = 2.0f;
 					GameManagerBehavior.GameWaveLength = 50;
 				}
 			});

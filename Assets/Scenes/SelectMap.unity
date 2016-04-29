@@ -878,11 +878,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Waves: 20
 
-    Delay per wave: 2 min
+    Enemy HP bonus: 0%
 
-    Score bonus: 0%
-
-'
+    Bounty bonus: 0%'
 --- !u!222 &525478197
 CanvasRenderer:
   m_ObjectHideFlags: 0

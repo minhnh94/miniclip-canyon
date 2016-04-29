@@ -81,6 +81,16 @@ public class GameManagerBehavior : MonoBehaviour {
 		Health = 10;
 		Wave = 0;
 		Score = 0;
+
+		if (GameWaveLength == 0)
+		{
+			GameWaveLength = 20;
+		}
+
+		if (DifficultyBonus == 0)
+		{
+			DifficultyBonus = 1.0f;
+		}
 	}
 	
 	// Update is called once per frame
