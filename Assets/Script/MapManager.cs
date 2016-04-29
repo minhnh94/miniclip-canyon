@@ -16,7 +16,7 @@ public class MapManager : MonoBehaviour
 	public GameObject sellButton;
 
 	// Use this for initialization
-	void Start()
+	void Awake()
 	{
 		createGridMapData();
 		createGrid();
@@ -126,14 +126,14 @@ public class MapManager : MonoBehaviour
 				grid.GetComponent<GridBoxAction>().gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehavior>();
 				grid.GetComponent<GridBoxAction>().mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
 
-//				grid.transform.parent = currentMap.transform;
+				grid.transform.parent = currentMap.transform;
 
 //				float gridSize = grid.GetComponent<Renderer>().bounds.size.x;
 				float gridSize = grid.GetComponent<GridBoxAction>().normalRender.GetComponent<Renderer>().bounds.size.x;
 				float mapSize = currentMap.GetComponent<Renderer>().bounds.size.x;
 
 				grid.transform.position = new Vector2(-mapSize / 2 + gridSize / 2 + gridSize * j, mapSize / 2 - gridSize / 2 - (gridSize * i));
-				grid.SetActive(true);
+//				grid.SetActive(true);
 				index++;
 			}
 		}
