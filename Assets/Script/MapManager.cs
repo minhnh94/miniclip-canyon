@@ -97,7 +97,7 @@ public class MapManager : MonoBehaviour
 		int i = 0;
 		foreach (var lineStr in lineFromFile)
 		{
-			print(lineStr);
+//			print(lineStr);
 			string[] points = lineStr.Split(',');
 
 			for (int j = 0; j < points.Length; j++) {

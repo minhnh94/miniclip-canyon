@@ -20,7 +20,7 @@ public class SpawnEnemy : MonoBehaviour {
 
 	private float lastSpawnTime;
 	private int enemiesSpawned = 0;
-	private float betweenWavesTimer;
+	private bool allDied;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +29,7 @@ public class SpawnEnemy : MonoBehaviour {
 
 		print(GameManagerBehavior.GameWaveLength);
 		print(GameManagerBehavior.DifficultyBonus);
+		allDied = false;
 	}
 	
 	// Update is called once per frame
@@ -40,16 +41,12 @@ public class SpawnEnemy : MonoBehaviour {
 			// 2
 			float timeInterval = Time.time - lastSpawnTime;
 			float spawnInterval = waves[theCurrentWave].spawnInterval;
-//			Debug.Log (enemiesSpawned);
-//			Debug.Log (timeInterval);
-//			Debug.Log (timeBetweenWaves);
-//			Debug.Log (timeInterval > spawnInterval);
-			if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) || (enemiesSpawned != 0 && timeInterval > spawnInterval)) && enemiesSpawned < waves[theCurrentWave].maxEnemies) {
+			if (((enemiesSpawned == 0 && timeInterval >= 5) || (enemiesSpawned != 0 && timeInterval >= spawnInterval)) && enemiesSpawned < waves[theCurrentWave].maxEnemies) {
 				// 3  
 				lastSpawnTime = Time.time;
 				GameObject newEnemy = (GameObject) Instantiate(waves[theCurrentWave].enemyPrefab);
 				newEnemy.GetComponent<EnemyDestructionDelegate> ().hpMod *= (float) (1 + theCurrentWave / 20f);
-				newEnemy.GetComponent<EnemyDestructionDelegate>().hpMod *= GameManagerBehavior.DifficultyBonus;
+				newEnemy.GetComponent<EnemyDestructionDelegate> ().hpMod *= GameManagerBehavior.DifficultyBonus;
 				newEnemy.GetComponent<EnemyDestructionDelegate> ().healthBarWrapper.GetComponentInChildren<HealthBar> ().AdjustMaxHP ();
 
 				if (newEnemy.tag == "Air Enemy") {
@@ -68,14 +65,19 @@ public class SpawnEnemy : MonoBehaviour {
 					}
 				}
 				enemiesSpawned++;
-				betweenWavesTimer = Time.time;
 			}
 			// 4 
-			if ((enemiesSpawned >= waves[theCurrentWave].maxEnemies) && (Time.time - betweenWavesTimer >= 5) && (GameObject.FindGameObjectWithTag("Ground Enemy") == null) && (GameObject.FindGameObjectWithTag("Air Enemy") == null)) {
+			if ((enemiesSpawned >= waves[theCurrentWave].maxEnemies) && (timeInterval >= 5) && (GameObject.FindGameObjectWithTag("Ground Enemy") == null) && (GameObject.FindGameObjectWithTag("Air Enemy") == null)) {
+				if (!allDied) {
+					lastSpawnTime = Time.time;
+					allDied = true;
+					return;
+				}
 				gameManager.Wave++;
 //				gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
 				enemiesSpawned = 0;
 				lastSpawnTime = Time.time;
+				allDied = false;
 			}
 			// 5 
 		} else {
