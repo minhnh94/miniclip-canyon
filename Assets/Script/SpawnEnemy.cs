@@ -13,7 +13,7 @@ public class SpawnEnemy : MonoBehaviour {
 
 	public GameObject[] waypoints;
 	public int timeBetweenWaves = 5;
-	public int currentWave = 0;
+	private int currentWave;
 	public Wave[] waves;
 
 	private GameManagerBehavior gameManager;
@@ -44,8 +44,9 @@ public class SpawnEnemy : MonoBehaviour {
 				// 3  
 				lastSpawnTime = Time.time;
 				GameObject newEnemy = (GameObject) Instantiate(waves[currentWave].enemyPrefab);
-				newEnemy.GetComponent<EnemyDestructionDelegate> ().hpMod *= (1 + currentWave / 20);
+				newEnemy.GetComponent<EnemyDestructionDelegate> ().hpMod *= (float) (1 + currentWave / 20f);
 				newEnemy.GetComponent<EnemyDestructionDelegate> ().healthBarWrapper.GetComponentInChildren<HealthBar> ().AdjustMaxHP ();
+
 				if (newEnemy.tag == "Air Enemy") {
 					float randomRoute = Random.value * 3;
 					if ((randomRoute >= 0) && (randomRoute < 1)) {
@@ -67,7 +68,7 @@ public class SpawnEnemy : MonoBehaviour {
 			// 4 
 			if ((enemiesSpawned >= waves[currentWave].maxEnemies) && (Time.time - betweenWavesTimer >= 5) && (GameObject.FindGameObjectWithTag("Ground Enemy") == null) && (GameObject.FindGameObjectWithTag("Air Enemy") == null)) {
 				gameManager.Wave++;
-				gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
+//				gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
 				enemiesSpawned = 0;
 				lastSpawnTime = Time.time;
 			}
@@ -76,7 +77,7 @@ public class SpawnEnemy : MonoBehaviour {
 			gameManager.gameOver = true;
 //			GameObject gameOverText = GameObject.FindGameObjectWithTag ("GameWon");
 //			gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
-//			SceneManager.LoadScene("GameOverScene");
+			SceneManager.LoadScene("GameWonScene");
 		}
 	}
 }

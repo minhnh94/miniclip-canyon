@@ -211,8 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c94a89e84c0834892517e80018d79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 50
-  hpMod: 2
+  gold: 100
+  hpMod: 3
   healthBarWrapper: {fileID: 156656}
   destroySound: {fileID: 8300000, guid: 47c9c7d61f7334755b42ab6e8e4e2412, type: 3}
 --- !u!114 &11426888
@@ -226,12 +226,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f20b52426696449b76be32c0285c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSlowDuration: 3
+  baseSlowDuration: 2.5
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  speed: 0.75
+  speed: 1.5
 --- !u!114 &11482944
 MonoBehaviour:
   m_ObjectHideFlags: 1

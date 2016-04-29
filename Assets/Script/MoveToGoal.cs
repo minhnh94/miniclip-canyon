@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class MoveToGoal : MonoBehaviour{
 
 	private float normalSpeed;
-	public float baseSlowDuration = 3f;
+	public float baseSlowDuration;
 	private float bulletSlowDuration = 0f;
 	private bool isSlowed = false;
 	private float slowBegin;

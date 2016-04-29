@@ -114,11 +114,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197655e52faa0064995fc8c4557871c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 400
-  damage: 34
+  cost: 500
+  damage: 50
   fireRate: 1
   isSlowTower: 0
-  bullet: {fileID: 186808, guid: 0395f0abb7b80d544ab57b92c268d25f, type: 2}
+  bullet: {fileID: 143870, guid: 32b0f34991380164d8e6b9e50c6d68e4, type: 2}
   aoeImageScale: 2
 --- !u!114 &11470150
 MonoBehaviour:
@@ -143,11 +143,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd0f10a543154c61abf8f4338512605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canAttackAir: 1
+  canAttackAir: 0
   canAttackGround: 1
   enemiesInRange: []
   towerGun: {fileID: 102992}
   shootSound: {fileID: 8300000, guid: 9091d86c8b47149f998baec0f783caf0, type: 3}
+  turnRate: 0.1
+  canShootAngleThreshold: 10
 --- !u!212 &21254596
 SpriteRenderer:
   m_ObjectHideFlags: 1

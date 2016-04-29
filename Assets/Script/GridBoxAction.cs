@@ -59,7 +59,7 @@ public class GridBoxAction : MonoBehaviour {
 
 				if (transform.childCount == 2) {
 //					mapManager.getSelectedGridBox ().transform.GetChild (2).gameObject.GetComponent<TowerAreaOfEffect> ().deactivateAoE ();
-					mapManager.deactivateOtherGridBox();
+					mapManager.deselectOtherGridBox();
 				}
 
 				if (isSelected) {
@@ -67,7 +67,7 @@ public class GridBoxAction : MonoBehaviour {
 						isSelected = false;
 						return;
 					}
-					mapManager.deactivateOtherGridBox ();
+					mapManager.deselectOtherGridBox ();
 					isSelected = true;
 				}
 			}

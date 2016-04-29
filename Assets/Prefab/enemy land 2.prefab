@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c94a89e84c0834892517e80018d79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 20
-  hpMod: 1.25
+  gold: 50
+  hpMod: 1.5
   healthBarWrapper: {fileID: 117348}
   destroySound: {fileID: 8300000, guid: 7ebc7cf8f13f34bb884570dc5df7510e, type: 3}
 --- !u!114 &11410292
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f872f1b55044b6e94cfda9d1a8aa38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 3
+  maxSpeed: 2.5
   mass: 9
   stoppingDistance: 0.1
   slowingDistance: 0.1
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0306143f3dfd44bbcb2f3a1517e4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSlowDuration: 0
+  baseSlowDuration: 2
 --- !u!212 &21210818
 SpriteRenderer:
   m_ObjectHideFlags: 1

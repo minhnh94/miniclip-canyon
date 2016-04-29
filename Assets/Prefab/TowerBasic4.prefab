@@ -90,6 +90,8 @@ MonoBehaviour:
   enemiesInRange: []
   towerGun: {fileID: 185870}
   shootSound: {fileID: 8300000, guid: b73440852f5124527bdb8a6dab413ce9, type: 3}
+  turnRate: 0.5
+  canShootAngleThreshold: 20
 --- !u!114 &11445710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,10 +104,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 500
-  damage: 34
-  fireRate: 0.5
+  damage: 35
+  fireRate: 0.25
   isSlowTower: 0
-  bullet: {fileID: 117132, guid: 30d4483a8efc84081b9b1c49a6994106, type: 2}
+  bullet: {fileID: 168494, guid: cb4108b43e990774cbef619e487070f8, type: 2}
   aoeImageScale: 4
 --- !u!114 &11494888
 MonoBehaviour:

@@ -51,7 +51,7 @@ public class MapManager : MonoBehaviour
 		}
 	}
 
-	public void deactivateOtherGridBox() {
+	public void deselectOtherGridBox() {
 		foreach (var grid in gridPrefabs) {
 			var gridAction = grid.GetComponent<GridBoxAction> ();
 			gridAction.isSelected = false;
@@ -74,6 +74,17 @@ public class MapManager : MonoBehaviour
 				return grid;
 		}
 		return null;
+	}
+
+	public float getBuiltTowersCost() {
+		float result = 0f;
+		foreach (var grid in gridPrefabs) {
+			if (grid.transform.childCount != 2) {
+				GameObject tower = grid.transform.GetChild (2).gameObject;
+				result += tower.GetComponent<TowerData> ().cost;
+			}
+		}
+		return result;
 	}
 
 	#region Private inits
