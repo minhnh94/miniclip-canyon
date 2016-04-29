@@ -220,8 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c94a89e84c0834892517e80018d79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 30
-  hpMod: 1.5
+  gold: 85
+  hpMod: 2
   healthBarWrapper: {fileID: 193188}
   destroySound: {fileID: 8300000, guid: b827be8a075ea45d4bdf57406d157a7e, type: 3}
 --- !u!114 &11474222
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0306143f3dfd44bbcb2f3a1517e4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSlowDuration: 2
+  baseSlowDuration: 2.5
 --- !u!212 &21232498
 SpriteRenderer:
   m_ObjectHideFlags: 1

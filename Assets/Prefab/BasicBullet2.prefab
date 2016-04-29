@@ -73,12 +73,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d50678e675e4db08f51be6ea1eb3e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 5
   speedDecay: 1
   isSlowBullet: 0
   bulletSlowDuration: 0
   isAoeBullet: 1
-  radius: 3
+  radius: 2.5
   target: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &21246150

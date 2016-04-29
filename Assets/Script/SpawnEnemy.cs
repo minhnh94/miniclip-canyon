@@ -68,7 +68,7 @@ public class SpawnEnemy : MonoBehaviour {
 			// 4 
 			if ((enemiesSpawned >= waves[currentWave].maxEnemies) && (Time.time - betweenWavesTimer >= 5) && (GameObject.FindGameObjectWithTag("Ground Enemy") == null) && (GameObject.FindGameObjectWithTag("Air Enemy") == null)) {
 				gameManager.Wave++;
-				gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
+//				gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
 				enemiesSpawned = 0;
 				lastSpawnTime = Time.time;
 			}
@@ -77,7 +77,7 @@ public class SpawnEnemy : MonoBehaviour {
 			gameManager.gameOver = true;
 //			GameObject gameOverText = GameObject.FindGameObjectWithTag ("GameWon");
 //			gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
-//			SceneManager.LoadScene("GameOverScene");
+			SceneManager.LoadScene("GameWonScene");
 		}
 	}
 }

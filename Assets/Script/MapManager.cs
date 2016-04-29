@@ -76,6 +76,17 @@ public class MapManager : MonoBehaviour
 		return null;
 	}
 
+	public float getBuiltTowersCost() {
+		float result = 0f;
+		foreach (var grid in gridPrefabs) {
+			if (grid.transform.childCount != 2) {
+				GameObject tower = grid.transform.GetChild (2).gameObject;
+				result += tower.GetComponent<TowerData> ().cost;
+			}
+		}
+		return result;
+	}
+
 	#region Private inits
 
 	void createGridMapData()
