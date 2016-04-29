@@ -7,6 +7,9 @@ public class SelectGameModeButtonAction : MonoBehaviour {
 		if (gameObject.tag.Equals(Constant.EasyModeBtn))
 		{
 			GetComponent<Image>().sprite = Resources.Load<Sprite>("icon/border_button_select");
+			// Default is easy
+			GameManagerBehavior.DifficultyBonus = 0;
+			GameManagerBehavior.GameWaveLength = 20;
 		}
 
 		GetComponent<Button>().onClick.AddListener(() =>
