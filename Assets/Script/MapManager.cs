@@ -103,7 +103,7 @@ public class MapManager : MonoBehaviour
 		{
 			for (int j = 0; j < 14; j++)
 			{
-				GameObject grid = GameObject.Instantiate(gridBoxSample);
+				GameObject grid = (GameObject)Instantiate(gridBoxSample);
 				gridPrefabs.Add(grid);
 				grid.GetComponent<GridBoxAction>().towerPreviewRender.SetActive(false);
 				grid.GetComponent<GridBoxAction>().indexInMapManagerArray = index;
@@ -115,7 +115,7 @@ public class MapManager : MonoBehaviour
 				grid.GetComponent<GridBoxAction>().gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehavior>();
 				grid.GetComponent<GridBoxAction>().mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
 
-				grid.transform.parent = currentMap.transform;
+//				grid.transform.parent = currentMap.transform;
 
 //				float gridSize = grid.GetComponent<Renderer>().bounds.size.x;
 				float gridSize = grid.GetComponent<GridBoxAction>().normalRender.GetComponent<Renderer>().bounds.size.x;
