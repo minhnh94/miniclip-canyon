@@ -26,25 +26,29 @@ public class SpawnEnemy : MonoBehaviour {
 	void Start () {
 		lastSpawnTime = Time.time;
 		gameManager = GameObject.Find ("GameManager").GetComponent<GameManagerBehavior> ();
+
+		print(GameManagerBehavior.GameWaveLength);
+		print(GameManagerBehavior.DifficultyBonus);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		// 1
-		int currentWave = gameManager.Wave;
-		if (currentWave < waves.Length) {
+		int theCurrentWave = gameManager.Wave;
+		int maxWaveInThisLevel = GameManagerBehavior.GameWaveLength;
+		if (theCurrentWave < maxWaveInThisLevel) {
 			// 2
 			float timeInterval = Time.time - lastSpawnTime;
-			float spawnInterval = waves[currentWave].spawnInterval;
+			float spawnInterval = waves[theCurrentWave].spawnInterval;
 //			Debug.Log (enemiesSpawned);
 //			Debug.Log (timeInterval);
 //			Debug.Log (timeBetweenWaves);
 //			Debug.Log (timeInterval > spawnInterval);
-			if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) || (enemiesSpawned != 0 && timeInterval > spawnInterval)) && enemiesSpawned < waves[currentWave].maxEnemies) {
+			if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) || (enemiesSpawned != 0 && timeInterval > spawnInterval)) && enemiesSpawned < waves[theCurrentWave].maxEnemies) {
 				// 3  
 				lastSpawnTime = Time.time;
-				GameObject newEnemy = (GameObject) Instantiate(waves[currentWave].enemyPrefab);
-				newEnemy.GetComponent<EnemyDestructionDelegate> ().hpMod *= (float) (1 + currentWave / 20f);
+				GameObject newEnemy = (GameObject) Instantiate(waves[theCurrentWave].enemyPrefab);
+				newEnemy.GetComponent<EnemyDestructionDelegate> ().hpMod *= (float) (1 + theCurrentWave / 20f);
 				newEnemy.GetComponent<EnemyDestructionDelegate> ().healthBarWrapper.GetComponentInChildren<HealthBar> ().AdjustMaxHP ();
 
 				if (newEnemy.tag == "Air Enemy") {
@@ -66,7 +70,7 @@ public class SpawnEnemy : MonoBehaviour {
 				betweenWavesTimer = Time.time;
 			}
 			// 4 
-			if ((enemiesSpawned >= waves[currentWave].maxEnemies) && (Time.time - betweenWavesTimer >= 5) && (GameObject.FindGameObjectWithTag("Ground Enemy") == null) && (GameObject.FindGameObjectWithTag("Air Enemy") == null)) {
+			if ((enemiesSpawned >= waves[theCurrentWave].maxEnemies) && (Time.time - betweenWavesTimer >= 5) && (GameObject.FindGameObjectWithTag("Ground Enemy") == null) && (GameObject.FindGameObjectWithTag("Air Enemy") == null)) {
 				gameManager.Wave++;
 //				gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
 				enemiesSpawned = 0;

@@ -5,13 +5,9 @@ using UnityEngine.SceneManagement;
 public class GameManagerBehavior : MonoBehaviour {
 
 	public MapManager mapManager;
-	private float difficultyBonus;
-	public float DifficultyBonus {
-		get { return difficultyBonus; }
-		set {
-			difficultyBonus = value;
-		}
-	}
+
+	public static float DifficultyBonus = 0;
+	public static int GameWaveLength = 50;
 
 	public static int whatTowerIsPressed = -1;
 	public GameObject[] towerButtons;
@@ -89,7 +85,7 @@ public class GameManagerBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		Score = ((Health * 10000f) + (Gold + mapManager.getBuiltTowersCost())) * DifficultyBonus;
+		Score = ((Health * 10000f) + (Gold + mapManager.getBuiltTowersCost())) * GameManagerBehavior.DifficultyBonus;
 	}
 
 	public void ToggleTowerButton() {
