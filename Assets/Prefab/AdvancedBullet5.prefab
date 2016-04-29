@@ -76,7 +76,7 @@ MonoBehaviour:
   speed: 5
   speedDecay: 1
   isSlowBullet: 1
-  bulletSlowDuration: 3
+  bulletSlowDuration: 2
   isAoeBullet: 0
   radius: 0
   target: {fileID: 0}

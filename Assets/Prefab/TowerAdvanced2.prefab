@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 200
   damage: 10
-  fireRate: 1
+  fireRate: 1.5
   isSlowTower: 1
   bullet: {fileID: 157792, guid: 0144026b77daa89458e78c41da6c9ce9, type: 2}
   aoeImageScale: 2
