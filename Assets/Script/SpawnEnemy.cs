@@ -26,9 +26,6 @@ public class SpawnEnemy : MonoBehaviour {
 	void Start () {
 		lastSpawnTime = Time.time;
 		gameManager = GameObject.Find ("GameManager").GetComponent<GameManagerBehavior> ();
-
-		print(GameManagerBehavior.GameWaveLength);
-		print(GameManagerBehavior.DifficultyBonus);
 		allDied = false;
 	}
 	
