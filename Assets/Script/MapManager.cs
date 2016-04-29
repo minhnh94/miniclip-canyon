@@ -91,13 +91,14 @@ public class MapManager : MonoBehaviour
 
 	void createGridMapData()
 	{
-		var reader = new StreamReader("Assets/Script/Map1.txt");
+		TextAsset textReader = Resources.Load<TextAsset>("map/Map1");
+		string[] lineFromFile = textReader.text.Split('\n');
 
 		int i = 0;
-		string line;
-		while ((line = reader.ReadLine()) != null)
+		foreach (var lineStr in lineFromFile)
 		{
-			string[] points = line.Split(',');
+			print(lineStr);
+			string[] points = lineStr.Split(',');
 
 			for (int j = 0; j < points.Length; j++) {
 				gridData[i, j] = points[j] == "0" ? new Grid(false) : new Grid(true);
