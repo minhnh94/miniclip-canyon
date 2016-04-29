@@ -8,6 +8,7 @@ public class GameManagerBehavior : MonoBehaviour {
 
 	public static float DifficultyBonus;
 	public static int GameWaveLength;
+	public static float TotalScore;
 
 	public static int whatTowerIsPressed = -1;
 	public GameObject[] towerButtons;
@@ -53,6 +54,7 @@ public class GameManagerBehavior : MonoBehaviour {
 		get { return score; }
 		set {
 			score = value;
+			TotalScore = score;
 		}
 	}
 
