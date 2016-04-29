@@ -12,8 +12,7 @@ public class SelectGameModeButtonAction : MonoBehaviour {
 			GameManagerBehavior.GameWaveLength = 20;
 		}
 
-		GetComponent<Button>().onClick.AddListener(() =>
-			{
+		GetComponent<Button>().onClick.AddListener(() => {
 				var difficultyText = GameObject.Find("DifficultyText").GetComponent<Text>();
 				var btnTag = gameObject.tag;
 				if (btnTag.Equals(Constant.EasyModeBtn)) {

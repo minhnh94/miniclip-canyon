@@ -84,8 +84,16 @@ public class BulletBehavior : MonoBehaviour {
 		// If bullet hit the enemy
 		if ((target != null) && (other == target.transform.GetComponent<PolygonCollider2D> ())) {
 			if (isAoeBullet) {
-				areaOfEffect (other, radius);
+				AreaOfEffect (other, radius);
 			} else {
+				if (isSlowBullet) {
+					if (other.gameObject.tag == "Ground Enemy") {
+						other.gameObject.GetComponent<MoveToGoal> ().SetSlowEffect (bulletSlowDuration);
+					} else {
+						other.gameObject.GetComponent<FlyToGoal> ().SetSlowEffect (bulletSlowDuration);
+					}
+				}
+
 				Transform healthBarTransform = target.transform.Find ("HealthBarWrapper/HealthBar");
 
 				if (healthBarTransform != null) {
@@ -107,11 +115,19 @@ public class BulletBehavior : MonoBehaviour {
 		}
 	}
 
-	void areaOfEffect (Collider2D mainTarget, float radius) {
+	void AreaOfEffect (Collider2D mainTarget, float radius) {
 		Collider2D[] subTargets = Physics2D.OverlapCircleAll(mainTarget.gameObject.transform.position, radius);
 		foreach (Collider2D subTarget in subTargets) {
 			if (subTarget.transform.Find ("HealthBarWrapper/HealthBar") != null) {
 				subDel = subTarget.gameObject.GetComponent<EnemyDestructionDelegate> ();
+
+				if (isSlowBullet) {
+					if (subTarget.gameObject.tag == "Ground Enemy") {
+						subTarget.gameObject.GetComponent<MoveToGoal> ().SetSlowEffect (bulletSlowDuration);
+					} else {
+						subTarget.gameObject.GetComponent<FlyToGoal> ().SetSlowEffect (bulletSlowDuration);
+					}
+				}
 
 				Transform healthBarTransform = subTarget.transform.Find ("HealthBarWrapper/HealthBar");
 

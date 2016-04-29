@@ -30,7 +30,7 @@ public class AoeTowerAction : MonoBehaviour {
 		foreach (GameObject enemy in enemiesInRange) {
 			float distanceToGoal = float.MaxValue;
 			if (enemy.tag == "Ground Enemy" && canAttackGround) {
-				distanceToGoal = enemy.GetComponent<MoveToGoal> ().distanceToGoal ();
+				distanceToGoal = enemy.GetComponent<MoveToGoal> ().DistanceToGoal ();
 			} else {
 				if (enemy.tag == "Air Enemy" && canAttackAir) {
 					distanceToGoal = enemy.GetComponent<FlyToGoal> ().distanceToGoal ();

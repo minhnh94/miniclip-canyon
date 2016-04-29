@@ -32,17 +32,6 @@ public class FlyToGoal : MonoBehaviour{
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
-		if (other.tag == "Bullet") {
-			if (other.gameObject.GetComponent<BulletBehavior> ().isSlowBullet) {
-				if (!isSlowed) {
-					speed /= 2;
-				}
-				isSlowed = true;
-				bulletSlowDuration = other.gameObject.GetComponent <BulletBehavior> ().bulletSlowDuration;
-				slowBegin = Time.time;
-			}
-		}
-
 		if (other.tag == "Finish") {
 			if (currentWaypoint < waypoints.Length - 3) {
 				currentWaypoint++;
@@ -65,7 +54,16 @@ public class FlyToGoal : MonoBehaviour{
 		return distance;
 	}
 
-	void ClearSlowEffect()
+	public void SetSlowEffect(float duration) {
+		if (!isSlowed) {
+			speed /= 2;
+		}
+		isSlowed = true;
+		bulletSlowDuration = duration;
+		slowBegin = Time.time;
+	}
+
+	private void ClearSlowEffect()
 	{
 		isSlowed = false;
 		speed *= 2;

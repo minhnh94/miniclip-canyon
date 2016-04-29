@@ -40,27 +40,24 @@ public class MoveToGoal : MonoBehaviour{
 			GameManagerBehavior gameManager = GameObject.Find ("GameManager").GetComponent<GameManagerBehavior> ();
 			gameManager.Health -= 1;
 		}
-
-		if (other.tag == "Bullet") {
-			if (other.gameObject.GetComponent<BulletBehavior> ().isSlowBullet) {
-				if (!isSlowed) {
-					agent.maxSpeed = agent.maxSpeed / 2;
-				}
-				isSlowed = true;
-				bulletSlowDuration = other.gameObject.GetComponent <BulletBehavior> ().bulletSlowDuration;
-				slowBegin = Time.time;
-			}
-		}
 	}
 
-	public float distanceToGoal() {
+	public float DistanceToGoal() {
 		float distance = 0;
 		distance = gameObject.GetComponent<PolyNavAgent> ().remainingDistance;
 		return distance;
 	}
 
-	void ClearSlowEffect()
-	{
+	public void SetSlowEffect(float duration) {
+		if (!isSlowed) {
+			agent.maxSpeed = agent.maxSpeed / 2;
+		}
+		isSlowed = true;
+		bulletSlowDuration = duration;
+		slowBegin = Time.time;
+	}
+
+	private void ClearSlowEffect() {
 		isSlowed = false;
 		agent.maxSpeed = agent.maxSpeed * 2;
 	}

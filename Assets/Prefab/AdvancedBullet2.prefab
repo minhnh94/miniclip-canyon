@@ -77,8 +77,8 @@ MonoBehaviour:
   speedDecay: 1
   isSlowBullet: 1
   bulletSlowDuration: 3
-  isAoeBullet: 0
-  radius: 0
+  isAoeBullet: 1
+  radius: 1
   target: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &21251900
