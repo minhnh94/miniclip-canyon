@@ -6,8 +6,8 @@ public class GameManagerBehavior : MonoBehaviour {
 
 	public MapManager mapManager;
 
-	public static float DifficultyBonus = 0;
-	public static int GameWaveLength = 50;
+	public static float DifficultyBonus;
+	public static int GameWaveLength;
 
 	public static int whatTowerIsPressed = -1;
 	public GameObject[] towerButtons;
