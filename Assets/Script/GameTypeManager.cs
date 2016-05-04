@@ -2,11 +2,16 @@
 using System.Collections;
 
 public class GameTypeManager : MonoBehaviour {
-
-	// Use this for initialization
-
+	
 	public GameObject selectMenuCanvas;
 	public AudioClip startGameSound;
+	private string selectedMap;
+	public string SelectedMap {
+		get { return selectedMap; }
+		set {
+			selectedMap = value;
+		}
+	}
 
 	void Start () {
 	
@@ -21,8 +26,7 @@ public class GameTypeManager : MonoBehaviour {
 		AudioSource.PlayClipAtPoint(startGameSound, transform.position);
 		yield return new WaitForSeconds(startGameSound.length);
 
-
-		Application.LoadLevel("Map1");
+		Application.LoadLevel(SelectedMap);
 	}
 
 

@@ -25,6 +25,7 @@ TagManager:
   - EasyBtn
   - NormalBtn
   - HardBtn
+  - SelectMapCanvas
   layers:
   - Default
   - TransparentFX

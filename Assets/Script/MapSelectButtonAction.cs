@@ -4,9 +4,11 @@ using UnityEngine.UI;
 
 public class MapSelectButtonAction : MonoBehaviour {
 
+	public GameTypeManager gameTypeManager;
 	public GameObject mapPreview;
 
 	void Start() {
+		gameTypeManager = GameObject.FindGameObjectWithTag ("SelectMapCanvas").GetComponent<GameTypeManager> ();
 		if (gameObject.tag.Equals(Constant.SelectMap1Btn))
 		{
 			GetComponent<Image>().sprite = Resources.Load<Sprite>("map/map1_selected");
@@ -16,6 +18,7 @@ public class MapSelectButtonAction : MonoBehaviour {
 			{
 				var btnTag = gameObject.tag;
 				if (btnTag.Equals(Constant.SelectMap1Btn)) {
+					gameTypeManager.SelectedMap = "Map1";
 					mapPreview.GetComponent<SelectGameMapPreview>().SetMapPreview(0);
 					GameObject.Find("LevelText").GetComponent<Text>().text = "Desert";
 
@@ -23,6 +26,7 @@ public class MapSelectButtonAction : MonoBehaviour {
 					GameObject.Find("map2_button").GetComponent<Image>().sprite = Resources.Load<Sprite>("map/map2");
 					GameObject.Find("map3_button").GetComponent<Image>().sprite = Resources.Load<Sprite>("map/map3");
 				} else if (btnTag.Equals(Constant.SelectMap2Btn)) {
+					gameTypeManager.SelectedMap = "Map2";
 					mapPreview.GetComponent<SelectGameMapPreview>().SetMapPreview(1);
 					GameObject.Find("LevelText").GetComponent<Text>().text = "Wasteland";
 
@@ -30,6 +34,7 @@ public class MapSelectButtonAction : MonoBehaviour {
 					GameObject.Find("map1_button").GetComponent<Image>().sprite = Resources.Load<Sprite>("map/map1");
 					GameObject.Find("map3_button").GetComponent<Image>().sprite = Resources.Load<Sprite>("map/map3");
 				} else if (btnTag.Equals(Constant.SelectMap3Btn)) {
+					gameTypeManager.SelectedMap = "Map3";
 					mapPreview.GetComponent<SelectGameMapPreview>().SetMapPreview(2);
 					GameObject.Find("LevelText").GetComponent<Text>().text = "Canyon";
 
