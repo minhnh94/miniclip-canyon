@@ -19,7 +19,7 @@ public class TowerAction : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		enemiesInRange = new List<GameObject>();
-		lastShotTime = Time.time;
+		lastShotTime = float.MinValue;
 		towerData = gameObject.GetComponentInChildren<TowerData> ();
 	}
 
