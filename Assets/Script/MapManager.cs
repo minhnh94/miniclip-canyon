@@ -100,7 +100,7 @@ public class MapManager : MonoBehaviour
 //			print(lineStr);
 			string[] points = lineStr.Split(',');
 
-			for (int j = 0; j < points.Length; j++) {
+			for (int j = 0; j < (points.Length - 1); j++) {
 				gridData[i, j] = points[j] == "0" ? new Grid(false) : new Grid(true);
 			}
 
