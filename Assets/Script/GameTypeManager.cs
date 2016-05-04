@@ -1,17 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameTypeManager : MonoBehaviour {
 	
 	public GameObject selectMenuCanvas;
 	public AudioClip startGameSound;
-	private string selectedMap;
-	public string SelectedMap {
-		get { return selectedMap; }
-		set {
-			selectedMap = value;
-		}
-	}
 
 	void Start () {
 	
@@ -26,7 +20,11 @@ public class GameTypeManager : MonoBehaviour {
 		AudioSource.PlayClipAtPoint(startGameSound, transform.position);
 		yield return new WaitForSeconds(startGameSound.length);
 
-		Application.LoadLevel(SelectedMap);
+		if (PlayerPrefs.GetString("Selected Map") != "") {
+			SceneManager.LoadScene(PlayerPrefs.GetString("Selected Map"));
+		} else {
+			SceneManager.LoadScene("Menu");
+		}
 	}
 
 

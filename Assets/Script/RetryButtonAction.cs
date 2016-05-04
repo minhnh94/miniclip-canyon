@@ -14,7 +14,11 @@ public class RetryButtonAction : MonoBehaviour
 				GameManagerBehavior.whatTowerIsPressed = -1;
 				if (gameObject.tag == "RetryBtn")
 				{
-					SceneManager.LoadScene("Map1");
+					if (PlayerPrefs.GetString("Selected Map") != "") {
+						SceneManager.LoadScene(PlayerPrefs.GetString("Selected Map"));
+					} else {
+						SceneManager.LoadScene("Menu");
+					}
 				}
 				else if (gameObject.tag == "QuitBtn")
 				{
