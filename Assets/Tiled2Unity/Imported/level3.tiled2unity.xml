@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 4/23/2016 4:24:35 AM-->
+<!--Last exported: 5/4/2016 1:04:04 PM-->
 <Tiled2Unity version="1.0.4.4">
   <AssignMaterial mesh="mesh_0001" material="meta" />
   <AssignMaterial mesh="mesh_0002" material="meta" />
@@ -24,10 +24,10 @@
         </PolygonCollider2D>
       </GameObject>
     </GameObject>
-    <GameObject name="Road" x="0" y="0">
+    <GameObject name="Mountain" x="0" y="0">
       <GameObject name="map3_default" copy="mesh_0003" sortingLayerName="" sortingOrder="2" opacity="1" />
     </GameObject>
-    <GameObject name="Mountain" x="0" y="0">
+    <GameObject name="Road" x="0" y="0">
       <GameObject name="map3_default" copy="mesh_0004" sortingLayerName="" sortingOrder="3" opacity="1" />
     </GameObject>
   </Prefab>

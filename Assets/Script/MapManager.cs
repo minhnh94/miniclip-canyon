@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 public class MapManager : MonoBehaviour
 {
+	public string mapPath;
 	public GameObject gridBoxSample;
 	public GameObject currentMap;
 	public Camera mainCamera;
@@ -91,7 +92,7 @@ public class MapManager : MonoBehaviour
 
 	void createGridMapData()
 	{
-		TextAsset textReader = Resources.Load<TextAsset>("map/Map1");
+		TextAsset textReader = Resources.Load<TextAsset> ("map/" + mapPath);
 		string[] lineFromFile = textReader.text.Split('\n');
 
 		int i = 0;

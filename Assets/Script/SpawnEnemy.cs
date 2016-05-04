@@ -11,6 +11,7 @@ public class Wave {
 
 public class SpawnEnemy : MonoBehaviour {
 
+	public GameObject spawn;
 	public GameObject[] waypoints;
 	public int timeBetweenWaves = 5;
 	private int currentWave;
@@ -42,6 +43,7 @@ public class SpawnEnemy : MonoBehaviour {
 				// 3  
 				lastSpawnTime = Time.time;
 				GameObject newEnemy = (GameObject) Instantiate(waves[theCurrentWave].enemyPrefab);
+				newEnemy.transform.position = spawn.transform.position;
 				newEnemy.GetComponent<EnemyDestructionDelegate> ().hpMod *= (float) (1 + theCurrentWave / 20f);
 				newEnemy.GetComponent<EnemyDestructionDelegate> ().hpMod *= GameManagerBehavior.DifficultyBonus;
 				newEnemy.GetComponent<EnemyDestructionDelegate> ().healthBarWrapper.GetComponentInChildren<HealthBar> ().AdjustMaxHP ();
