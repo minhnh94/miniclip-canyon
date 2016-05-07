@@ -3,13 +3,15 @@ using System.Collections;
 
 public class TutorialButton : MonoBehaviour {
 
-	public GameObject tutorialScreen;
+	public GameObject gameManager;
+	public GameObject tutorialBasic;
+	public GameObject tutorialAdvanced;
 
 	public void OnClick() {
-		tutorialScreen.GetComponent<TutorialButton> ().DisplayTutorial ();
-	}
-
-	public void DisplayTutorial() {
-		gameObject.GetComponent<Animator> ().SetTrigger ("displayTutorial");
+		if (!gameManager.GetComponent<GameManagerBehavior> ().isShowingAdvanceButton) {
+			tutorialBasic.GetComponent<TutorialWeapons> ().DisplayTutorial ();
+		} else {
+			tutorialAdvanced.GetComponent<TutorialWeapons> ().DisplayTutorial ();
+		}
 	}
 }
