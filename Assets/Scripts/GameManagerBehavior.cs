@@ -58,6 +58,7 @@ public class GameManagerBehavior : MonoBehaviour {
 		}
 	}
 
+	public GameObject tutorialSpawn;
 	public GameObject[] nextWaveLabels;
 	public bool gameOver = false;
 
@@ -65,15 +66,22 @@ public class GameManagerBehavior : MonoBehaviour {
 	public int Wave {
 		get { return wave; }
 		set {
-			wave = value;
-			if (!gameOver) {
-				for (int i = 0; i < nextWaveLabels.Length; i++) {
-					nextWaveLabels [i].GetComponent<Text> ().text = "Wave " + (value + 1);
-//					Debug.Log (nextWaveLabels [i].GetComponent<Text> ().text);
-//					Debug.Log (nextWaveLabels [i].GetComponent<Animator> ());
-					nextWaveLabels [i].GetComponent<Animator> ().SetTrigger ("nextWave");
+			if ((value == 0)) {
+				tutorialSpawn.GetComponent<Animator> ().SetTrigger ("displayTutorial");
+			} else {
+				if (!gameOver) {
+					DisplayWaveLabels (value);
 				}
 			}
+
+			wave = value;
+		}
+	}
+
+	public void DisplayWaveLabels(int value = 0) {
+		for (int i = 0; i < nextWaveLabels.Length; i++) {
+			nextWaveLabels [i].GetComponent<Text> ().text = "Wave " + (value + 1);
+			nextWaveLabels [i].GetComponent<Animator> ().SetTrigger ("nextWave");
 		}
 	}
 

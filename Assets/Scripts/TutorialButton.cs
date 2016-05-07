@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Tutorial : MonoBehaviour {
+public class TutorialButton : MonoBehaviour {
 
 	public GameObject tutorialScreen;
 
 	public void OnClick() {
-		tutorialScreen.GetComponent<Tutorial> ().DisplayTutorial ();
+		tutorialScreen.GetComponent<TutorialButton> ().DisplayTutorial ();
 	}
 
 	public void DisplayTutorial() {

@@ -22,29 +22,43 @@ public class SpawnEnemy : MonoBehaviour {
 	private float lastSpawnTime;
 	private int enemiesSpawned = 0;
 	private bool allDied;
+	private float tutorialTimer;
+	private float tutorialWait = 11f;
+	private bool playedTutorial;
 
 	// Use this for initialization
 	void Start () {
 		lastSpawnTime = Time.time;
 		gameManager = GameObject.Find ("GameManager").GetComponent<GameManagerBehavior> ();
 		allDied = false;
+		tutorialTimer = Time.time;
+		playedTutorial = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		// 1
-		int theCurrentWave = gameManager.Wave;
+		int currentWave = gameManager.Wave;
+		if ((currentWave == 0) && (Time.time - tutorialTimer <= tutorialWait)) {
+			return;
+		} else {
+			if (!playedTutorial) {
+				lastSpawnTime = Time.time;
+				playedTutorial = true;
+			}
+		}
+
 		int maxWaveInThisLevel = GameManagerBehavior.GameWaveLength;
-		if (theCurrentWave < maxWaveInThisLevel) {
+		if (currentWave < maxWaveInThisLevel) {
 			// 2
 			float timeInterval = Time.time - lastSpawnTime;
-			float spawnInterval = waves[theCurrentWave].spawnInterval;
-			if (((enemiesSpawned == 0 && timeInterval >= 5) || (enemiesSpawned != 0 && timeInterval >= spawnInterval)) && enemiesSpawned < waves[theCurrentWave].maxEnemies) {
+			float spawnInterval = waves[currentWave].spawnInterval;
+			if (((enemiesSpawned == 0 && timeInterval >= 5) || (enemiesSpawned != 0 && timeInterval >= spawnInterval)) && enemiesSpawned < waves[currentWave].maxEnemies) {
 				// 3  
 				lastSpawnTime = Time.time;
-				GameObject newEnemy = (GameObject) Instantiate(waves[theCurrentWave].enemyPrefab);
+				GameObject newEnemy = (GameObject) Instantiate(waves[currentWave].enemyPrefab);
 				newEnemy.transform.position = spawn.transform.position;
-				newEnemy.GetComponent<EnemyDestructionDelegate> ().hpMod *= (float) (1 + theCurrentWave / 20f);
+				newEnemy.GetComponent<EnemyDestructionDelegate> ().hpMod *= (float) (1 + currentWave / 20f);
 				newEnemy.GetComponent<EnemyDestructionDelegate> ().hpMod *= GameManagerBehavior.DifficultyBonus;
 				newEnemy.GetComponent<EnemyDestructionDelegate> ().healthBarWrapper.GetComponentInChildren<HealthBar> ().AdjustMaxHP ();
 
@@ -66,7 +80,7 @@ public class SpawnEnemy : MonoBehaviour {
 				enemiesSpawned++;
 			}
 			// 4 
-			if ((enemiesSpawned >= waves[theCurrentWave].maxEnemies) && (timeInterval >= 5) && (GameObject.FindGameObjectWithTag("Ground Enemy") == null) && (GameObject.FindGameObjectWithTag("Air Enemy") == null)) {
+			if ((enemiesSpawned >= waves[currentWave].maxEnemies) && (timeInterval >= 5) && (GameObject.FindGameObjectWithTag("Ground Enemy") == null) && (GameObject.FindGameObjectWithTag("Air Enemy") == null)) {
 				if (!allDied) {
 					lastSpawnTime = Time.time;
 					allDied = true;
