@@ -144,6 +144,11 @@ Prefab:
       propertyPath: speed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 79ac60760bfffd443b36c23b37a7ef53,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 168938}
