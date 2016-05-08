@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 117132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5398682, y: 2.2010794, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1.5281484}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -62,7 +62,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.19
+  m_Radius: 0.08247612
 --- !u!95 &9503756
 Animator:
   serializedVersion: 3
@@ -91,8 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d50678e675e4db08f51be6ea1eb3e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  speedDecay: 1
+  speed: 10
+  speedDecay: 2
   isSlowBullet: 0
   bulletSlowDuration: 0
   isAoeBullet: 0
