@@ -26,6 +26,11 @@ public class PauseMenu : MonoBehaviour {
 		isPaused = false;
 	}
 
+	public void Restart(){
+		Application.LoadLevel ("SelectMap");
+		isPaused = false;
+	}
+
 	public void Quit(){
 		Application.LoadLevel ("Menu");
 		isPaused = false;
