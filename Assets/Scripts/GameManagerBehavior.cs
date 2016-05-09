@@ -44,11 +44,20 @@ public class GameManagerBehavior : MonoBehaviour {
 				Camera.main.GetComponent<CameraShake> ().Shake ();
 				Handheld.Vibrate ();
 			}
-			health = value;
+			if (value >= 0) {
+				health = value;
+			}
 			healthLabel.GetComponent<Text> ().text = "" + health;
 			if (health == 0)
 			{
-				SceneManager.LoadScene("GameOverScene");
+				foreach (GameObject airEnemy in GameObject.FindGameObjectsWithTag ("Air Enemy")) {
+					airEnemy.GetComponent<EnemyDestructionDelegate> ().PlayAnimation ();
+				}
+				foreach (GameObject groundEnemy in GameObject.FindGameObjectsWithTag ("Ground Enemy")) {
+					groundEnemy.GetComponent<EnemyDestructionDelegate> ().PlayAnimation ();
+				}
+				GameObject gameOverText = GameObject.FindGameObjectWithTag ("GameLost");
+				gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
 			}
 		}
 	}
@@ -78,7 +87,7 @@ public class GameManagerBehavior : MonoBehaviour {
 					Camera.main.GetComponent<ScrollCamera> ().RemoveAnimator ();
 				}
 			} else {
-				if (!gameOver) {
+				if (!gameOver && (value < GameWaveLength)) {
 					DisplayWaveLabels (value);
 				}
 			}

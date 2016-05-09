@@ -26,6 +26,10 @@ TagManager:
   - NormalBtn
   - HardBtn
   - SelectMapCanvas
+  - RetryBtn
+  - QuitBtn
+  - GameWon
+  - GameLost
   layers:
   - Default
   - TransparentFX
