@@ -1,29 +1,29 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class MusicMuteButton : MonoBehaviour {
 
-	public GameObject backgroundSprite;
+	public GameObject btnSprite;
 
 	// Use this for initialization
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+		btnSprite.GetComponent<Text>().text = !GameManagerBehavior.MusicMute ? "MUSIC: ON" : "MUSIC: OFF";
 
-	void OnClick() {
-		GameManagerBehavior.MusicMute = !GameManagerBehavior.MusicMute;
-		if (GameManagerBehavior.MusicMute)
-		{
-			backgroundSprite.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("icon/music_mute");
-		}
-		else
-		{
-			backgroundSprite.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("icon/music");
-		}
+		GetComponent<Button>().onClick.AddListener(() => {
+			GameManagerBehavior.MusicMute = !GameManagerBehavior.MusicMute;
+			if (GameManagerBehavior.MusicMute)
+			{
+				btnSprite.GetComponent<Text>().text = "MUSIC: OFF";
+				AudioMixer mixer = Resources.Load<AudioMixer>("etc/AudioMixer");
+				mixer.SetFloat("musicVolume", -40);
+			}
+			else
+			{
+				btnSprite.GetComponent<Text>().text = "MUSIC: ON";
+				AudioMixer mixer = Resources.Load<AudioMixer>("etc/AudioMixer");
+				mixer.SetFloat("musicVolume", 0);
+			}
+		});
 	}
 }

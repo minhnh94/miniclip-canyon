@@ -405,7 +405,7 @@ Transform:
   m_GameObject: {fileID: 71616143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 133, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 125, y: 125, z: 1}
   m_Children: []
   m_Father: {fileID: 1800876311}
   m_RootOrder: 1
@@ -423,7 +423,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -965,7 +965,7 @@ Transform:
   m_GameObject: {fileID: 177526682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 132, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 125, y: 125, z: 1}
   m_Children: []
   m_Father: {fileID: 2103410203}
   m_RootOrder: 1
@@ -983,7 +983,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 1, g: 1, b: 1, a: 0.5882353}
+  mColor: {r: 1, g: 1, b: 1, a: 0.78431374}
   mPivot: 4
   mDepth: 0
   mAtlas: {fileID: 11401026, guid: 10b67f9ac0a3544a8bd3559500a6a4b1, type: 2}
@@ -1377,7 +1377,7 @@ Transform:
   m_GameObject: {fileID: 232431594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 123, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 125, y: 125, z: 1}
   m_Children: []
   m_Father: {fileID: 1645441928}
   m_RootOrder: 1
@@ -1395,7 +1395,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -2302,7 +2302,7 @@ Transform:
   m_GameObject: {fileID: 584386438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 127, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 125, y: 125, z: 1}
   m_Children: []
   m_Father: {fileID: 1230146312}
   m_RootOrder: 1
@@ -2320,7 +2320,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -2866,7 +2866,7 @@ Transform:
   m_GameObject: {fileID: 675347482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 127, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 125, y: 125, z: 1}
   m_Children: []
   m_Father: {fileID: 627093488}
   m_RootOrder: 1
@@ -2884,7 +2884,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -2923,7 +2923,7 @@ Transform:
   m_GameObject: {fileID: 677307517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 123, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 125, y: 125, z: 1}
   m_Children: []
   m_Father: {fileID: 1542435008}
   m_RootOrder: 1
@@ -2941,7 +2941,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -3073,7 +3073,6 @@ Transform:
   - {fileID: 1853539641}
   - {fileID: 2046575515}
   - {fileID: 1418114450}
-  - {fileID: 711878170}
   m_Father: {fileID: 256182166}
   m_RootOrder: 0
 --- !u!114 &709210628
@@ -3143,13 +3142,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 711878169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -159, y: -297, z: 0}
-  m_LocalScale: {x: 1.1666665, y: 1.1666665, z: 1}
+  m_LocalPosition: {x: 459.1572, y: 7, z: 0}
+  m_LocalScale: {x: 1.0428573, y: 1, z: 1}
   m_Children:
   - {fileID: 948238005}
   - {fileID: 641337846}
-  m_Father: {fileID: 709210627}
-  m_RootOrder: 3
+  m_Father: {fileID: 1068093544}
+  m_RootOrder: 1
 --- !u!114 &711878171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3490,7 +3489,7 @@ Transform:
   m_GameObject: {fileID: 870200471}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 133, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 125, y: 125, z: 1}
   m_Children: []
   m_Father: {fileID: 1852046200}
   m_RootOrder: 1
@@ -3508,7 +3507,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -3547,7 +3546,7 @@ Transform:
   m_GameObject: {fileID: 879857060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 129, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 125, y: 125, z: 1}
   m_Children: []
   m_Father: {fileID: 1650293195}
   m_RootOrder: 1
@@ -3565,7 +3564,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -3619,11 +3618,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 1, g: 1, b: 1, a: 0.5882353}
+  mColor: {r: 1, g: 1, b: 1, a: 0.716}
   mPivot: 4
   mDepth: 0
   mAtlas: {fileID: 11401026, guid: 10b67f9ac0a3544a8bd3559500a6a4b1, type: 2}
-  mSpriteName: slicedsprite_glowbox
+  mSpriteName: help
   mFillCenter: 1
   mType: 1
   mFillDirection: 4
@@ -4104,6 +4103,7 @@ Transform:
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 1595833435}
+  - {fileID: 711878170}
   m_Father: {fileID: 1488177686}
   m_RootOrder: 0
 --- !u!114 &1068093545
@@ -4983,11 +4983,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 1, g: 1, b: 1, a: 0.5882353}
+  mColor: {r: 1, g: 1, b: 1, a: 0.785}
   mPivot: 4
   mDepth: 0
   mAtlas: {fileID: 11401026, guid: 10b67f9ac0a3544a8bd3559500a6a4b1, type: 2}
-  mSpriteName: money
+  mSpriteName: sell
   mFillCenter: 1
   mType: 1
   mFillDirection: 4
@@ -5192,6 +5192,7 @@ GameObject:
   - 114: {fileID: 1380088150}
   - 95: {fileID: 1380088151}
   - 114: {fileID: 1380088152}
+  - 114: {fileID: 1380088153}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5349,6 +5350,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialGoal: {fileID: 156022166}
   tutorialGeneral: {fileID: 469316586}
+--- !u!114 &1380088153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1380088141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae942c9068183dc40a9d01f648273726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortByDepth: 1
+  showInPanelTool: 1
+  generateNormals: 0
+  depthPass: 0
+  widgetsAreStatic: 0
+  cullWhileDragging: 0
+  worldToLocal:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -3.859064
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 10
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  mAlpha: 1
+  mDebugInfo: 1
+  mClipping: 0
+  mClipRange: {x: 0, y: 0, z: 0, w: 0}
+  mClipSoftness: {x: 40, y: 40}
 --- !u!1 &1383097919
 GameObject:
   m_ObjectHideFlags: 0
@@ -5433,7 +5473,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1383097919}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 65bd359cc8cb70a4095c7be95f5d08b6, type: 2}
   m_CullingMode: 0
@@ -6717,7 +6757,7 @@ Transform:
   m_GameObject: {fileID: 1688448315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 124, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 125, y: 125, z: 1}
   m_Children: []
   m_Father: {fileID: 1431840798}
   m_RootOrder: 1
@@ -6735,7 +6775,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -7106,8 +7146,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1729140430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 511.80002, y: 820, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 505.1, y: 802.79, z: 0}
+  m_LocalScale: {x: 1.04, y: 1, z: 1}
   m_Children:
   - {fileID: 1338400940}
   m_Father: {fileID: 214272552}
@@ -8801,7 +8841,7 @@ Transform:
   m_GameObject: {fileID: 2113366345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 129, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 125, y: 125, z: 1}
   m_Children: []
   m_Father: {fileID: 1354540881}
   m_RootOrder: 1
@@ -8819,7 +8859,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
