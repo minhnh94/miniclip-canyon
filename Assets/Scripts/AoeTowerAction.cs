@@ -101,7 +101,10 @@ public class AoeTowerAction : MonoBehaviour {
 	}
 
 	void PlayShootSound(){
-		AudioSource.PlayClipAtPoint(shootSound, transform.position);
+		if (!GameManagerBehavior.AudioMute)
+		{
+			AudioSource.PlayClipAtPoint(shootSound, transform.position);	
+		}
 	}
 
 	void Shoot(Collider2D target) {

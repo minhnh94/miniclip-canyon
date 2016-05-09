@@ -41,6 +41,9 @@ public class EnemyDestructionDelegate : MonoBehaviour {
 	}
 
 	public void PlayAudio(){
-		AudioSource.PlayClipAtPoint(destroySound, transform.position);
+		if (!GameManagerBehavior.AudioMute)
+		{
+			AudioSource.PlayClipAtPoint(destroySound, transform.position);	
+		}
 	}
 }
