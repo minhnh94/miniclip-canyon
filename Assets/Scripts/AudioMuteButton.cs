@@ -1,29 +1,24 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 
 public class AudioMuteButton : MonoBehaviour {
 
-	public GameObject backgroundSprite;
+	public GameObject btnSprite;
 
 	// Use this for initialization
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+		btnSprite.GetComponent<Text>().text = !GameManagerBehavior.AudioMute ? "SOUND: ON" : "SOUND: OFF";
 
-	void OnClick() {
-		GameManagerBehavior.AudioMute = !GameManagerBehavior.AudioMute;
-		if (GameManagerBehavior.AudioMute)
-		{
-			backgroundSprite.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("icon/audio_mute");
-		}
-		else
-		{
-			backgroundSprite.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("icon/audio");
-		}
+		GetComponent<Button>().onClick.AddListener(() => {
+			GameManagerBehavior.AudioMute = !GameManagerBehavior.AudioMute;
+			if (GameManagerBehavior.AudioMute)
+			{
+				btnSprite.GetComponent<Text>().text = "SOUND: OFF";
+			}
+			else
+			{
+				btnSprite.GetComponent<Text>().text = "SOUND: ON";
+			}
+		});
 	}
 }
