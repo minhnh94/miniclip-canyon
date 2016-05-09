@@ -1371,6 +1371,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2168,8 +2169,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 22.792637, y: 2.9999962}
-  m_SizeDelta: {x: 425.21472, y: 18.399992}
+  m_AnchoredPosition: {x: 9.6, y: -0.8}
+  m_SizeDelta: {x: 199.7, y: 23.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1800643551
 MonoBehaviour:
@@ -2985,8 +2986,8 @@ RectTransform:
   m_RootOrder: 10
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.3150024, y: 0.33999634}
-  m_SizeDelta: {x: -470.23, y: -294.42004}
+  m_AnchoredPosition: {x: -5.92, y: 0.51}
+  m_SizeDelta: {x: -494.2, y: -301.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2124572722
 MonoBehaviour:
