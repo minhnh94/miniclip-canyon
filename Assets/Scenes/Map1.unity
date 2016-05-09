@@ -422,7 +422,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -980,7 +980,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -1392,7 +1392,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -2315,7 +2315,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -2822,7 +2822,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -2879,7 +2879,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -3444,7 +3444,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -3501,7 +3501,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -6412,7 +6412,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -8362,7 +8362,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11420036, guid: 80579aa35ae04447987ed853fcedfb25, type: 2}
+  mFont: {fileID: 11419974, guid: c252356eeafc845c386ff7f93ccf39f5, type: 2}
   mText: 100
   mMaxLineWidth: 0
   mMaxLineHeight: 0

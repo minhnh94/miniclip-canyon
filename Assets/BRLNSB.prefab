@@ -1,39 +1,39 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &130632
+--- !u!1 &198794
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 424520}
-  - 114: {fileID: 11420036}
+  - 4: {fileID: 425138}
+  - 114: {fileID: 11463860}
   m_Layer: 0
-  m_Name: Arial
+  m_Name: BRLNSB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &424520
+--- !u!4 &425138
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130632}
+  m_GameObject: {fileID: 198794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11420036
+--- !u!114 &11463860
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130632}
+  m_GameObject: {fileID: 198794}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b4eb3a400afab046abb8471a9d746d6, type: 3}
@@ -59,10 +59,10 @@ MonoBehaviour:
   mReplacement: {fileID: 0}
   mPixelSize: 1
   mSymbols: []
-  mDynamicFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-  mDynamicFontSize: 100
-  mDynamicFontStyle: 1
-  mDynamicFontOffset: 79
+  mDynamicFont: {fileID: 12800000, guid: f1e0cb00d759c4cf59fd726b675cf4ca, type: 3}
+  mDynamicFontSize: 16
+  mDynamicFontStyle: 0
+  mDynamicFontOffset: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -72,5 +72,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 130632}
+  m_RootGameObject: {fileID: 198794}
   m_IsPrefabParent: 1
