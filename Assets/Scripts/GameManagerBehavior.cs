@@ -12,6 +12,7 @@ public class GameManagerBehavior : MonoBehaviour {
 	public static float TotalScore;
 	public static bool MusicMute;	// false is not mute
 	public static bool AudioMute;	// false is not mute
+	public static bool VibrateMute;	// false is not mute
 
 	public static int whatTowerIsPressed = -1;
 	public GameObject[] towerButtons;
