@@ -91,6 +91,7 @@ MonoBehaviour:
   enemiesInRange: []
   towerGun: {fileID: 153006}
   shootSound: {fileID: 8300000, guid: 33e8e64d1ab484b99b21eeb967fe0ccc, type: 3}
+  turnRate: 0.2
 --- !u!114 &11477960
 MonoBehaviour:
   m_ObjectHideFlags: 1
