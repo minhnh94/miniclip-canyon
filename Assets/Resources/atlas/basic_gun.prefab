@@ -81,13 +81,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 105
-      y: 628
+      y: 436
       width: 97
       height: 88
     inner:
       serializedVersion: 2
       x: 105
-      y: 628
+      y: 436
       width: 97
       height: 88
     rotated: 0
@@ -98,16 +98,16 @@ MonoBehaviour:
   - name: advance3
     outer:
       serializedVersion: 2
-      x: 295
-      y: 545
-      width: 66
-      height: 75
+      x: 0
+      y: 436
+      width: 97
+      height: 88
     inner:
       serializedVersion: 2
-      x: 295
-      y: 545
-      width: 66
-      height: 75
+      x: 0
+      y: 436
+      width: 97
+      height: 88
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
@@ -117,13 +117,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 315
-      y: 628
+      y: 532
       width: 97
       height: 88
     inner:
       serializedVersion: 2
       x: 315
-      y: 628
+      y: 532
       width: 97
       height: 88
     rotated: 0
@@ -134,13 +134,13 @@ MonoBehaviour:
   - name: basic3
     outer:
       serializedVersion: 2
-      x: 0
+      x: 210
       y: 532
       width: 97
       height: 88
     inner:
       serializedVersion: 2
-      x: 0
+      x: 210
       y: 532
       width: 97
       height: 88
@@ -170,14 +170,14 @@ MonoBehaviour:
   - name: basic4
     outer:
       serializedVersion: 2
-      x: 210
-      y: 628
+      x: 0
+      y: 532
       width: 97
       height: 88
     inner:
       serializedVersion: 2
-      x: 210
-      y: 628
+      x: 0
+      y: 532
       width: 97
       height: 88
     rotated: 0
@@ -188,16 +188,16 @@ MonoBehaviour:
   - name: advance5
     outer:
       serializedVersion: 2
-      x: 369
-      y: 545
-      width: 66
-      height: 75
+      x: 210
+      y: 436
+      width: 97
+      height: 88
     inner:
       serializedVersion: 2
-      x: 369
-      y: 545
-      width: 66
-      height: 75
+      x: 210
+      y: 436
+      width: 97
+      height: 88
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
@@ -206,16 +206,16 @@ MonoBehaviour:
   - name: advance4
     outer:
       serializedVersion: 2
-      x: 0
-      y: 449
-      width: 66
-      height: 75
+      x: 315
+      y: 628
+      width: 97
+      height: 88
     inner:
       serializedVersion: 2
-      x: 0
-      y: 449
-      width: 66
-      height: 75
+      x: 315
+      y: 628
+      width: 97
+      height: 88
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
@@ -224,16 +224,16 @@ MonoBehaviour:
   - name: advance1
     outer:
       serializedVersion: 2
-      x: 74
-      y: 449
-      width: 66
-      height: 75
+      x: 210
+      y: 628
+      width: 97
+      height: 88
     inner:
       serializedVersion: 2
-      x: 74
-      y: 449
-      width: 66
-      height: 75
+      x: 210
+      y: 628
+      width: 97
+      height: 88
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
@@ -242,16 +242,16 @@ MonoBehaviour:
   - name: advance2
     outer:
       serializedVersion: 2
-      x: 148
-      y: 449
-      width: 66
-      height: 75
+      x: 105
+      y: 628
+      width: 97
+      height: 88
     inner:
       serializedVersion: 2
-      x: 148
-      y: 449
-      width: 66
-      height: 75
+      x: 105
+      y: 628
+      width: 97
+      height: 88
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
@@ -332,14 +332,14 @@ MonoBehaviour:
   - name: border_button
     outer:
       serializedVersion: 2
-      x: 443
-      y: 566
+      x: 423
+      y: 470
       width: 60
       height: 54
     inner:
       serializedVersion: 2
-      x: 443
-      y: 566
+      x: 423
+      y: 470
       width: 60
       height: 54
     rotated: 0
@@ -368,13 +368,13 @@ MonoBehaviour:
   - name: help
     outer:
       serializedVersion: 2
-      x: 210
+      x: 420
       y: 543
       width: 77
       height: 77
     inner:
       serializedVersion: 2
-      x: 210
+      x: 420
       y: 543
       width: 77
       height: 77
@@ -396,6 +396,24 @@ MonoBehaviour:
       y: 761
       width: 100
       height: 95
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: tag
+    outer:
+      serializedVersion: 2
+      x: 315
+      y: 464
+      width: 100
+      height: 60
+    inner:
+      serializedVersion: 2
+      x: 315
+      y: 464
+      width: 100
+      height: 60
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
