@@ -39,7 +39,7 @@ public class SpawnEnemy : MonoBehaviour {
 	void Update () {
 		// 1
 		int currentWave = gameManager.Wave;
-		if (!GameManagerBehavior.playedTutorial && (currentWave == 0) && (Time.time - tutorialTimer <= tutorialWait)) {
+		if (!ShowTutorialToggle.playedTutorial && (currentWave == 0) && (Time.time - tutorialTimer <= tutorialWait)) {
 			return;
 		} else {
 			if (!playedTutorial) {

@@ -19,7 +19,7 @@ public class ScrollCamera : MonoBehaviour {
 	}
 
 	public void RemoveAnimator() {
-		GameManagerBehavior.playedTutorial = true;
+		ShowTutorialToggle.playedTutorial = true;
 		GetComponent<Animator> ().enabled = false;
 	}
 }

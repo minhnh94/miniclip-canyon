@@ -3,9 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManagerBehavior : MonoBehaviour {
-
-	public static bool playedTutorial;
-
+	
 	public MapManager mapManager;
 
 	public static float DifficultyBonus;
@@ -68,7 +66,7 @@ public class GameManagerBehavior : MonoBehaviour {
 	public int Wave {
 		get { return wave; }
 		set {
-			if ((value == 0) && !playedTutorial) {
+			if ((value == 0) && !ShowTutorialToggle.playedTutorial) {
 				tutorialSpawn.GetComponent<Animator> ().SetTrigger ("displayTutorial");
 			} else {
 				if (!gameOver) {
