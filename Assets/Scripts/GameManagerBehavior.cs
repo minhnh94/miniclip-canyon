@@ -8,6 +8,7 @@ public class GameManagerBehavior : MonoBehaviour {
 
 	public static float DifficultyBonus;
 	public static int GameWaveLength;
+	public static string PlayerName;
 	public static float TotalScore;
 	public static bool MusicMute;	// false is not mute
 	public static bool AudioMute;	// false is not mute
