@@ -72,11 +72,11 @@ TagManager:
   - name: TowerBase
     uniqueID: 3515755603
     locked: 0
-  - name: Bullet
-    uniqueID: 2786973605
-    locked: 0
   - name: TowerGun
     uniqueID: 1034258453
+    locked: 0
+  - name: Bullet
+    uniqueID: 2786973605
     locked: 0
   - name: Enemy
     uniqueID: 2351526059

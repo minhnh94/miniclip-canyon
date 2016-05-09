@@ -14,7 +14,12 @@ public class ScrollCamera : MonoBehaviour {
 		tutorialGeneral.GetComponent<TutorialGeneral> ().DisplayTutorial ();
 	}
 
+	public void EnableCameraDragging () {
+		Camera.main.GetComponent<DragCamera> ().enabled = true;
+	}
+
 	public void RemoveAnimator() {
+		GameManagerBehavior.playedTutorial = true;
 		GetComponent<Animator> ().enabled = false;
 	}
 }

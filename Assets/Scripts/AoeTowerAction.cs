@@ -11,7 +11,8 @@ public class AoeTowerAction : MonoBehaviour {
 	public AudioClip shootSound;
 
 	GameObject oldTarget = null;
-	float t;
+	float turnDuration;
+	public float turnRate;
 	float lastShotTime;
 	TowerData towerData;
 
@@ -48,14 +49,14 @@ public class AoeTowerAction : MonoBehaviour {
 				lastShotTime = Time.time;
 			}
 
-//			Vector3 direction = towerGun.transform.position - target.transform.position;
-//			if (oldTarget == target) {
-//				t = Time.time - lastShotTime;
-//			} else {
-//				t = Time.time - lastShotTime + towerData.fireRate;
-//			}
-//			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), t * 0.25f);
-//			oldTarget = target;
+			Vector3 direction = towerGun.transform.position - target.transform.position;
+			if (oldTarget == target) {
+				turnDuration = Mathf.Min(towerData.fireRate, Time.time - lastShotTime);
+			} else {
+				turnDuration = Mathf.Min(towerData.fireRate, Time.time - lastShotTime - towerData.fireRate);
+			}
+			towerGun.transform.rotation = Quaternion.Slerp (towerGun.transform.rotation, Quaternion.LookRotation (Vector3.forward, direction), turnDuration * turnRate);
+			oldTarget = target;
 		}
 	}
 
