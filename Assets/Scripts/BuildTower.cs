@@ -15,6 +15,7 @@ public class BuildTower : MonoBehaviour {
 		initialColor = refButton.defaultColor;
 
 		initPriceLabel();
+		alterVolume();
 	}
 
 	void OnClick() {
@@ -90,5 +91,13 @@ public class BuildTower : MonoBehaviour {
 	{
 		int cost = towerPrefabData.GetComponent<TowerData>().cost;
 		priceLabel.GetComponent<UILabel>().text = "" + cost;
+	}
+
+	void alterVolume()
+	{
+		if (GameManagerBehavior.AudioMute)
+		{
+			gameObject.GetComponent<UIButtonSound>().volume = 0;
+		}
 	}
 }
