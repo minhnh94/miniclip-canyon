@@ -31,4 +31,8 @@ public class GameTypeManager : MonoBehaviour {
 	public void StartGame() {
 		StartCoroutine(PlayStartGameSoundThenLoad ());
 	}
+
+	public void ToMenu(){
+		SceneManager.LoadScene ("Menu");
+	}
 }
