@@ -67,8 +67,13 @@ public class GameManagerBehavior : MonoBehaviour {
 	public int Wave {
 		get { return wave; }
 		set {
-			if ((value == 0) && !ShowTutorialToggle.playedTutorial) {
-				tutorialSpawn.GetComponent<Animator> ().SetTrigger ("displayTutorial");
+			if (value == 0) {
+				if (!ShowTutorialToggle.playedTutorial) {
+					tutorialSpawn.GetComponent<Animator> ().SetTrigger ("displayTutorial");
+				} else {
+					DisplayWaveLabels ();
+					Camera.main.GetComponent<ScrollCamera> ().RemoveAnimator ();
+				}
 			} else {
 				if (!gameOver) {
 					DisplayWaveLabels (value);
