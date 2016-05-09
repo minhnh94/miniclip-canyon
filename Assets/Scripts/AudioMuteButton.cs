@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class AudioMuteButton : MonoBehaviour {
 
@@ -14,10 +15,14 @@ public class AudioMuteButton : MonoBehaviour {
 			if (GameManagerBehavior.AudioMute)
 			{
 				btnSprite.GetComponent<Text>().text = "SOUND: OFF";
+				AudioMixer mixer = Resources.Load<AudioMixer>("etc/AudioMixer");
+				mixer.SetFloat("audioVolume", -70);
 			}
 			else
 			{
 				btnSprite.GetComponent<Text>().text = "SOUND: ON";
+				AudioMixer mixer = Resources.Load<AudioMixer>("etc/AudioMixer");
+				mixer.SetFloat("audioVolume", 0);
 			}
 		});
 	}

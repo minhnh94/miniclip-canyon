@@ -75,8 +75,10 @@ public class GridBoxAction : MonoBehaviour {
 	}
 
 	void PlayPlaceTowerSound(){
-
-		AudioSource.PlayClipAtPoint(placeTowerSound, transform.position);
+		if (!GameManagerBehavior.AudioMute)
+		{
+			AudioSource.PlayClipAtPoint(placeTowerSound, transform.position);	
+		}
 	}
 
 

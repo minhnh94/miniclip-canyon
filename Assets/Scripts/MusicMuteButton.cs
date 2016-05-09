@@ -16,7 +16,7 @@ public class MusicMuteButton : MonoBehaviour {
 			{
 				btnSprite.GetComponent<Text>().text = "MUSIC: OFF";
 				AudioMixer mixer = Resources.Load<AudioMixer>("etc/AudioMixer");
-				mixer.SetFloat("musicVolume", -40);
+				mixer.SetFloat("musicVolume", -70);
 			}
 			else
 			{
