@@ -11,6 +11,7 @@ public class MapSelectButtonAction : MonoBehaviour {
 		gameTypeManager = GameObject.FindGameObjectWithTag ("SelectMapCanvas").GetComponent<GameTypeManager> ();
 		if (gameObject.tag.Equals(Constant.SelectMap1Btn))
 		{
+			PlayerPrefs.SetString("Selected Map", "Map1");
 			GetComponent<Image>().sprite = Resources.Load<Sprite>("map/map1_selected");
 		}
 
