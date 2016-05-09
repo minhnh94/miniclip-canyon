@@ -39,6 +39,7 @@ public class GameManagerBehavior : MonoBehaviour {
 		set {
 			if (value < health) {
 				Camera.main.GetComponent<CameraShake> ().Shake ();
+				Handheld.Vibrate ();
 			}
 			health = value;
 			healthLabel.GetComponent<Text> ().text = "" + health;
