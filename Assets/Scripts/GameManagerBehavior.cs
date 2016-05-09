@@ -71,6 +71,7 @@ public class GameManagerBehavior : MonoBehaviour {
 				if (!ShowTutorialToggle.playedTutorial) {
 					tutorialSpawn.GetComponent<Animator> ().SetTrigger ("displayTutorial");
 				} else {
+					DisplayWaveLabels ();
 					Camera.main.GetComponent<ScrollCamera> ().RemoveAnimator ();
 				}
 			} else {
