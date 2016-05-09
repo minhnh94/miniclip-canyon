@@ -283,7 +283,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HIGHSCORE
+  m_Text: Your Score
 --- !u!222 &32702764
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -724,7 +724,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -285.45, y: -159.74}
+  m_AnchoredPosition: {x: -286, y: -159.74}
   m_SizeDelta: {x: -226.46, y: -229.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1313124770
@@ -897,7 +897,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -285.4, y: -162.18}
+  m_AnchoredPosition: {x: -285.99, y: -162.18}
   m_SizeDelta: {x: 167.09, y: 38.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1808402384
@@ -1091,7 +1091,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -285.4, y: -163.88}
+  m_AnchoredPosition: {x: -285.99, y: -163.88}
   m_SizeDelta: {x: 166, y: 39.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2014687823

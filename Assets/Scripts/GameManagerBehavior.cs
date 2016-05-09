@@ -9,6 +9,8 @@ public class GameManagerBehavior : MonoBehaviour {
 	public static float DifficultyBonus;
 	public static int GameWaveLength;
 	public static float TotalScore;
+	public static bool MusicMute;	// false is not mute
+	public static bool AudioMute;	// false is not mute
 
 	public static int whatTowerIsPressed = -1;
 	public GameObject[] towerButtons;
@@ -39,6 +41,7 @@ public class GameManagerBehavior : MonoBehaviour {
 		set {
 			if (value < health) {
 				Camera.main.GetComponent<CameraShake> ().Shake ();
+				Handheld.Vibrate ();
 			}
 			health = value;
 			healthLabel.GetComponent<Text> ().text = "" + health;
@@ -66,8 +69,13 @@ public class GameManagerBehavior : MonoBehaviour {
 	public int Wave {
 		get { return wave; }
 		set {
-			if ((value == 0) && !ShowTutorialToggle.playedTutorial) {
-				tutorialSpawn.GetComponent<Animator> ().SetTrigger ("displayTutorial");
+			if (value == 0) {
+				if (!ShowTutorialToggle.playedTutorial) {
+					tutorialSpawn.GetComponent<Animator> ().SetTrigger ("displayTutorial");
+				} else {
+					DisplayWaveLabels ();
+					Camera.main.GetComponent<ScrollCamera> ().RemoveAnimator ();
+				}
 			} else {
 				if (!gameOver) {
 					DisplayWaveLabels (value);
