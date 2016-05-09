@@ -45,13 +45,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 459
-      y: 437
+      y: 949
       width: 25
       height: 75
     inner:
       serializedVersion: 2
       x: 459
-      y: 437
+      y: 949
       width: 25
       height: 5
     rotated: 0
@@ -63,13 +63,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 413
-      y: 264
+      y: 776
       width: 80
       height: 80
     inner:
       serializedVersion: 2
       x: 443
-      y: 294
+      y: 806
       width: 20
       height: 20
     rotated: 0
@@ -80,14 +80,14 @@ MonoBehaviour:
   - name: basic2
     outer:
       serializedVersion: 2
-      x: 381
-      y: 129
+      x: 370
+      y: 556
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 381
-      y: 129
+      x: 370
+      y: 556
       width: 66
       height: 75
     rotated: 0
@@ -98,14 +98,14 @@ MonoBehaviour:
   - name: advance3
     outer:
       serializedVersion: 2
-      x: 307
-      y: 46
+      x: 296
+      y: 556
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 307
-      y: 46
+      x: 296
+      y: 556
       width: 66
       height: 75
     rotated: 0
@@ -116,14 +116,14 @@ MonoBehaviour:
   - name: basic5
     outer:
       serializedVersion: 2
-      x: 307
-      y: 129
+      x: 222
+      y: 556
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 307
-      y: 129
+      x: 222
+      y: 556
       width: 66
       height: 75
     rotated: 0
@@ -134,14 +134,14 @@ MonoBehaviour:
   - name: basic3
     outer:
       serializedVersion: 2
-      x: 233
-      y: 46
+      x: 170
+      y: 641
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 233
-      y: 46
+      x: 170
+      y: 641
       width: 66
       height: 75
     rotated: 0
@@ -152,14 +152,14 @@ MonoBehaviour:
   - name: basic1
     outer:
       serializedVersion: 2
-      x: 233
-      y: 129
+      x: 244
+      y: 641
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 233
-      y: 129
+      x: 244
+      y: 641
       width: 66
       height: 75
     rotated: 0
@@ -170,14 +170,14 @@ MonoBehaviour:
   - name: basic4
     outer:
       serializedVersion: 2
-      x: 159
-      y: 46
+      x: 318
+      y: 641
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 159
-      y: 46
+      x: 318
+      y: 641
       width: 66
       height: 75
     rotated: 0
@@ -188,14 +188,14 @@ MonoBehaviour:
   - name: advance5
     outer:
       serializedVersion: 2
-      x: 159
-      y: 129
+      x: 392
+      y: 641
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 159
-      y: 129
+      x: 392
+      y: 641
       width: 66
       height: 75
     rotated: 0
@@ -206,14 +206,14 @@ MonoBehaviour:
   - name: advance4
     outer:
       serializedVersion: 2
-      x: 85
-      y: 46
+      x: 0
+      y: 556
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 85
-      y: 46
+      x: 0
+      y: 556
       width: 66
       height: 75
     rotated: 0
@@ -224,14 +224,14 @@ MonoBehaviour:
   - name: advance1
     outer:
       serializedVersion: 2
-      x: 85
-      y: 129
+      x: 74
+      y: 556
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 85
-      y: 129
+      x: 74
+      y: 556
       width: 66
       height: 75
     rotated: 0
@@ -242,14 +242,14 @@ MonoBehaviour:
   - name: advance2
     outer:
       serializedVersion: 2
-      x: 0
-      y: 44
+      x: 148
+      y: 556
       width: 66
       height: 75
     inner:
       serializedVersion: 2
-      x: 0
-      y: 44
+      x: 148
+      y: 556
       width: 66
       height: 75
     rotated: 0
@@ -261,13 +261,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 308
-      y: 256
+      y: 768
       width: 97
       height: 88
     inner:
       serializedVersion: 2
       x: 308
-      y: 256
+      y: 768
       width: 97
       height: 88
     rotated: 0
@@ -279,13 +279,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 0
-      y: 127
+      y: 639
       width: 77
       height: 77
     inner:
       serializedVersion: 2
       x: 0
-      y: 127
+      y: 639
       width: 77
       height: 77
     rotated: 0
@@ -297,13 +297,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 0
-      y: 212
+      y: 724
       width: 300
       height: 300
     inner:
       serializedVersion: 2
       x: 0
-      y: 212
+      y: 724
       width: 300
       height: 300
     rotated: 0
@@ -315,13 +315,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 308
-      y: 418
+      y: 930
       width: 143
       height: 94
     inner:
       serializedVersion: 2
       x: 308
-      y: 418
+      y: 930
       width: 143
       height: 94
     rotated: 0
@@ -332,14 +332,14 @@ MonoBehaviour:
   - name: border_button
     outer:
       serializedVersion: 2
-      x: 381
-      y: 67
+      x: 444
+      y: 577
       width: 60
       height: 54
     inner:
       serializedVersion: 2
-      x: 381
-      y: 67
+      x: 444
+      y: 577
       width: 60
       height: 54
     rotated: 0
@@ -351,15 +351,33 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 308
-      y: 352
+      y: 864
       width: 174
       height: 58
     inner:
       serializedVersion: 2
       x: 308
-      y: 352
+      y: 864
       width: 174
       height: 58
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: help
+    outer:
+      serializedVersion: 2
+      x: 85
+      y: 639
+      width: 77
+      height: 77
+    inner:
+      serializedVersion: 2
+      x: 85
+      y: 639
+      width: 77
+      height: 77
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
