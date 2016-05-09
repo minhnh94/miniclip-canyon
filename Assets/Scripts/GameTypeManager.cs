@@ -34,4 +34,5 @@ public class GameTypeManager : MonoBehaviour {
 
 	public void ToMenu(){
 		SceneManager.LoadScene ("Menu");
+	}
 }
