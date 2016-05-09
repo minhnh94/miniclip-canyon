@@ -89,7 +89,7 @@ public class GameManagerBehavior : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Gold = 3500;
+		Gold = 350;
 		Health = 10;
 		Wave = 0;
 		Score = 0;
