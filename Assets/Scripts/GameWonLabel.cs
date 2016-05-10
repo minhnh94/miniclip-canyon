@@ -5,6 +5,6 @@ using UnityEngine.SceneManagement;
 public class GameWonLabel : MonoBehaviour {
 
 	public void LoadGameOverScene () {
-		SceneManager.LoadScene("GameOverScene");;
+		SceneManager.LoadScene("GameOverScene");
 	}
 }

@@ -20,6 +20,6 @@ public class ScrollCamera : MonoBehaviour {
 
 	public void RemoveAnimator() {
 		ShowTutorialToggle.playedTutorial = true;
-		GetComponent<Animator> ().enabled = false;
+		Camera.main.GetComponent<Animator> ().enabled = false;
 	}
 }
