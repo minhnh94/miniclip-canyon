@@ -148,8 +148,8 @@ MonoBehaviour:
   enemiesInRange: []
   towerGun: {fileID: 125034}
   shootSound: {fileID: 8300000, guid: 685174906dbb046ad9a394151621aa7d, type: 3}
-  turnRate: 0.5
-  canShootAngleThreshold: 30
+  turnRate: 0.75
+  canShootAngleThreshold: 20
 --- !u!212 &21230114
 SpriteRenderer:
   m_ObjectHideFlags: 1

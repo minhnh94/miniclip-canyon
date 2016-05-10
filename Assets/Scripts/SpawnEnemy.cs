@@ -21,6 +21,7 @@ public class SpawnEnemy : MonoBehaviour {
 
 	private float lastSpawnTime;
 	private int enemiesSpawned = 0;
+	private bool allDied;
 	private float tutorialTimer;
 	private float tutorialWait = 11f;
 	private bool playedTutorial;
@@ -29,6 +30,7 @@ public class SpawnEnemy : MonoBehaviour {
 	void Start () {
 		lastSpawnTime = Time.time;
 		gameManager = GameObject.Find ("GameManager").GetComponent<GameManagerBehavior> ();
+		allDied = false;
 		tutorialTimer = Time.time;
 		playedTutorial = false;
 	}
@@ -79,10 +81,17 @@ public class SpawnEnemy : MonoBehaviour {
 			}
 			// 4 
 			if ((enemiesSpawned >= waves[currentWave].maxEnemies) && (timeInterval >= 5) && (GameObject.FindGameObjectWithTag("Ground Enemy") == null) && (GameObject.FindGameObjectWithTag("Air Enemy") == null)) {
+				if (!allDied) {
+					lastSpawnTime = Time.time;
+					allDied = true;
+					return;
+				}
+
 				gameManager.Wave++;
 //				gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
 				enemiesSpawned = 0;
 				lastSpawnTime = Time.time;
+				allDied = false;
 			}
 			// 5 
 		} else {

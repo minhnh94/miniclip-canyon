@@ -1,4 +1,4 @@
-﻿	using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -43,7 +43,7 @@ public class GameManagerBehavior : MonoBehaviour {
 		set {
 			if (value < health) {
 				Camera.main.GetComponent<CameraShake> ().Shake ();
-				Handheld.Vibrate ();
+//				Handheld.Vibrate ();
 			}
 			if (value >= 0) {
 				health = value;
