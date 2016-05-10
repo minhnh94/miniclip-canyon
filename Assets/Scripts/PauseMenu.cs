@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PauseMenu : MonoBehaviour {
@@ -27,12 +28,16 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void Restart(){
-		Application.LoadLevel ("SelectMap");
+		if (PlayerPrefs.GetString("Selected Map") != "") {
+			SceneManager.LoadScene(PlayerPrefs.GetString("Selected Map"));
+		} else {
+			SceneManager.LoadScene("Menu");
+		}
 		isPaused = false;
 	}
 
 	public void Quit(){
-		Application.LoadLevel ("Menu");
+		SceneManager.LoadScene("Menu");
 		isPaused = false;
 	}
 }
