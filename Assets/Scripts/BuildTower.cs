@@ -18,10 +18,11 @@ public class BuildTower : MonoBehaviour {
 		alterVolume();
 	}
 
+	void Update() {
+		priceLabel.GetComponent<UILabel>().color = gameManager.Gold < towerPrefabData.GetComponent<TowerData>().cost ? Color.red : Color.white;
+	}
+
 	void OnClick() {
-
-		SetToSelectedState();
-
 		int selection = -1;
 
 		if (gameObject.tag == Constant.TowerBasic1Tag)
@@ -64,6 +65,12 @@ public class BuildTower : MonoBehaviour {
 		{
 			selection = 9;
 		}
+			
+		if (gameManager.Gold < towerPrefabData.GetComponent<TowerData>().cost && selection != GameManagerBehavior.whatTowerIsPressed)
+		{
+			return;
+		}
+		SetToSelectedState();
 			
 		if (GameManagerBehavior.whatTowerIsPressed != -1)
 		{
